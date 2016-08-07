@@ -1,0 +1,165 @@
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\obj\Debug\Example.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Example.dll.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Example.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Example.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Antlr3.Runtime.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\EntityFramework.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Newtonsoft.Json.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Owin.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Helpers.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Mvc.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Optimization.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Razor.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\WebGrease.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Helpers.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Mvc.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Optimization.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.Razor.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Newtonsoft.Json.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Antlr3.Runtime.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\EntityFramework.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\obj\Debug\Example.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\cas\Example\Example\obj\Debug\Example.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Example.dll.config
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Example.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Example.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Antlr3.Runtime.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\EntityFramework.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\EntityFramework.SqlServer.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Newtonsoft.Json.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Helpers.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Mvc.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Optimization.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Razor.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.Razor.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\WebGrease.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Helpers.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Mvc.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Optimization.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.Razor.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\System.Web.WebPages.Razor.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Newtonsoft.Json.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Antlr3.Runtime.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\EntityFramework.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\EntityFramework.SqlServer.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\obj\Debug\Example.csprojResolveAssemblyReference.cache
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\obj\Debug\Example.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Example\Example\obj\Debug\Example.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Example.dll.config
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Example.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Example.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Antlr3.Runtime.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\EntityFramework.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\EntityFramework.SqlServer.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Newtonsoft.Json.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Owin.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Helpers.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Mvc.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Optimization.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Razor.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.Razor.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\WebGrease.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Helpers.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Mvc.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Optimization.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.Razor.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\System.Web.WebPages.Razor.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Newtonsoft.Json.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Antlr3.Runtime.pdb
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\EntityFramework.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\EntityFramework.SqlServer.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\obj\Debug\Example.csprojResolveAssemblyReference.cache
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\obj\Debug\Example.dll
+C:\Users\Milomir93\Desktop\Vežbe\15\kod\Test\Example\obj\Debug\Example.pdb
