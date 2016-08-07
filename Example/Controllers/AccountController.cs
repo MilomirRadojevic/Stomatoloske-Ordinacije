@@ -98,14 +98,14 @@ namespace Example.Controllers
                 if (result.Succeeded)
                 {
                     UserManager.AddToRole(user.Id, "user");
-                    Stomatolog s = new Stomatolog()
+                    /*Stomatolog s = new Stomatolog()
                     {
                         IDClanaKomore = model.UserName,
                         Ime = model.UserName,
                         Prezime = model.UserName
                     };
                     context.Stomatolozi.Add(s);
-                    context.SaveChanges();
+                    context.SaveChanges();*/
 
                     //await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Admin", "Home");

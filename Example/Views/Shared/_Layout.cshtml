@@ -40,10 +40,7 @@
                 else if (User.Identity.Name == "Administrator")
                 {
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("All employees", "Index", "Employees")</li>
-                        <li>@Html.ActionLink("Add employee", "AddEmployee", "Employees")</li>
                         <li>@Html.ActionLink("Add login", "Register", "Account")</li>
-
                     </ul>
 
                 }
