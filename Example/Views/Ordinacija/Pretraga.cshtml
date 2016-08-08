@@ -1,0 +1,71 @@
+﻿@model Example.Models.OrdinacijaViewModel
+@{
+    ViewBag.Title = "Pretraga";
+}
+
+<p>
+    @Html.ActionLink("Dodaj novu ordinaciju", "DodajOrdinaciju", "Ordinacija")
+</p>
+<div>
+    <div>
+        @using (Ajax.BeginForm("RefreshList", "Ordinacija", new AjaxOptions()
+        {
+            UpdateTargetId = "listaordinacija",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST"
+
+        }))
+        {
+            <span style="font-weight: bold;">Filter: </span>
+            @Html.LabelFor(m => m.Naziv)
+            @Html.TextBoxFor(m => m.Naziv)
+            @Html.ValidationMessageFor(m => m.Naziv)
+
+            @Html.LabelFor(m => m.PIB)
+            @Html.TextBoxFor(m => m.PIB)
+            @Html.ValidationMessageFor(m => m.PIB)
+
+            @Html.LabelFor(m => m.MaticniBrojFirme)
+            @Html.TextBoxFor(m => m.MaticniBrojFirme)
+            @Html.ValidationMessageFor(m => m.MaticniBrojFirme)
+
+            @Html.LabelFor(m => m.JMBGVlasnika)
+            @Html.TextBoxFor(m => m.JMBGVlasnika)
+            @Html.ValidationMessageFor(m => m.JMBGVlasnika)
+
+            <div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div id="listaordinacija">
+    @Html.Partial("_ListaOrdinacija", Model)
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $("#Naziv, #PIB, #MaticniBrojFirme, #JMBGVlasnika").keyup(function (event) {
+            // $(this).parents("form").submit();
+
+            // Moze i ovako, efekat je isti, ali je fleksibilnije, jer direktno
+            // koristimo JQuery.ajax() metodu.
+            $.ajax($(this).parents("form").attr("action"), {
+                // submit-uju se parametri koji se pokupe iz forme
+                data: { Naziv: $("#Naziv").val(), PIB: $("#PIB").val(), MaticniBrojFirme: $("#MaticniBrojFirme").val(), JMBGVlasnika: $("#JMBGVlasnika").val() },
+                method: "POST",
+                // izvrsava se ako zahtev uspe
+                success: function (data, status, xhr) {
+                    $("#listaordinacija").html(data);
+                },
+                // izvrsava se ako se dogodi neka greska
+                error: function (xhr, status, err) {
+                    $("#listaordinacija").text(err);
+                },
+                dataType: "html"
+            });
+        });
+    </script>
+}
+

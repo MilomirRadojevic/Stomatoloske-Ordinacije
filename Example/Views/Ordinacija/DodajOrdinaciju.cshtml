@@ -1,0 +1,106 @@
+﻿
+@model Example.Models.NovaOrdinacija
+
+@{
+    ViewBag.Title = "DodajOrdinaciju";
+}
+
+<h2>DodajOrdinaciju</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>NovaOrdinacija</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Naziv, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Naziv)
+                @Html.ValidationMessageFor(model => model.Naziv)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PIB, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PIB)
+                @Html.ValidationMessageFor(model => model.PIB)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaticniBrojFirme, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaticniBrojFirme)
+                @Html.ValidationMessageFor(model => model.MaticniBrojFirme)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adresa, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Adresa)
+                @Html.ValidationMessageFor(model => model.Adresa)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Grad, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Grad)
+                @Html.ValidationMessageFor(model => model.Grad)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KontaktTelefon, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KontaktTelefon)
+                @Html.ValidationMessageFor(model => model.KontaktTelefon)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImeVlasnika, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ImeVlasnika)
+                @Html.ValidationMessageFor(model => model.ImeVlasnika)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PrezimeVlasnika, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PrezimeVlasnika)
+                @Html.ValidationMessageFor(model => model.PrezimeVlasnika)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.JMBGVlasnika, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JMBGVlasnika)
+                @Html.ValidationMessageFor(model => model.JMBGVlasnika)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

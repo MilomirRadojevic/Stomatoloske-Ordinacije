@@ -1,0 +1,37 @@
+﻿@model Example.Models.OrdinacijaViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PIB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.MaticniBrojFirme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JMBGVlasnika)
+        </th>
+
+    </tr>
+
+    @foreach (var m in Model.ListaOrdinacija)
+    {
+        <tr>
+            <td>@m.Naziv</td>
+            <td>@m.PIB</td>
+            <td>@m.MaticniBrojFirme</td>
+            <td>@m.JMBG</td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", m.MaticniBrojFirme) |
+                @Html.ActionLink("Details", "Details", m.MaticniBrojFirme) |
+                @Html.ActionLink("Delete", "Delete", m.MaticniBrojFirme)
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -13,7 +13,7 @@ namespace Example.Models
         public virtual string Naziv { get; set; }
         public virtual string Grad { get; set; }
         public virtual string Adresa { get; set; }
-        public virtual ICollection<string> Kontakt_telefon { get; set; }
+        public virtual string KontaktTelefon { get; set; }
         public virtual int PIB { get; set; }
 
         public virtual string ImeVlasnika { get; set; }
