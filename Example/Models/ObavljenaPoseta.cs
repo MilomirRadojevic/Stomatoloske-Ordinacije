@@ -10,7 +10,7 @@ namespace Example.Models
     {
         [Key]
         public virtual int IDPosete { get; set; }
-        public virtual string StomatologIDClanaKomore { get; set; }
+        public virtual int StomatologIDClanaKomore { get; set; }
         public virtual int PacijentIDKartona { get; set; }
 
 

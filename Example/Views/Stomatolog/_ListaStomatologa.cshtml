@@ -1,0 +1,37 @@
+﻿
+@model Example.Models.StomatologViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDClanaKomore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JMBG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+
+    </tr>
+
+    @foreach (var m in Model.ListaStomatologa)
+    {
+        <tr>
+            <td>@m.IDClanaKomore</td>
+            <td>@m.JMBG</td>
+            <td>@m.Ime</td>
+            <td>@m.Prezime</td>
+
+            <td>
+                @Html.ActionLink("Izmeni podatke o stomatologu", "IzmeniStomatologa", new { IDClanaKomore = m.IDClanaKomore }) |
+                @Html.ActionLink("Detalji o stomatologu", "DetaljiStomatologa", new { IDClanaKomore = m.IDClanaKomore }) |
+                @Html.ActionLink("Obrisi nalog stomatologa", "ObrisiStomatologa", new { IDClanaKomore = m.IDClanaKomore })
+            </td>
+        </tr>
+    }
+
+</table>

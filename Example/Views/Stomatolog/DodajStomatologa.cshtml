@@ -1,0 +1,116 @@
+﻿@model Example.Models.NovStomatolog
+
+@{
+    ViewBag.Title = "Dodaj stomatologa";
+}
+
+<h2>Dodaj stomatologa:</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DodajStomatologa</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Stomatolog</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IDClanaKomore, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IDClanaKomore)
+                    @Html.ValidationMessageFor(model => model.IDClanaKomore)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaticniBrojFirmeStomatologa, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MaticniBrojFirmeStomatologa)
+                    @Html.ValidationMessageFor(model => model.MaticniBrojFirmeStomatologa)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Ime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Ime)
+                    @Html.ValidationMessageFor(model => model.Ime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Prezime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Prezime)
+                    @Html.ValidationMessageFor(model => model.Prezime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.JMBG, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.JMBG)
+                    @Html.ValidationMessageFor(model => model.JMBG)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ZavrseniFakultet, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ZavrseniFakultet)
+                    @Html.ValidationMessageFor(model => model.ZavrseniFakultet)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Specijalizacija, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Specijalizacija)
+                    @Html.ValidationMessageFor(model => model.Specijalizacija)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Sertifikat, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Sertifikat)
+                    @Html.ValidationMessageFor(model => model.Sertifikat)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BrojTelefona, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BrojTelefona)
+                    @Html.ValidationMessageFor(model => model.BrojTelefona)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Mail, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Mail)
+                    @Html.ValidationMessageFor(model => model.Mail)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Vrati se na listu stomatologa", "Index")
+    </div>
+</body>
+</html>

@@ -12,8 +12,8 @@ namespace Example.Models
         public virtual int IDOdgovora { get; set; }
 
         public virtual int PorukaIDPoruke { get; set; }
-        public virtual string StomatologPrimalacIDClanaKomore { get; set; }
-        public virtual string StomatologSaljeIDClanaKomore { get; set; }
+        public virtual int StomatologPrimalacIDClanaKomore { get; set; }
+        public virtual int StomatologSaljeIDClanaKomore { get; set; }
 
 
         public virtual Poruka OriginalnaPoruka { get; set; }

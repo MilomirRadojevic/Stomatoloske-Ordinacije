@@ -84,5 +84,57 @@ namespace Example.Controllers
             return PartialView("_ListaOrdinacija", model);
         }
 
+        public ActionResult DetailjiOrdinacije(int? MaticniBrojFirme)
+        {
+            if (MaticniBrojFirme == null)
+                throw new Exception("Matični broj firme nije zadat!");
+
+            DetaljiOrdinacijeViewModel model = new DetaljiOrdinacijeViewModel();
+            model.MaticniBrojFirme = (int)MaticniBrojFirme;
+
+            return View(model);
+        }
+
+
+        public ActionResult IzmeniOrdinaciju(int? MaticniBrojFirme)
+        {
+            if (MaticniBrojFirme == null)
+                throw new Exception("Maticni broj firme nije zadat!");
+            IzmeniOrdinacijuViewModel model = new IzmeniOrdinacijuViewModel();
+            model.MaticniBrojFirme = (int)MaticniBrojFirme;
+            model.loadData();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult IzmeniOrdinaciju(IzmeniOrdinacijuViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.editOrdinacija();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception e)
+                {
+                    return RedirectToAction("Error", new { Message = e.Message });
+                }
+
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult ObrisiOrdinaciju(int? MaticniBrojFirme)
+        {
+
+            Ordinacija o = context.Ordinacije.Where(m => m.MaticniBrojFirme == MaticniBrojFirme).SingleOrDefault();
+            context.Ordinacije.Remove(o);
+            context.SaveChanges();
+
+            return RedirectToAction("Pretraga", "Ordinacija");
+        }
     }
 }

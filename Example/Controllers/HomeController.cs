@@ -24,7 +24,7 @@ namespace Example.Controllers
             StomatologContext context = new StomatologContext();
             var user = manager.FindById(User.Identity.GetUserId());
             var result = from e in context.Stomatolozi
-                         where e.IDClanaKomore == user.UserName
+                         where e.JMBG == user.UserName
                          select e.Ime + " " + e.Prezime;
             if (result.Any())
                 ViewBag.Ime = result.First();

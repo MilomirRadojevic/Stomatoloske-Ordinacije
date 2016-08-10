@@ -1,0 +1,56 @@
+﻿@model Example.Models.IzmeniOrdinacijuViewModel
+
+@{
+    ViewBag.Title = "Izmeni ordinaciju";
+}
+
+<h2>Izmeni ordinaciju</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.MaticniBrojFirme)
+        <div>
+            @Html.LabelFor(m => m.Naziv)
+            @Html.TextBoxFor(m => m.Naziv)
+            @Html.ValidationMessageFor(m => m.Naziv)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Grad)
+            @Html.TextBoxFor(m => m.Grad)
+            @Html.ValidationMessageFor(m => m.Grad)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Adresa)
+            @Html.TextBoxFor(m => m.Adresa)
+            @Html.ValidationMessageFor(m => m.Adresa)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Kontakttelefon)
+            @Html.TextBoxFor(m => m.Kontakttelefon)
+            @Html.ValidationMessageFor(m => m.Kontakttelefon)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.PIB)
+            @Html.TextBoxFor(m => m.PIB)
+            @Html.ValidationMessageFor(m => m.PIB)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.ImeVlasnika)
+            @Html.TextBoxFor(m => m.ImeVlasnika)
+            @Html.ValidationMessageFor(m => m.ImeVlasnika)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.PrezimeVlasnika)
+            @Html.TextBoxFor(m => m.PrezimeVlasnika)
+            @Html.ValidationMessageFor(m => m.PrezimeVlasnika)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG)
+            @Html.ValidationMessageFor(m => m.JMBG)
+        </div>
+        <input type="submit" value="Submit changes" />
+    }
+    @Html.ActionLink("Vrati se na listu ordinacija", "Index")
+</div>

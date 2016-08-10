@@ -1,0 +1,71 @@
+﻿@model Example.Models.StomatologViewModel
+@{
+    ViewBag.Title = "Pretraga";
+}
+
+<p>
+    @Html.ActionLink("Dodaj novog stomatologa", "DodajStomatologa", "Stomatolog")
+</p>
+<div>
+    <div>
+        @using (Ajax.BeginForm("RefreshList", "Stomatolog", new AjaxOptions()
+        {
+            UpdateTargetId = "listastomatologa",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST"
+
+        }))
+        {
+            <span style="font-weight: bold;">Filter: </span>
+            @Html.LabelFor(m => m.IDClanaKomore)
+            @Html.TextBoxFor(m => m.IDClanaKomore)
+            @Html.ValidationMessageFor(m => m.IDClanaKomore)
+
+            @Html.LabelFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG)
+            @Html.ValidationMessageFor(m => m.JMBG)
+
+            @Html.LabelFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime)
+            @Html.ValidationMessageFor(m => m.Ime)
+
+            @Html.LabelFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime)
+            @Html.ValidationMessageFor(m => m.Prezime)
+
+            <div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div id="listastomatologa">
+    @Html.Partial("_ListaStomatologa", Model)
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $("#IDClanaKomore, #JMBG, #Ime, #Prezime").keyup(function (event) {
+            // $(this).parents("form").submit();
+
+            // Moze i ovako, efekat je isti, ali je fleksibilnije, jer direktno
+            // koristimo JQuery.ajax() metodu.
+            $.ajax($(this).parents("form").attr("action"), {
+                // submit-uju se parametri koji se pokupe iz forme
+                data: { IDClanaKomore: $("#IDClanaKomore").val(), JMBG: $("#JMBG").val(), Ime: $("#Ime").val(), Prezime: $("#Prezime").val() },
+                method: "POST",
+                // izvrsava se ako zahtev uspe
+                success: function (data, status, xhr) {
+                    $("#listastomatologa").html(data);
+                },
+                // izvrsava se ako se dogodi neka greska
+                error: function (xhr, status, err) {
+                    $("#listastomatologa").text(err);
+                },
+                dataType: "html"
+            });
+        });
+    </script>
+}
+

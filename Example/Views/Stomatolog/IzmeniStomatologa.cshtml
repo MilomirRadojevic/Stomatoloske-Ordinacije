@@ -1,0 +1,56 @@
+﻿@model Example.Models.IzmeniStomatologaViewModel
+
+@{
+    ViewBag.Title = "Izmeni stomatologa";
+}
+
+<h2>Izmeni stomatologa</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.IDClanaKomore)
+        <div>
+            @Html.LabelFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime)
+            @Html.ValidationMessageFor(m => m.Ime)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime)
+            @Html.ValidationMessageFor(m => m.Prezime)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG)
+            @Html.ValidationMessageFor(m => m.JMBG)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.ZavrseniFakultet)
+            @Html.TextBoxFor(m => m.ZavrseniFakultet)
+            @Html.ValidationMessageFor(m => m.ZavrseniFakultet)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Specijalizacija)
+            @Html.TextBoxFor(m => m.Specijalizacija)
+            @Html.ValidationMessageFor(m => m.Specijalizacija)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Sertifikat)
+            @Html.TextBoxFor(m => m.Sertifikat)
+            @Html.ValidationMessageFor(m => m.Sertifikat)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.BrojTelefona)
+            @Html.TextBoxFor(m => m.BrojTelefona)
+            @Html.ValidationMessageFor(m => m.BrojTelefona)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Mail)
+            @Html.TextBoxFor(m => m.Mail)
+            @Html.ValidationMessageFor(m => m.Mail)
+        </div>
+        <input type="submit" value="Submit changes" />
+    }
+    @Html.ActionLink("Vrati se na listu stomatologa", "Index")
+</div>

@@ -9,7 +9,7 @@ namespace Example.Models
     public class Stomatolog
     {
         [Key]
-        public virtual string IDClanaKomore { get; set; }
+        public virtual int IDClanaKomore { get; set; }
 
         public virtual int OrdinacijaMaticniBrojFirme { get; set; }
 
@@ -17,8 +17,8 @@ namespace Example.Models
         public virtual string Prezime { get; set; }
         public virtual string JMBG { get; set; }
         public virtual string ZavrseniFakultet { get; set; }
-        public virtual ICollection<string> Specijalizacije { get; set; }
-        public virtual ICollection<string> Sertifikati { get; set; }
+        public virtual string Specijalizacija { get; set; }
+        public virtual string Sertifikat { get; set; }
         public virtual string BrojTelefona { get; set; }
         public virtual string Mail { get; set; }
         public virtual Ordinacija OrdinacijaZaposlenog { get; set; }
@@ -30,7 +30,6 @@ namespace Example.Models
         public virtual ICollection<Objava> Objave { get; set; }
         public virtual ICollection<KomentarNaObjavu> KomentariNaObjave { get; set; }
         public virtual ICollection<OdgovorNaPoruku> OdgovoriNaPorukePrimljeno { get; set; }
-
         public virtual ICollection<OdgovorNaPoruku> OdgovoriNaPorukePoslato { get; set; }
 
     }
