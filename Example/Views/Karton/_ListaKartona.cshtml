@@ -1,0 +1,32 @@
+﻿@model Example.Models.KartonViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.JMBG)
+        </th>
+
+    </tr>
+
+    @foreach (var m in Model.ListaKartona)
+    {
+        <tr>
+            <td>@m.Ime</td>
+            <td>@m.Prezime</td>
+            <td>@m.JMBG</td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", m.IDKartona) |
+                @Html.ActionLink("Details", "Details", m.IDKartona) |
+                @Html.ActionLink("Delete", "Delete", m.IDKartona)
+            </td>
+        </tr>
+    }
+
+</table>

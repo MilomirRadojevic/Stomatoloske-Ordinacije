@@ -217,3 +217,4 @@ C:\Users\Milomir93\Desktop\Test\Example\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Milomir93\Desktop\Test\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Milomir93\Desktop\Test\Example\obj\Debug\Example.dll
 C:\Users\Milomir93\Desktop\Test\Example\obj\Debug\Example.pdb
+C:\Users\Milomir93\Desktop\Test\Example\obj\Debug\Example.csprojResolveAssemblyReference.cache

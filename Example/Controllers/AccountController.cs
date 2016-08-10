@@ -36,7 +36,7 @@ namespace Example.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                if (User.IsInRole("user"))
+                if(User.IsInRole("user"))
                     return RedirectToAction("Index", "Home");
             }
             ViewBag.ReturnUrl = returnUrl;

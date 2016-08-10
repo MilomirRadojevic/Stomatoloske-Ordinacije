@@ -160,17 +160,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AbcController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KartonController.cs" />
     <Compile Include="Controllers\OrdinacijaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KartonViewModel.cs" />
     <Compile Include="Models\KomentarNaObjavu.cs" />
     <Compile Include="Models\NovaOrdinacija.cs" />
+    <Compile Include="Models\NoviKarton.cs" />
     <Compile Include="Models\ObavljenaPoseta.cs" />
     <Compile Include="Models\Objava.cs" />
     <Compile Include="Models\OdgovorNaPoruku.cs" />
@@ -238,10 +240,14 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Admin.cshtml" />
-    <Content Include="Views\Ordinacija\_ListaOrdinacija.cshtml" />
-    <Content Include="Views\Ordinacija\DodajOrdinaciju.cshtml" />
-    <Content Include="Views\Ordinacija\Index.cshtml" />
     <Content Include="Views\Ordinacija\Pretraga.cshtml" />
+    <Content Include="Views\Ordinacija\Index.cshtml" />
+    <Content Include="Views\Ordinacija\DodajOrdinaciju.cshtml" />
+    <Content Include="Views\Ordinacija\_ListaOrdinacija.cshtml" />
+    <Content Include="Views\Karton\DodajKarton.cshtml" />
+    <Content Include="Views\Karton\Index.cshtml" />
+    <Content Include="Views\Karton\_ListaKartona.cshtml" />
+    <Content Include="Views\Karton\Pretraga.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

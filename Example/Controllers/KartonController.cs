@@ -7,48 +7,49 @@ using Example.Models;
 
 namespace Example.Controllers
 {
-    public class OrdinacijaController : Controller
+    public class KartonController : Controller
     {
 
         private StomatologContext context = new StomatologContext();
 
         //
-        // GET: /Ordinacija/
+        // GET: /Karton/
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: /Ordinacija/DodajOrdinaciju
-        [Authorize(Roles = "admin")]
-        public ActionResult DodajOrdinaciju()
+        // GET: /Karton/DodajKarton
+        [Authorize(Roles = "user")]
+        public ActionResult DodajKarton()
         {
-            return View(new NovaOrdinacija());
+            return View(new NoviKarton());
         }
 
-        // POST: /Ordinacija/DodajOrdinaciju
+        // POST: /Karton/DodajKarton
         [HttpPost]
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "user")]
         [ValidateAntiForgeryToken]
-        public ActionResult DodajOrdinaciju(NovaOrdinacija model)
+        public ActionResult DodajKarton(NoviKarton model)
         {
             if (ModelState.IsValid)
             {
-                Ordinacija o = new Ordinacija()
+                Pacijent o = new Pacijent()
                 {
-                    Naziv = model.Naziv,
-                    PIB = model.PIB,
-                    ImeVlasnika = model.ImeVlasnika,
-                    PrezimeVlasnika = model.PrezimeVlasnika,
-                    JMBG = model.JMBGVlasnika,
-                    Adresa = model.Adresa,
-                    Grad = model.Grad,
-                    KontaktTelefon = model.KontaktTelefon
+                    StomatologIDClanaKomore = model.StomatologIDClanaKomore,
+                    Ime = model.Ime,
+                    Prezime = model.Prezime,
+                    GodinaRodjenja = model.GodinaRodjenja,
+                    JMBG = model.JMBG,
+                    KontaktTelefon = model.KontaktTelefon,
+                    ImeRoditelja = model.ImeRoditelja,
+                    Napomena = model.Napomena,
+                    Pol = model.Pol
                 };
 
-                context.Ordinacije.Add(o);
+                context.Pacijenti.Add(o);
                 context.SaveChanges();
-                return RedirectToAction("Index", "Ordinacija");
+                return RedirectToAction("Index", "Karton");
             }
 
             // If we got this far, something failed, redisplay form
@@ -60,7 +61,7 @@ namespace Example.Controllers
         // GET: /Ordinacija/Pretraga
         public ActionResult Pretraga()
         {
-            return View(new OrdinacijaViewModel());
+            return View(new KartonViewModel());
         }
 
         /*[HttpPost]
@@ -75,13 +76,13 @@ namespace Example.Controllers
         }*/
 
         [HttpPost]
-        public ActionResult RefreshList(OrdinacijaViewModel model)
+        public ActionResult RefreshList(KartonViewModel model)
         {
             if (ModelState.IsValid)
             {
                 model.RefreshList();
             }
-            return PartialView("_ListaOrdinacija", model);
+            return PartialView("_ListaKartona", model);
         }
 
     }

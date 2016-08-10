@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Upravljanje kartonima";
+}
+
+<h2>Index</h2>
+
+<ul id="menu1">
+    <li>@Html.ActionLink("Dodaj karton", "DodajKarton", "Karton", routeValues: null, htmlAttributes: new { id = "dodajNoviKarton" })</li>
+    <li>@Html.ActionLink("Pretraga i izmena kartona", "Pretraga", "Karton", routeValues: null, htmlAttributes: new { id = "pretragaKartona" })</li>
+</ul>
+
