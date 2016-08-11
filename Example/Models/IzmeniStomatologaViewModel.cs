@@ -10,7 +10,7 @@ namespace Example.Models
     {
         StomatologContext context = new StomatologContext();
 
-        public int IDClanaKomore { get; set; }
+        public string IDClanaKomore { get; set; }
 
         [Required]
         public string Ime
@@ -91,14 +91,14 @@ namespace Example.Models
                             select m).First();
 
 
-            Ime = s.Ime;
-            Prezime = s.Prezime;
-            JMBG = s.JMBG;
-            ZavrseniFakultet = s.ZavrseniFakultet;
-            Specijalizacija = s.Specijalizacija;
-            Sertifikat = s.Sertifikat;
-            BrojTelefona = s.BrojTelefona;
-            Mail = s.Mail;
+            s.Ime = Ime;
+            s.Prezime = Prezime;
+            s.JMBG = JMBG;
+            s.ZavrseniFakultet = ZavrseniFakultet;
+            s.Specijalizacija = Specijalizacija;
+            s.Sertifikat = Sertifikat;
+            s.BrojTelefona = BrojTelefona;
+            s.Mail = Mail;
 
             context.SaveChanges();
         }

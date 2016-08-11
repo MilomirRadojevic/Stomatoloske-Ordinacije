@@ -10,7 +10,7 @@ namespace Example.Models
     {
         [Required]
         [Display(Name = "StomatologIDClanaKomore:")]
-        public int StomatologIDClanaKomore { get; set; }
+        public string StomatologIDClanaKomore { get; set; }
 
         [Required]
         [Display(Name = "Ime:")]

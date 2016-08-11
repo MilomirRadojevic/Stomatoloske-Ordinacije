@@ -36,11 +36,11 @@ namespace Example.Models
         public void RefreshList()
         {
             ListaKartona = (from m in context.Pacijenti
-                            where (m.StomatologIDClanaKomore == 1)/*!!!*/&&
+                            where (m.StomatologIDClanaKomore == "1")/*!!!*/&&
                                ((m.Ime == Ime) ||
                                (m.Prezime == Prezime) ||
                                (m.JMBG == JMBG))
-                            select m).ToList();
+                               select m).ToList();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Example.Models
         public string JMBG { get; set; }
 
         [Display(Name = "ID clana komore:")]
-        public int IDClanaKomore { get; set; }
+        public string IDClanaKomore { get; set; }
 
         private StomatologContext context = new StomatologContext();
 
@@ -35,7 +35,7 @@ namespace Example.Models
             Ime = "";
             Prezime = "";
             JMBG = "";
-            IDClanaKomore = 0;
+            IDClanaKomore = "";
         }
 
 

@@ -9,7 +9,7 @@ namespace Example.Models
     {
         StomatologContext context = new StomatologContext();
 
-        public int IDClanaKomore { get; set; }
+        public string IDClanaKomore { get; set; }
 
         public string Ime
         {

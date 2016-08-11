@@ -10,7 +10,7 @@ namespace Example.Models
     {
         [Required]
         [Display(Name = "ID člana komore:")]
-        public int IDClanaKomore { get; set; }
+        public string IDClanaKomore { get; set; }
 
         [Required]
         [Display(Name = "Matični broj firme stomatologa:")]

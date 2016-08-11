@@ -36,8 +36,8 @@ namespace Example.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                if (User.IsInRole("user"))
-                    return RedirectToAction("Index", "Home");
+                if(User.IsInRole("user"))
+                    return RedirectToAction("IndexForUsers", "Home");
             }
             ViewBag.ReturnUrl = returnUrl;
             return View();
@@ -53,7 +53,7 @@ namespace Example.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 if (User.IsInRole("user"))
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("IndexForUsers", "Home");
             }
             if (ModelState.IsValid)
             {
@@ -62,7 +62,7 @@ namespace Example.Controllers
                 {
                     await SignInAsync(user, model.RememberMe);
                     if (user.UserName != "Administrator")
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("IndexForUsers", "Home");
                     else
                         return RedirectToAction("Admin", "Home");
                 }

@@ -9,7 +9,7 @@ namespace Example.Models
     public class Stomatolog
     {
         [Key]
-        public virtual int IDClanaKomore { get; set; }
+        public virtual string IDClanaKomore { get; set; }
 
         public virtual int OrdinacijaMaticniBrojFirme { get; set; }
 

@@ -86,23 +86,23 @@ namespace Example.Controllers
             return PartialView("_ListaStomatologa", model);
         }
 
-        public ActionResult DetaljiStomatologa(int? IDClanaKomore)
+        public ActionResult DetaljiStomatologa(string IDClanaKomore)
         {
             if (IDClanaKomore == null)
                 throw new Exception("ID clana komore nije zadat!");
 
             DetaljiStomatologViewModel model = new DetaljiStomatologViewModel();
-            model.IDClanaKomore = (int)IDClanaKomore;
+            model.IDClanaKomore = IDClanaKomore;
 
             return View(model);
         }
 
-        public ActionResult IzmeniStomatologa(int? IDClanaKomore)
+        public ActionResult IzmeniStomatologa(string IDClanaKomore)
         {
             if (IDClanaKomore == null)
                 throw new Exception("ID clana komore nije zadat!");
             IzmeniStomatologaViewModel model = new IzmeniStomatologaViewModel();
-            model.IDClanaKomore = (int)IDClanaKomore;
+            model.IDClanaKomore = IDClanaKomore;
             model.loadData();
 
             return View(model);

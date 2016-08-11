@@ -11,8 +11,8 @@ namespace Example.Models
         [Key]
         public virtual int IDPoruke { get; set; }
 
-        public virtual int StomatologPrimalacIDClanaKomore { get; set; }
-        public virtual int StomatologSaljeIDClanaKomore { get; set; }
+        public virtual string StomatologPrimalacIDClanaKomore { get; set; }
+        public virtual string StomatologSaljeIDClanaKomore { get; set; }
 
         public virtual DateTime DatumVreme { get; set; }
         public virtual Stomatolog Primalac { get; set; }

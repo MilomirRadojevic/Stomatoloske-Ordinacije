@@ -35,7 +35,7 @@ namespace Example.Models
         }
 
         [Required]
-        public string Kontakttelefon
+        public string KontaktTelefon
         {
             get;
             set;
@@ -78,7 +78,7 @@ namespace Example.Models
             Naziv = ordinacija.Naziv;
             Grad = ordinacija.Grad;
             Adresa = ordinacija.Adresa;
-            Kontakttelefon = ordinacija.KontaktTelefon;
+            KontaktTelefon = ordinacija.KontaktTelefon;
             PIB = ordinacija.PIB;
             ImeVlasnika = ordinacija.ImeVlasnika;
             PrezimeVlasnika = ordinacija.PrezimeVlasnika;
@@ -91,14 +91,14 @@ namespace Example.Models
                                      where m.MaticniBrojFirme == MaticniBrojFirme
                                      select m).First();
 
-            Naziv = ordinacija.Naziv;
-            Grad = ordinacija.Grad;
-            Adresa = ordinacija.Adresa;
-            Kontakttelefon = ordinacija.KontaktTelefon;
-            PIB = ordinacija.PIB;
-            ImeVlasnika = ordinacija.ImeVlasnika;
-            PrezimeVlasnika = ordinacija.PrezimeVlasnika;
-            JMBG = ordinacija.JMBG;
+            ordinacija.Naziv = Naziv;
+            ordinacija.Grad = Grad;
+            ordinacija.Adresa = Adresa;
+            ordinacija.KontaktTelefon = KontaktTelefon;
+            ordinacija.PIB = PIB;
+            ordinacija.ImeVlasnika = ImeVlasnika;
+            ordinacija.PrezimeVlasnika = PrezimeVlasnika;
+            ordinacija.JMBG = JMBG;
 
             context.SaveChanges();
         }

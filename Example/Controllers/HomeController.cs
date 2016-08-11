@@ -13,8 +13,16 @@ namespace Example.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize(Roles = "user")]
         public ActionResult Index()
+        {
+
+            // treba da bude deo za izlistavanje ordinacija
+
+            return View();
+        }
+
+        [Authorize(Roles = "user")]
+        public ActionResult IndexForUsers()
         {
             if (!User.Identity.IsAuthenticated)
             {
@@ -24,7 +32,7 @@ namespace Example.Controllers
             StomatologContext context = new StomatologContext();
             var user = manager.FindById(User.Identity.GetUserId());
             var result = from e in context.Stomatolozi
-                         where e.JMBG == user.UserName
+                         where e.IDClanaKomore == user.UserName
                          select e.Ime + " " + e.Prezime;
             if (result.Any())
                 ViewBag.Ime = result.First();
@@ -33,6 +41,7 @@ namespace Example.Controllers
 
             return View();
         }
+
 
         [Authorize(Roles = "admin")]
         public ActionResult Admin()

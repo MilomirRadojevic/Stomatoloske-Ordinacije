@@ -164,6 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KartonController.cs" />
     <Compile Include="Controllers\OrdinacijaController.cs" />
+    <Compile Include="Controllers\ProfilController.cs" />
     <Compile Include="Controllers\StomatologController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -190,6 +191,7 @@
     <Compile Include="Models\Stomatolog.cs" />
     <Compile Include="Models\StomatologContext.cs" />
     <Compile Include="Models\StomatologViewModel.cs" />
+    <Compile Include="Models\UrediProfilViewModel.cs" />
     <Compile Include="Models\ZakazanaPoseta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -257,12 +259,14 @@
     <Content Include="Views\Karton\Pretraga.cshtml" />
     <Content Include="Views\Ordinacija\DetaljiOrdinacije.cshtml" />
     <Content Include="Views\Ordinacija\IzmeniOrdinaciju.cshtml" />
+    <Content Include="Views\Stomatolog\Pretraga.cshtml" />
     <Content Include="Views\Stomatolog\_ListaStomatologa.cshtml" />
     <Content Include="Views\Stomatolog\DetaljiStomatologa.cshtml" />
     <Content Include="Views\Stomatolog\DodajStomatologa.cshtml" />
     <Content Include="Views\Stomatolog\Index.cshtml" />
     <Content Include="Views\Stomatolog\IzmeniStomatologa.cshtml" />
-    <Content Include="Views\Stomatolog\Pretraga.cshtml" />
+    <Content Include="Views\Home\IndexForUsers.cshtml" />
+    <Content Include="Views\Profil\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
