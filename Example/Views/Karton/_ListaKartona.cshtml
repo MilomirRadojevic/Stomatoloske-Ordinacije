@@ -22,9 +22,9 @@
             <td>@m.JMBG</td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", m.IDKartona) |
-                @Html.ActionLink("Details", "Details", m.IDKartona) |
-                @Html.ActionLink("Delete", "Delete", m.IDKartona)
+                @Html.ActionLink("Izmeni podatke o kartonu", "IzmeniKarton", new { IDKartona = m.IDKartona }) |
+                @Html.ActionLink("Detalji o kartonu", "DetaljiKartona", new { IDKartona = m.IDKartona }) |
+                @Html.ActionLink("Obrisi karton", "ObrisiKarton", new { IDKartona = m.IDKartona })
             </td>
         </tr>
     }

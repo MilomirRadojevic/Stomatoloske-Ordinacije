@@ -85,5 +85,56 @@ namespace Example.Controllers
             return PartialView("_ListaKartona", model);
         }
 
+        public ActionResult DetaljiKartona(int? IDKartona)
+        {
+            if (IDKartona == null)
+                throw new Exception("ID kartona nije zadat!");
+
+            DetaljiKartonaViewModel model = new DetaljiKartonaViewModel();
+            model.IDKartona = (int)IDKartona;
+
+            return View(model);
+        }
+
+
+        public ActionResult IzmeniKarton(int? IDKartona)
+        {
+            if (IDKartona == null)
+                throw new Exception("ID kartona nije zadat!");
+            IzmeniKartonViewModel model = new IzmeniKartonViewModel();
+            model.IDKartona = (int)IDKartona;
+            model.loadData();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult IzmeniKarton(IzmeniKartonViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.editKarton();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception e)
+                {
+                    return RedirectToAction("Error", new { Message = e.Message });
+                }
+
+            }
+            return View(model);
+        }
+
+        public ActionResult ObrisiKarton(int? IDKartona)
+        {
+
+            Pacijent o = context.Pacijenti.Where(m => m.IDKartona == IDKartona).SingleOrDefault();
+            context.Pacijenti.Remove(o);
+            context.SaveChanges();
+
+            return RedirectToAction("Pretraga", "Karton");
+        }
     }
 }

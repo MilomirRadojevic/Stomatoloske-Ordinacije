@@ -36,7 +36,7 @@ namespace Example.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                if(User.IsInRole("user"))
+                if (User.IsInRole("user"))
                     return RedirectToAction("IndexForUsers", "Home");
             }
             ViewBag.ReturnUrl = returnUrl;
@@ -98,14 +98,21 @@ namespace Example.Controllers
                 if (result.Succeeded)
                 {
                     UserManager.AddToRole(user.Id, "user");
-                    /*Stomatolog s = new Stomatolog()
+                    Stomatolog s = new Stomatolog()
                     {
                         IDClanaKomore = model.UserName,
-                        Ime = model.UserName,
-                        Prezime = model.UserName
+                        OrdinacijaMaticniBrojFirme = model.MaticniBrojFirmeStomatologa,
+                        Ime = model.Ime,
+                        Prezime = model.Prezime,
+                        JMBG = model.JMBG,
+                        ZavrseniFakultet = model.ZavrseniFakultet,
+                        Specijalizacija = model.Specijalizacija,
+                        Sertifikat = model.Sertifikat,
+                        BrojTelefona = model.BrojTelefona,
+                        Mail = model.Mail
                     };
                     context.Stomatolozi.Add(s);
-                    context.SaveChanges();*/
+                    context.SaveChanges();
 
                     //await SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Admin", "Home");

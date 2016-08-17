@@ -1,0 +1,18 @@
+﻿@model Example.Models.DetaljiKartonaViewModel
+
+@{
+    ViewBag.Title = "Detalji o ordinaciji";
+}
+
+<h2>Detalji o ordinaciji</h2>
+
+<div>
+    <div><span style="font-weight: bold;">Naziv: </span> @Model.Ime</div>
+    <div><span style="font-weight: bold;">Grad: </span> @Model.Prezime</div>
+    <div><span style="font-weight: bold;">Adresa: </span> @Model.JMBG</div>
+    <div><span style="font-weight: bold;">PIB: </span> @Model.GodinaRodjenja</div>
+    <div><span style="font-weight: bold;">Ime vlasnika: </span> @Model.KontaktTelefon</div>
+    <div><span style="font-weight: bold;">Prezime vlasnika: </span> @Model.ImeRoditelja</div>
+    <div><span style="font-weight: bold;">JMBG: </span> @Model.Napomena</div>
+    <div><span style="font-weight: bold;">Prezime vlasnika: </span> @Model.Pol</div>
+</div>

@@ -69,15 +69,45 @@ namespace Example.Models
         {
             public int ID { get; set; }
             public string Name { get; set; }
+
         }
 
-        /*public List<Item> EmployeeList
-        {
-            get
-            {
-                return db.Employees.Select(e => new Item() { ID = e.ID, Name = e.FirstName + " " + e.LastName }).ToList();
-            }
-        }*/
+        [Required]
+        [Display(Name = "Maticni broj firme stomatologa")]
+        public int MaticniBrojFirmeStomatologa { get; set; }
 
+        [Required]
+        [Display(Name = "Ime")]
+        public string Ime { get; set; }
+
+
+        [Required]
+        [Display(Name = "Prezime")]
+        public string Prezime { get; set; }
+
+        [Required]
+        [Display(Name = "JMBG")]
+        public string JMBG { get; set; }
+
+        [Required]
+        [Display(Name = "Zavrseni fakultet")]
+        public string ZavrseniFakultet { get; set; }
+
+        [Required]
+        [Display(Name = "Specijalizacija")]
+        public string Specijalizacija { get; set; }
+
+        [Required]
+        [Display(Name = "Sertifikat")]
+        public string Sertifikat { get; set; }
+
+        [Required]
+        [Display(Name = "Broj telefona")]
+        public string BrojTelefona { get; set; }
+
+        [Required]
+        [Display(Name = "Mail")]
+        public string Mail { get; set; }
     }
+
 }

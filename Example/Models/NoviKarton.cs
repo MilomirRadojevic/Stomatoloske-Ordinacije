@@ -26,7 +26,7 @@ namespace Example.Models
 
         [Required]
         [Display(Name = "Godina rodjenja:")]
-        public uint GodinaRodjenja { get; set; }
+        public int GodinaRodjenja { get; set; }
 
         [Required]
         [Display(Name = "Kontakt telefon:")]

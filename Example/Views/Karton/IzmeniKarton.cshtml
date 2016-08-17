@@ -1,0 +1,57 @@
+﻿@model Example.Models.IzmeniKartonViewModel
+
+@{
+    ViewBag.Title = "Izmeni karton";
+}
+
+<h2>Izmeni karton</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.IDKartona)
+        @Html.HiddenFor(m => m.StomatologIDClanaKomore)
+        <div>
+            @Html.LabelFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime)
+            @Html.ValidationMessageFor(m => m.Ime)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime)
+            @Html.ValidationMessageFor(m => m.Prezime)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG)
+            @Html.ValidationMessageFor(m => m.JMBG)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.GodinaRodjenja)
+            @Html.TextBoxFor(m => m.GodinaRodjenja)
+            @Html.ValidationMessageFor(m => m.GodinaRodjenja)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.KontaktTelefon)
+            @Html.TextBoxFor(m => m.KontaktTelefon)
+            @Html.ValidationMessageFor(m => m.KontaktTelefon)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.ImeRoditelja)
+            @Html.TextBoxFor(m => m.ImeRoditelja)
+            @Html.ValidationMessageFor(m => m.ImeRoditelja)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Napomena)
+            @Html.TextBoxFor(m => m.Napomena)
+            @Html.ValidationMessageFor(m => m.Napomena)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Pol)
+            @Html.TextBoxFor(m => m.Pol)
+            @Html.ValidationMessageFor(m => m.Pol)
+        </div>
+        <input type="submit" value="Submit changes" />
+    }
+    @Html.ActionLink("Vrati se na listu kartona", "Index")
+</div>

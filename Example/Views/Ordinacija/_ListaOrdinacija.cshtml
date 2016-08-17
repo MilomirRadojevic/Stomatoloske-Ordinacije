@@ -26,9 +26,9 @@
             <td>@m.JMBG</td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", m.MaticniBrojFirme) |
-                @Html.ActionLink("Details", "Details", m.MaticniBrojFirme) |
-                @Html.ActionLink("Delete", "Delete", m.MaticniBrojFirme)
+                @Html.ActionLink("Izmeni podatke o ordinaciji", "IzmeniOrdinaciju", new { MaticniBrojFirme = m.MaticniBrojFirme }) |
+                @Html.ActionLink("Detalji o ordinaciji", "DetaljiOrdinacije", new { MaticniBrojFirme = m.MaticniBrojFirme }) |
+                @Html.ActionLink("Obrisi ordinaciju", "ObrisiOrdinaciju", new { MaticniBrojFirme = m.MaticniBrojFirme })
             </td>
         </tr>
     }

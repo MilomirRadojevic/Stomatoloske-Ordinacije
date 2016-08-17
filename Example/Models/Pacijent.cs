@@ -17,7 +17,7 @@ namespace Example.Models
         public virtual string Prezime { get; set; }
         public virtual string JMBG { get; set; }
         public virtual Stomatolog IzabraniStomatolog { get; set; }
-        public virtual uint GodinaRodjenja { get; set; }
+        public virtual int GodinaRodjenja { get; set; }
         public virtual string KontaktTelefon { get; set; }
         public virtual string ImeRoditelja { get; set; }
         public virtual string Napomena { get; set; }

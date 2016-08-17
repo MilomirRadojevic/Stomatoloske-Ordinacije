@@ -20,7 +20,7 @@ namespace Example.Controllers
         }
 
         // GET: /Stomatolog/DodajStomatologa
-        [Authorize(Roles = "admin")]
+        /*[Authorize(Roles = "admin")]
         public ActionResult DodajStomatologa()
         {
             return View(new NovStomatolog());
@@ -57,7 +57,7 @@ namespace Example.Controllers
             return View(model);
         }
 
-
+        */
 
         // GET: /Stomatolog/Pretraga
         public ActionResult Pretraga()
@@ -127,18 +127,14 @@ namespace Example.Controllers
             return View(model);
         }
 
-
-        [HttpPost]
-        public ActionResult ObrisiStomatologa(int? IDClanaKomore)
+        public ActionResult ObrisiStomatologa(string IDClanaKomore)
         {
 
-            Stomatolog s = context.Stomatolozi.Where(m => m.IDClanaKomore.CompareTo(IDClanaKomore) == 0).SingleOrDefault();
+            Stomatolog s = (from m in context.Stomatolozi where m.IDClanaKomore == IDClanaKomore select m).ToList().First();
             context.Stomatolozi.Remove(s);
             context.SaveChanges();
 
             return RedirectToAction("Pretraga", "Stomatolog");
         }
-
-
     }
 }

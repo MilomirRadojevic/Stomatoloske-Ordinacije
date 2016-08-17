@@ -84,7 +84,7 @@ namespace Example.Controllers
             return PartialView("_ListaOrdinacija", model);
         }
 
-        public ActionResult DetailjiOrdinacije(int? MaticniBrojFirme)
+        public ActionResult DetaljiOrdinacije(int? MaticniBrojFirme)
         {
             if (MaticniBrojFirme == null)
                 throw new Exception("Matični broj firme nije zadat!");
@@ -126,7 +126,6 @@ namespace Example.Controllers
             return View(model);
         }
 
-        [HttpPost]
         public ActionResult ObrisiOrdinaciju(int? MaticniBrojFirme)
         {
 
