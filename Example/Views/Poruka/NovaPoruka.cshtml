@@ -1,0 +1,26 @@
+﻿@model Example.Models.NovaPorukaViewModel
+
+@{
+    ViewBag.Title = "Nova poruka";
+}
+
+<h2>Napisi poruku:</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.PrimalacIDClanaKomore)
+            @Html.DropDownListFor(m => m.PrimalacIDClanaKomore, new SelectList(Model.Primaoci, "IDClanaKomore", "ImeIPrezime"));
+            @Html.ValidationMessageFor(m => m.PrimalacIDClanaKomore)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.TekstPoruke)
+            @Html.TextAreaFor(m => m.TekstPoruke)
+            @Html.ValidationMessageFor(m => m.TekstPoruke)
+        </div>
+        <div>
+            <input type="submit" value="Send" />
+        </div>
+    }
+</div>

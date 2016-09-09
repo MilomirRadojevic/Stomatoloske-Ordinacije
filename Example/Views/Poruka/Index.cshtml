@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Poruke</h2>
+
+<ul id="menu1">
+    <li>@Html.ActionLink("Nova poruka", "NovaPoruka", "Poruka", routeValues: null, htmlAttributes: new { id = "upravljanjeKartonima" })</li>
+    <li>@Html.ActionLink("Moje poruke", "ListaPoruka", "Poruka", routeValues: null, htmlAttributes: new { id = "upravljanjeKartonima" })</li>
+
+</ul>
+

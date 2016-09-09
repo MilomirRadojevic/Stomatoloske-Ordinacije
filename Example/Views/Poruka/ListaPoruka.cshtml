@@ -1,0 +1,32 @@
+﻿@model Example.Models.ListaPorukaViewModel
+
+@{
+    ViewBag.Title = "Lista poruka";
+}
+
+<h2>Lista poruka</h2>
+
+<div>
+    @using (Ajax.BeginForm("RefreshList", new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        UpdateTargetId = "list",
+        InsertionMode = InsertionMode.Replace
+    }))
+    {
+
+    }
+
+</div>
+
+<div id="list">
+    @Html.Partial("_ListaPoruka", Model)
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $("#Tip").change(function (event) {
+            $(this).parents("form").submit();
+        });
+    </script>
+}

@@ -1,0 +1,16 @@
+﻿@model Example.Models.ListaPorukaViewModel
+
+<table class="table">
+
+    @foreach (var m in Model.ListaPoruka)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(m.Salje.Ime + " " + m.Salje.Prezime, "ProcitajPoruku", new { IDClanaKomore = m.Salje.IDClanaKomore })
+
+            </td>
+        </tr>
+
+    }
+</table>
+

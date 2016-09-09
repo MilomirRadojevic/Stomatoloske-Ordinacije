@@ -21,7 +21,29 @@ namespace Example.Models
         public virtual bool Procitana { get; set; }
 
         public virtual ICollection<OdgovorNaPoruku> OdgovoriNaPoruke { get; set; }
+        StomatologContext context = new StomatologContext();
+
+        // override object.Equals
+        public override bool Equals(Object obj)
+        {
 
 
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            //throw new NotImplementedException();
+            return this.StomatologSaljeIDClanaKomore.Equals(((Poruka)obj).StomatologSaljeIDClanaKomore);
+        }
+
+
+        public void sacuvajPoruku()
+        {
+            DatumVreme = DateTime.Now;
+            Procitana = false;
+            context.Poruke.Add(this);
+            context.SaveChanges();
+        }
     }
 }
