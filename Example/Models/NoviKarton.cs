@@ -9,7 +9,7 @@ namespace Example.Models
     public class NoviKarton
     {
         [Required]
-        [Display(Name = "StomatologIDClanaKomore:")]
+        [Display(Name = "ID Člana Komore:")]
         public string StomatologIDClanaKomore { get; set; }
 
         [Required]
@@ -25,7 +25,7 @@ namespace Example.Models
         public string JMBG { get; set; }
 
         [Required]
-        [Display(Name = "Godina rodjenja:")]
+        [Display(Name = "Godina rođenja:")]
         public int GodinaRodjenja { get; set; }
 
         [Required]

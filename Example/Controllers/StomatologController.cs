@@ -19,46 +19,6 @@ namespace Example.Controllers
             return View();
         }
 
-        // GET: /Stomatolog/DodajStomatologa
-        /*[Authorize(Roles = "admin")]
-        public ActionResult DodajStomatologa()
-        {
-            return View(new NovStomatolog());
-        }
-
-        // POST: /Stomatolog/DodajStomatologa
-        [HttpPost]
-        [Authorize(Roles = "admin")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DodajStomatologa(NovStomatolog model)
-        {
-            if (ModelState.IsValid)
-            {
-                Stomatolog s = new Stomatolog()
-                {
-                    IDClanaKomore = model.IDClanaKomore,
-                    OrdinacijaMaticniBrojFirme = model.MaticniBrojFirmeStomatologa,
-                    Ime = model.Ime,
-                    Prezime = model.Prezime,
-                    JMBG = model.JMBG,
-                    ZavrseniFakultet = model.ZavrseniFakultet,
-                    Specijalizacija = model.Specijalizacija,
-                    Sertifikat = model.Sertifikat,
-                    BrojTelefona = model.BrojTelefona,
-                    Mail = model.Mail
-                };
-
-                context.Stomatolozi.Add(s);
-                context.SaveChanges();
-                return RedirectToAction("Index", "Stomatolog");
-            }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
-
-        */
-
         // GET: /Stomatolog/Pretraga
         public ActionResult Pretraga()
         {

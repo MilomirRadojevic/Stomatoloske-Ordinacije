@@ -12,6 +12,7 @@ namespace Example.Models
         public virtual int IDZakazanePosete { get; set; }
 
         public virtual string StomatologIDClanaKomore { get; set; }
+        public virtual int? PacijentIDKartona { get; set; }
 
         public virtual Stomatolog Zakazao { get; set; }
         public virtual DateTime DatumVreme { get; set; }
@@ -19,6 +20,6 @@ namespace Example.Models
         public virtual string PrezimePacijenta { get; set; }
         public virtual Pacijent ZakazanPacijent { get; set; }
         public virtual string Napomena { get; set; }
-
+        public virtual bool ImaKarton { get; set; }
     }
 }

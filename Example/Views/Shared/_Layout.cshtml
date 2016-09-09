@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Stomatolog</title>
+    <title>@ViewBag.Title - Stomatološke Ordinacije</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -19,15 +19,15 @@
                 </button>
                 @if (!Request.IsAuthenticated)
                 {
-                    @Html.ActionLink("Stomatolog", "Login", "Account", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Početna strana", "Index", "Home", null, new { @class = "navbar-brand" })
                 }
                 else if (User.Identity.Name == "Administrator")
                 {
-                    @Html.ActionLink("Stomatolog", "Admin", "Home", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Početna strana", "Admin", "Home", null, new { @class = "navbar-brand" })
                 }
                 else
                 {
-                    @Html.ActionLink("Stomatolog", "Index", "Home", null, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Početna strana", "IndexForUsers", "Home", null, new { @class = "navbar-brand" })
 
                 }
 
@@ -39,14 +39,14 @@
                 }
                 else if (User.Identity.Name == "Administrator")
                 {
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Add login", "Register", "Account")</li>
-                    </ul>
 
                 }
                 else
                 {
-                    <ul class="nav navbar-nav">OVDE IDU LINKOVI</ul>
+                        @Html.ActionLink("Kartoni", "Index", "Karton", routeValues: null, htmlAttributes: new { @class = "navbar-brand" })
+                        @Html.ActionLink("Zakazane posete", "Index", "ZakazanaPoseta", routeValues: null, htmlAttributes: new { @class = "navbar-brand" })
+                        @Html.ActionLink("Obavljene posete", "Index", "ObavljenaPoseta", routeValues: null, htmlAttributes: new { @class = "navbar-brand" })
+                        @Html.ActionLink("Uredjivanje profila", "Index", "Profil", routeValues: null, htmlAttributes: new { @class = "navbar-brand" })
                 }
                 @Html.Partial("_LoginPartial")
             </div>

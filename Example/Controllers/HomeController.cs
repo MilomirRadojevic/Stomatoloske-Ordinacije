@@ -31,6 +31,7 @@ namespace Example.Controllers
             UserManager<ApplicationUser> manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             StomatologContext context = new StomatologContext();
             var user = manager.FindById(User.Identity.GetUserId());
+            Username.Name = user.UserName;
             var result = from e in context.Stomatolozi
                          where e.IDClanaKomore == user.UserName
                          select e.Ime + " " + e.Prezime;

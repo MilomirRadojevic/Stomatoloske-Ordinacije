@@ -1,0 +1,39 @@
+﻿@model Example.Models.IzmeniObavljenuPosetuViewModel
+
+@{
+    ViewBag.Title = "Izmeni obavljenu posetu";
+}
+
+<h2>Izmeni stomatologa</h2>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.IDPosete)
+        <div>
+            @Html.LabelFor(model => model.OpisIntervencije)
+            @Html.TextBoxFor(model => model.OpisIntervencije)
+            @Html.ValidationMessageFor(model => model.OpisIntervencije)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Terapija)
+            @Html.TextBoxFor(model => model.Terapija)
+            @Html.ValidationMessageFor(model => model.Terapija)
+        </div>
+        <div>
+            @Html.DropDownListFor(model => model.Dan, new SelectList(Enumerable.Range(1, 31).ToList()))
+            @Html.ValidationMessageFor(model => model.Dan)
+            @Html.DropDownListFor(model => model.Mesec, new SelectList(Enumerable.Range(1, 12).ToList()))
+            @Html.ValidationMessageFor(model => model.Mesec)
+            @Html.DropDownListFor(model => model.Godina, new SelectList(Enumerable.Range(1990, 50).ToList()))
+            @Html.ValidationMessageFor(model => model.Godina)
+            &nbsp;&nbsp;
+            @Html.DropDownListFor(model => model.Sat, new SelectList(Enumerable.Range(0, 24).ToList()))
+            @Html.ValidationMessageFor(model => model.Sat)
+            @Html.DropDownListFor(model => model.Minut, new SelectList(Enumerable.Range(0, 60).ToList()))
+            @Html.ValidationMessageFor(model => model.Minut)
+        </div>
+        <input type="submit" value="Submit changes" />
+    }
+    @Html.ActionLink("Vrati se na listu obavljenih poseta", "Index")
+</div>

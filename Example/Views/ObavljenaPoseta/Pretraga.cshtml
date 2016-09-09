@@ -1,0 +1,68 @@
+﻿@model Example.Models.ObavljenaPosetaViewModel
+@{
+    ViewBag.Title = "Pretraga";
+}
+
+<p>
+    @Html.ActionLink("Dodaj novu obavljanu posetu", "DodajNovuObavljenuPosetu", "ObavljenaPoseta")
+</p>
+<div>
+    <div>
+        @using (Ajax.BeginForm("RefreshList", "ObavljenaPoseta", new AjaxOptions()
+        {
+            UpdateTargetId = "listaobavljenihposeta",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST"
+
+        }))
+        {
+            <span style="font-weight: bold;">Od: </span>
+            @Html.DropDownListFor(model => model.Dan1, new SelectList(Enumerable.Range(1, 31).ToList()))
+            @Html.ValidationMessageFor(model => model.Dan1)
+            @Html.DropDownListFor(model => model.Mesec1, new SelectList(Enumerable.Range(1, 12).ToList()))
+            @Html.ValidationMessageFor(model => model.Mesec1)
+            @Html.DropDownListFor(model => model.Godina1, new SelectList(Enumerable.Range(1990, 50).ToList()))
+            @Html.ValidationMessageFor(model => model.Godina1)
+            <span style="font-weight: bold;">Do: </span>
+            @Html.DropDownListFor(model => model.Dan2, new SelectList(Enumerable.Range(1, 31).ToList()))
+            @Html.ValidationMessageFor(model => model.Dan2)
+            @Html.DropDownListFor(model => model.Mesec2, new SelectList(Enumerable.Range(1, 12).ToList()))
+            @Html.ValidationMessageFor(model => model.Mesec2)
+            @Html.DropDownListFor(model => model.Godina2, new SelectList(Enumerable.Range(1990, 50).ToList()))
+            @Html.ValidationMessageFor(model => model.Godina2)
+            <div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div id="listaobavljenihposeta">
+    @Html.Partial("_ListaObavljenihPoseta", Model)
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $("#Dan1, #Mesec1, #Godina1, #Dan2, #Mesec2, #Godina2").change(function (event) {
+            // $(this).parents("form").submit();
+
+            // Moze i ovako, efekat je isti, ali je fleksibilnije, jer direktno
+            // koristimo JQuery.ajax() metodu.
+            $.ajax($(this).parents("form").attr("action"), {
+                // submit-uju se parametri koji se pokupe iz forme
+                data: { Dan1: $("#Dan1").val(), Mesec1: $("#Mesec1").val(), Godina1: $("#Godina1").val(), Dan2: $("#Dan2").val(), Mesec2: $("#Mesec2").val(), Godina2: $("#Godina2").val() },
+                method: "POST",
+                // izvrsava se ako zahtev uspe
+                success: function (data, status, xhr) {
+                    $("#listaobavljenihposeta").html(data);
+                },
+                // izvrsava se ako se dogodi neka greska
+                error: function (xhr, status, err) {
+                    $("#listaobavljenihposeta").text(err);
+                },
+                dataType: "html"
+            });
+        });
+    </script>
+}
+

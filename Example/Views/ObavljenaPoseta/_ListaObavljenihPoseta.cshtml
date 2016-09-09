@@ -1,0 +1,36 @@
+﻿@model Example.Models.ObavljenaPosetaViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            Ime pacijenta
+        </th>
+        <th>
+            Prezime pacijenta
+        </th>
+        <th>
+            Datuma posete
+        </th>
+        <th>
+            Vreme posete
+        </th>
+
+    </tr>
+
+    @foreach (var m in Model.ListaObavljenihPoseta)
+    {
+        <tr>
+            <td>@((from t in Model.context.Pacijenti where t.IDKartona == m.PacijentIDKartona select t.Ime).First())</td>
+            <td>@((from t in Model.context.Pacijenti where t.IDKartona == m.PacijentIDKartona select t.Prezime).First())</td>
+            <td>@(m.DatumVreme.Day + "." + m.DatumVreme.Month + "." + m.DatumVreme.Year + ".")</td>
+            <td>@(m.DatumVreme.Hour + ":" + m.DatumVreme.Minute)</td>
+
+            <td>
+                @Html.ActionLink("Izmeni podatke o obavljenoj poseti", "IzmeniObavljenuPosetu", new { IDPosete = m.IDPosete }) |
+                @Html.ActionLink("Detalji o obavljenoj poseti", "DetaljiObavljenePosete", new { IDPosete = m.IDPosete }) |
+                @Html.ActionLink("Obriši obavljenu posetu", "ObrisiObavljenuPosetu", new { IDPosete = m.IDPosete })
+            </td>
+        </tr>
+    }
+
+</table>

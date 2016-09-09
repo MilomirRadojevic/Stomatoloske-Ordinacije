@@ -1,0 +1,82 @@
+﻿@model Example.Models.NovaZakazanaPosetaBezKartona
+
+@{
+    ViewBag.Title = "Pacijent bez kartona";
+}
+
+<h2>Pacijent bez kartona</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Pacijent bez kartona</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StomatologIDClanaKomore, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StomatologIDClanaKomore)
+                @Html.ValidationMessageFor(model => model.StomatologIDClanaKomore)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Dan, new SelectList(Enumerable.Range(1, 31).ToList()))
+                @Html.ValidationMessageFor(model => model.Dan)
+                @Html.DropDownListFor(model => model.Mesec, new SelectList(Enumerable.Range(1, 12).ToList()))
+                @Html.ValidationMessageFor(model => model.Mesec)
+                @Html.DropDownListFor(model => model.Godina, new SelectList(Enumerable.Range(1990, 50).ToList()))
+                @Html.ValidationMessageFor(model => model.Godina)
+                &nbsp;&nbsp;
+                @Html.DropDownListFor(model => model.Sat, new SelectList(Enumerable.Range(0, 24).ToList()))
+                @Html.ValidationMessageFor(model => model.Sat)
+                @Html.DropDownListFor(model => model.Minut, new SelectList(Enumerable.Range(0, 60).ToList()))
+                @Html.ValidationMessageFor(model => model.Minut)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImePacijenta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ImePacijenta)
+                @Html.ValidationMessageFor(model => model.ImePacijenta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PrezimePacijenta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PrezimePacijenta)
+                @Html.ValidationMessageFor(model => model.PrezimePacijenta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Napomena, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Napomena)
+                @Html.ValidationMessageFor(model => model.Napomena)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Potvrdi" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Nazad", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

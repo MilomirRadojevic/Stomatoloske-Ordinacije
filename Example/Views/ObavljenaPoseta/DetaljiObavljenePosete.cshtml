@@ -1,0 +1,16 @@
+﻿@model Example.Models.DetaljiObavljenaPosetaViewModel
+
+@{
+    ViewBag.Title = "Detalji obavljene posete:";
+}
+
+<h2>Detalji o stomatologu: </h2>
+
+<div>
+    <div><span style="font-weight: bold;">Ime: </span> @Model.ImePacijenta</div>
+    <div><span style="font-weight: bold;">Prezime: </span> @Model.PrezimePacijenta</div>
+    <div><span style="font-weight: bold;">Datum: </span> @Model.Datum</div>
+    <div><span style="font-weight: bold;">Vreme: </span> @Model.Vreme</div>
+    <div><span style="font-weight: bold;">Opis intervencije: </span> @Model.OpisIntervencije</div>
+    <div><span style="font-weight: bold;">Terapija: </span> @Model.Terapija</div>
+</div>

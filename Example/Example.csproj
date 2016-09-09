@@ -163,26 +163,36 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KartonController.cs" />
+    <Compile Include="Controllers\ObavljenaPosetaController.cs" />
     <Compile Include="Controllers\OrdinacijaController.cs" />
     <Compile Include="Controllers\ProfilController.cs" />
     <Compile Include="Controllers\StomatologController.cs" />
+    <Compile Include="Controllers\ZakazanaPosetaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DetaljiKartonaViewModel.cs" />
+    <Compile Include="Models\DetaljiObavljenaPosetaViewModel.cs" />
     <Compile Include="Models\DetaljiOrdinacijeViewModel.cs" />
     <Compile Include="Models\DetaljiStomatologViewModel.cs" />
+    <Compile Include="Models\DetaljiZakazanaPosetaViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IzmeniKartonViewModel.cs" />
+    <Compile Include="Models\IzmeniObavljenuPosetu.cs" />
     <Compile Include="Models\IzmeniOrdinacijuViewModel.cs" />
     <Compile Include="Models\IzmeniStomatologaViewModel.cs" />
+    <Compile Include="Models\IzmeniZakazanuPosetuViewModel.cs" />
     <Compile Include="Models\KartonViewModel.cs" />
     <Compile Include="Models\KomentarNaObjavu.cs" />
+    <Compile Include="Models\NovaObavljenaPoseta.cs" />
     <Compile Include="Models\NovaOrdinacija.cs" />
+    <Compile Include="Models\NovaZakazanaPosetaBezKartona.cs" />
+    <Compile Include="Models\NovaZakazanaPosetaSaKartonom.cs" />
     <Compile Include="Models\NoviKarton.cs" />
     <Compile Include="Models\NovStomatolog.cs" />
     <Compile Include="Models\ObavljenaPoseta.cs" />
+    <Compile Include="Models\ObavljenaPosetaViewModel.cs" />
     <Compile Include="Models\Objava.cs" />
     <Compile Include="Models\OdgovorNaPoruku.cs" />
     <Compile Include="Models\Ordinacija.cs" />
@@ -195,6 +205,7 @@
     <Compile Include="Models\StomatologViewModel.cs" />
     <Compile Include="Models\UrediProfilViewModel.cs" />
     <Compile Include="Models\ZakazanaPoseta.cs" />
+    <Compile Include="Models\ZakazanaPosetaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -203,6 +214,7 @@
     </Compile>
     <Compile Include="Repository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Username.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -271,6 +283,20 @@
     <Content Include="Views\Profil\Index.cshtml" />
     <Content Include="Views\Karton\DetaljiKartona.cshtml" />
     <Content Include="Views\Karton\IzmeniKarton.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\Index.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\ZakaziPosetu.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\PacijentSaKartonom.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\PacijentBezKartona.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\Pretraga.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\_ListaZakazanihPoseta.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\DetaljiZakazanePosete.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\IzmeniZakazanuPosetu.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\Index.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\DodajNovuObavljenuPosetu.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\Pretraga.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\_ListaObavljenihPoseta.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\DetaljiObavljenePosete.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\IzmeniObavljenuPosetu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

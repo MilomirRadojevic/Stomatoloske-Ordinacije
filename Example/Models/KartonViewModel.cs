@@ -25,7 +25,7 @@ namespace Example.Models
 
         public KartonViewModel()
         {
-            ListaKartona = context.Pacijenti.ToList();
+            ListaKartona = context.Pacijenti.Where(t => t.StomatologIDClanaKomore == Username.Name).ToList();
             Ime = "";
             Prezime = "";
             JMBG = "";
@@ -36,7 +36,7 @@ namespace Example.Models
         public void RefreshList()
         {
             ListaKartona = (from m in context.Pacijenti
-                            where (m.StomatologIDClanaKomore == "1")/*!!!*/&&
+                            where (m.StomatologIDClanaKomore == Username.Name)/*!!!*/&&
                                ((m.Ime == Ime) ||
                                (m.Prezime == Prezime) ||
                                (m.JMBG == JMBG))

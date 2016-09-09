@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Obavljene posete";
+}
+
+<h2>Upravljanje obavljenim posetama</h2>
+
+<ul id="menu">
+    <li>@Html.ActionLink("Dodaj novu obavljenu posetu", "DodajNovuObavljenuPosetu", "ObavljenaPoseta", routeValues: null, htmlAttributes: new { id = "dodavanjeObavljenePosete" })</li>
+    <li>@Html.ActionLink("Pretraga i izmena obavljenih poseta", "Pretraga", "ObavljenaPoseta", routeValues: null, htmlAttributes: new { id = "pretragaObavljenihPoseta" })</li>
+</ul>

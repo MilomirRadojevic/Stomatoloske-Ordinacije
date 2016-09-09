@@ -13,18 +13,18 @@ namespace Example.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "Trenutna lozinka")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "'{0}' mora biti dugačka bar '{2}' karaktera.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "Nova lozinka")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "Potvrdite novu lozinku")]
+        [Compare("NewPassword", ErrorMessage = "Lozinke se ne poklapaju.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -39,7 +39,7 @@ namespace Example.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Zapamti me?")]
         public bool RememberMe { get; set; }
     }
 
@@ -62,8 +62,6 @@ namespace Example.Models
 
         [Required]
         public int EmployeeID { get; set; }
-
-        //private DVDClubEntities db = new DVDClubEntities();
 
         public class Item
         {

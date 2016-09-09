@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Zakazane posete";
+}
+
+<h2>Zakaži novu posetu</h2>
+
+<ul id="menu">
+    <li>@Html.ActionLink("Zakaži novu posetu bez kartona", "PacijentBezKartona", "ZakazanaPoseta", routeValues: null, htmlAttributes: new { id = "zakazivanjePoseteBezKartona" })</li>
+    <li>@Html.ActionLink("Zakaži novu posetu sa kartonom", "PacijentSaKartonom", "ZakazanaPoseta", routeValues: null, htmlAttributes: new { id = "zakazivanjePoseteSaKartonom" })</li>
+</ul>
