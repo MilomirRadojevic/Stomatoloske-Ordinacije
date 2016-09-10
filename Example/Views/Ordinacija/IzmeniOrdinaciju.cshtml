@@ -1,4 +1,4 @@
-ï»¿@model Example.Models.IzmeniOrdinacijuViewModel
+@model Example.Models.IzmeniOrdinacijuViewModel
 
 @{
     ViewBag.Title = "Izmeni ordinaciju";
@@ -50,7 +50,7 @@
             @Html.TextBoxFor(m => m.JMBG)
             @Html.ValidationMessageFor(m => m.JMBG)
         </div>
-        <input type="submit" value="Submit changes" />
+        <input type="submit" value="Saèuvaj promene" />
     }
-    @Html.ActionLink("Vrati se na listu ordinacija", "Index")
+    @Html.ActionLink("Vrati se na listu ordinacija", "Pretraga")
 </div>

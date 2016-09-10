@@ -22,7 +22,7 @@ namespace Example.Models
         }
 
         [Display(Name = "Prezime: ")]
-        public virtual string Prezime 
+        public virtual string Prezime
         {
             get
             {
@@ -30,7 +30,7 @@ namespace Example.Models
             }
         }
 
-        [Display(Name = "Zavrseni fakultet: ")]
+        [Display(Name = "Završeni fakultet: ")]
         public virtual string ZavrseniFakultet
         {
             get
@@ -58,7 +58,7 @@ namespace Example.Models
         }
 
         [Display(Name = "Kontakt telefon: ")]
-        public virtual string BrojTelefona 
+        public virtual string BrojTelefona
         {
             get
             {
@@ -71,7 +71,7 @@ namespace Example.Models
         }
 
         [Display(Name = "Mail: ")]
-        public virtual string Mail 
+        public virtual string Mail
         {
             get
             {
@@ -84,13 +84,13 @@ namespace Example.Models
         {
             get
             {
-                Ordinacija o = stomatolog.Stomatolozi.Where(m => m.IDClanaKomore == IDClanaKomore).Select(m => m.OrdinacijaZaposlenog).First(); 
+                Ordinacija o = stomatolog.Stomatolozi.Where(m => m.IDClanaKomore == IDClanaKomore).Select(m => m.OrdinacijaZaposlenog).First();
                 return o.Naziv + " ( " + o.Adresa + ", " + o.Grad + " ) ";
             }
 
         }
 
-        public virtual Ordinacija OrdinacijaZaposlenog 
+        public virtual Ordinacija OrdinacijaZaposlenog
         {
             get
             {

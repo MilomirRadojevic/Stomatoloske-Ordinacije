@@ -11,7 +11,7 @@ namespace Example.Models
         [Display(Name = "Naziv:")]
         public string Naziv { get; set; }
 
-        [Display(Name = "Maticni broj firme:")]
+        [Display(Name = "Matični broj firme:")]
         public int? MaticniBrojFirme { get; set; }
 
         [Display(Name = "PIB:")]

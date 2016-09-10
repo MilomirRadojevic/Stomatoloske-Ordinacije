@@ -1,13 +1,13 @@
-﻿@model Example.Models.DetaljiOrdinacijeViewModel
+@model Example.Models.DetaljiOrdinacijeViewModel
 
 @{
     ViewBag.Title = "Detalji o ordinaciji";
 }
 
-<h2>Detalji o ordinaciji</h2>
+<h4> Naziv ordinacije: <b> @Html.DisplayFor(model => model.Naziv) </b> </h4>
 
 <div>
-    <div><span style="font-weight: bold;">Naziv: </span> @Model.Naziv</div>
+   
     <div><span style="font-weight: bold;">Grad: </span> @Model.Grad</div>
     <div><span style="font-weight: bold;">Adresa: </span> @Model.Adresa</div>
     <div><span style="font-weight: bold;">PIB: </span> @Model.PIB</div>
@@ -17,3 +17,4 @@
 
 
 </div>
+@Html.ActionLink("Vrati se na listu ordinacija", "Pretraga")

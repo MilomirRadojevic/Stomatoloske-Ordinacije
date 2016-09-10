@@ -1,10 +1,10 @@
-ï»¿@model Example.Models.IzmeniStomatologaViewModel
+@model Example.Models.IzmeniStomatologaViewModel
 
 @{
     ViewBag.Title = "Izmeni stomatologa";
 }
 
-<h2>Izmeni stomatologa</h2>
+<h2>Izmeni nalog</h2>
 
 <div>
     @using (Html.BeginForm())
@@ -50,7 +50,7 @@
             @Html.TextBoxFor(m => m.Mail)
             @Html.ValidationMessageFor(m => m.Mail)
         </div>
-        <input type="submit" value="Submit changes" />
+        <input type="submit" value="Saèuvaj promene" />
     }
-    @Html.ActionLink("Vrati se na listu stomatologa", "Index")
+    @Html.ActionLink("Vrati se na listu stomatologa", "Pretraga")
 </div>

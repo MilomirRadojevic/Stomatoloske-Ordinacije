@@ -1,4 +1,4 @@
-ï»¿@model Example.Models.KartonViewModel
+@model Example.Models.KartonViewModel
 
 <table class="table">
     <tr>
@@ -24,7 +24,7 @@
             <td>
                 @Html.ActionLink("Izmeni podatke o kartonu", "IzmeniKarton", new { IDKartona = m.IDKartona }) |
                 @Html.ActionLink("Detalji o kartonu", "DetaljiKartona", new { IDKartona = m.IDKartona }) |
-                @Html.ActionLink("Obrisi karton", "ObrisiKarton", new { IDKartona = m.IDKartona })
+                @Html.ActionLink("Obriši karton", "ObrisiKarton", new { IDKartona = m.IDKartona })
             </td>
         </tr>
     }

@@ -10,9 +10,15 @@ namespace Example.Models
     {
         StomatologContext stomatolog = new StomatologContext();
 
-        [Display(Name = "Grad")]
+        [Display(Name = "Grad: ")]
         public string Grad { get; set; }
+
+        [Display(Name = "Naziv: ")]
+
         public string Naziv { get; set; }
+
+        [Display(Name = "Adresa: ")]
+
         public string Adresa { get; set; }
         public int MaticniBrojFirme { get; set; }
 
@@ -40,7 +46,7 @@ namespace Example.Models
                                    where (m.Grad != "Beograd") &&
                                         (m.Grad != "Novi Sad") &&
                                         (m.Grad != "Kragujevac") &&
-                                        (m.Grad != "Nis")
+                                        (m.Grad != "Niš")
                                    select m).ToList();
             else if (Grad == "Svi gradovi")
                 ListaOrdinacija = (from m in stomatolog.Ordinacije
@@ -51,7 +57,7 @@ namespace Example.Models
                                    select m).ToList();
 
 
-       }
+        }
 
     }
 }

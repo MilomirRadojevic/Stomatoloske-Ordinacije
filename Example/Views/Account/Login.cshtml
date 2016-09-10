@@ -1,17 +1,17 @@
-Ôªø@model Example.Models.LoginViewModel
+@model Example.Models.LoginViewModel
 
 @{
     ViewBag.Title = "Prijavite se";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Prijavite se koristeƒái svoje korisniƒçko ime i lozinku.</h4>
+                <h4>Upiöite svoje korisniËko ime i lozinku.</h4>
                 <hr />
                 @Html.ValidationSummary(true)
                 <div class="form-group">

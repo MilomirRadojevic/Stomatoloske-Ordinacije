@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Example.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Example.Controllers
 {
@@ -36,7 +37,7 @@ namespace Example.Controllers
             {
                 Pacijent o = new Pacijent()
                 {
-                    StomatologIDClanaKomore = model.StomatologIDClanaKomore,
+                    StomatologIDClanaKomore = User.Identity.GetUserName(),
                     Ime = model.Ime,
                     Prezime = model.Prezime,
                     GodinaRodjenja = model.GodinaRodjenja,

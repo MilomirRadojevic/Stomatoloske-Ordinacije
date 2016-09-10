@@ -9,16 +9,16 @@ namespace Example.Models
     public class StomatologViewModel
     {
 
-        [Display(Name = "Ime:")]
+        [Display(Name = "Ime: ")]
         public string Ime { get; set; }
 
-        [Display(Name = "Prezime:")]
+        [Display(Name = "Prezime: ")]
         public string Prezime { get; set; }
 
-        [Display(Name = "JMBG:")]
+        [Display(Name = "JMBG: ")]
         public string JMBG { get; set; }
 
-        [Display(Name = "ID clana komore:")]
+        [Display(Name = "ID člana komore: ")]
         public string IDClanaKomore { get; set; }
 
         private StomatologContext context = new StomatologContext();

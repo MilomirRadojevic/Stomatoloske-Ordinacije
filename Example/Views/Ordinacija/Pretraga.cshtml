@@ -1,11 +1,9 @@
-﻿@model Example.Models.OrdinacijaViewModel
+@model Example.Models.OrdinacijaViewModel
 @{
     ViewBag.Title = "Pretraga";
 }
 
-<p>
-    @Html.ActionLink("Dodaj novu ordinaciju", "DodajOrdinaciju", "Ordinacija")
-</p>
+
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "Ordinacija", new AjaxOptions()
@@ -16,7 +14,7 @@
 
         }))
         {
-            <span style="font-weight: bold;">Filter: </span>
+            
             @Html.LabelFor(m => m.Naziv)
             @Html.TextBoxFor(m => m.Naziv)
             @Html.ValidationMessageFor(m => m.Naziv)
@@ -40,9 +38,14 @@
 
 </div>
 
+
 <div id="listaordinacija">
     @Html.Partial("_ListaOrdinacija", Model)
 </div>
+
+<p>
+    @Html.ActionLink("Dodaj novu ordinaciju", "DodajOrdinaciju", "Ordinacija")
+</p>
 
 @section scripts {
     <script type="text/javascript">
@@ -68,4 +71,3 @@
         });
     </script>
 }
-

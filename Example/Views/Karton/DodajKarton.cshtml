@@ -1,27 +1,20 @@
-﻿@model Example.Models.NoviKarton
+@model Example.Models.NoviKarton
 
 @{
     ViewBag.Title = "DodajKarton";
 }
 
-<h2>Dodaj Karton</h2>
+<h2>Dodaj karton</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Novi karton</h4>
+       
         <hr />
         @Html.ValidationSummary(true)
-        <div class="form-group">
-            @Html.LabelFor(model => model.StomatologIDClanaKomore, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.StomatologIDClanaKomore)
-                @Html.ValidationMessageFor(model => model.StomatologIDClanaKomore)
-            </div>
-        </div>
-
+       
         <div class="form-group">
             @Html.LabelFor(model => model.Ime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

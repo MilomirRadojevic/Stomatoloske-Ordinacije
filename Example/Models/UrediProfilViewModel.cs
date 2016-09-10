@@ -12,32 +12,32 @@ namespace Example.Models
 
         public string IDClanaKomore { get; set; }
 
-        [Display(Name="Ime")]
+        [Display(Name = "Ime: ")]
         public string Ime { get; set; }
 
-        [Display(Name = "Prezime")]
+        [Display(Name = "Prezime: ")]
         public string Prezime { get; set; }
 
-        [Display(Name = "ZavrseniFakultet")]
+        [Display(Name = "Završeni fakultet: ")]
         public string ZavrseniFakultet { get; set; }
 
-        [Display(Name = "Specijalizacija")]
+        [Display(Name = "Specijalizacija: ")]
         public string Specijalizacija { get; set; }
 
-        [Display(Name = "Sertifikat")]
+        [Display(Name = "Sertifikati i seminari: ")]
         public string Sertifikat { get; set; }
 
-        [Display(Name = "BrojTelefona")]
+        [Display(Name = "Broj telefona: ")]
         public string BrojTelefona { get; set; }
 
-        [Display(Name = "Mail")]
+        [Display(Name = "Mail: ")]
         public string Mail { get; set; }
 
         public void UcitajImeIPrezime()
         {
-            Stomatolog stomatolog = ( from m in context.Stomatolozi
-                                      where m.IDClanaKomore ==  IDClanaKomore
-                                      select m).First();
+            Stomatolog stomatolog = (from m in context.Stomatolozi
+                                     where m.IDClanaKomore == IDClanaKomore
+                                     select m).First();
 
 
             Ime = stomatolog.Ime;

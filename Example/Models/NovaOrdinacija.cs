@@ -17,7 +17,7 @@ namespace Example.Models
         public int PIB { get; set; }
 
         [Required]
-        [Display(Name = "Maticni broj firme:")]
+        [Display(Name = "Matični broj firme:")]
         public int MaticniBrojFirme { get; set; }
 
         [Required]

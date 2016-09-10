@@ -8,9 +8,6 @@ namespace Example.Models
 {
     public class NoviKarton
     {
-        [Required]
-        [Display(Name = "ID Člana Komore:")]
-        public string StomatologIDClanaKomore { get; set; }
 
         [Required]
         [Display(Name = "Ime:")]

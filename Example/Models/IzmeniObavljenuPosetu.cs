@@ -65,7 +65,7 @@ namespace Example.Models
         {
             ObavljenaPoseta o = (from m in context.ObavljenePosete
                                  where m.IDPosete == IDPosete
-                                select m).First();
+                                 select m).First();
 
             OpisIntervencije = o.OpisIntervencije;
             Terapija = o.Terapija;

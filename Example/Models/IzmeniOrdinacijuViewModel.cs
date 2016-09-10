@@ -13,6 +13,8 @@ namespace Example.Models
         public int MaticniBrojFirme { get; set; }
 
         [Required]
+        [Display(Name = "Naziv: ")]
+
         public string Naziv
         {
             get;
@@ -20,6 +22,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Grad: ")]
+
         public string Grad
         {
             get;
@@ -28,6 +32,8 @@ namespace Example.Models
 
 
         [Required]
+        [Display(Name = "Adresa: ")]
+
         public string Adresa
         {
             get;
@@ -35,6 +41,7 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Kontakt telefon: ")]
         public string KontaktTelefon
         {
             get;
@@ -42,6 +49,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "PIB: ")]
+
         public int PIB
         {
             get;
@@ -49,6 +58,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Ime vlasnika: ")]
+
         public string ImeVlasnika
         {
             get;
@@ -56,6 +67,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Prezime vlasnika: ")]
+
         public string PrezimeVlasnika
         {
             get;
@@ -63,6 +76,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "JMBG: ")]
+
         public string JMBG
         {
             get;

@@ -1,11 +1,9 @@
-﻿@model Example.Models.StomatologViewModel
+@model Example.Models.StomatologViewModel
 @{
     ViewBag.Title = "Pretraga";
 }
 
-<p>
-    @Html.ActionLink("Dodaj novog stomatologa", "DodajStomatologa", "Stomatolog")
-</p>
+
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "Stomatolog", new AjaxOptions()
@@ -16,7 +14,6 @@
 
         }))
         {
-            <span style="font-weight: bold;">Filter: </span>
             @Html.LabelFor(m => m.IDClanaKomore)
             @Html.TextBoxFor(m => m.IDClanaKomore)
             @Html.ValidationMessageFor(m => m.IDClanaKomore)
@@ -44,6 +41,10 @@
     @Html.Partial("_ListaStomatologa", Model)
 </div>
 
+<p>
+    @Html.ActionLink("Dodaj novog stomatologa", "DodajStomatologa", "Stomatolog")
+</p>
+
 @section scripts {
     <script type="text/javascript">
         $("#IDClanaKomore, #JMBG, #Ime, #Prezime").keyup(function (event) {
@@ -68,4 +69,3 @@
         });
     </script>
 }
-

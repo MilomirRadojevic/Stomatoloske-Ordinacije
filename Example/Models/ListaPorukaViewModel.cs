@@ -14,7 +14,7 @@ namespace Example.Models
 
         public void azurirajListuPoruka(string KorisnikID)
         {
-          
+
             ListaPoruka = (from p in context.Poruke
                            where p.StomatologPrimalacIDClanaKomore == KorisnikID
                            orderby p.DatumVreme descending

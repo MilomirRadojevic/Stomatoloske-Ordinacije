@@ -1,11 +1,9 @@
-﻿@model Example.Models.KartonViewModel
+@model Example.Models.KartonViewModel
 @{
     ViewBag.Title = "Pretraga";
 }
 
-<p>
-    @Html.ActionLink("Dodaj novog pacijenta", "DodajKarton", "Karton")
-</p>
+
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "Karton", new AjaxOptions()
@@ -16,7 +14,7 @@
 
         }))
         {
-            <span style="font-weight: bold;">Filter: </span>
+           
             @Html.LabelFor(m => m.Ime)
             @Html.TextBoxFor(m => m.Ime)
             @Html.ValidationMessageFor(m => m.Ime)
@@ -39,6 +37,10 @@
 <div id="listakartona">
     @Html.Partial("_ListaKartona", Model)
 </div>
+
+<p>
+    @Html.ActionLink("Dodaj novog pacijenta", "DodajKarton", "Karton")
+</p>
 
 @section scripts {
     <script type="text/javascript">
@@ -64,4 +66,3 @@
         });
     </script>
 }
-

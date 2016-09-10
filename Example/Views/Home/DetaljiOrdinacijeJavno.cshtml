@@ -1,4 +1,4 @@
-ï»¿@model Example.Models.DetaljiOrdinacijeJavnoViewModel
+@model Example.Models.DetaljiOrdinacijeJavnoViewModel
 
 <div>
     <h4> Naziv ordinacije: <b> @Html.DisplayFor(model => model.Naziv) </b> </h4>
@@ -36,7 +36,7 @@
             <ul>
                 @foreach (var m in Model.Zaposleni)
                 {
-                    <li><b>@(m.Ime + " " + m.Prezime)</b> @Html.ActionLink("(Prikazi profil)", "ProfilStomatologaJavno", new { IDClanaKomore = m.IDClanaKomore })</li>
+                    <li><b>@(m.Ime + " " + m.Prezime)</b> @Html.ActionLink("(Prikaži profil)", "ProfilStomatologaJavno", new { IDClanaKomore = m.IDClanaKomore })</li>
                 }
             </ul>
         </dd>

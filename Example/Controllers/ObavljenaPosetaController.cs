@@ -18,7 +18,7 @@ namespace Example.Controllers
         {
             return View();
         }
-        
+
         // GET: /ObavljenaPoseta/DodajNovuObavljenuPosetu
         [Authorize(Roles = "user")]
         public ActionResult DodajNovuObavljenuPosetu()
@@ -52,7 +52,7 @@ namespace Example.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-        
+
         // GET: /ObavljenaPoseta/Pretraga
         public ActionResult Pretraga()
         {
@@ -68,7 +68,7 @@ namespace Example.Controllers
             }
             return PartialView("_ListaObavljenihPoseta", model);
         }
-        
+
         public ActionResult DetaljiObavljenePosete(int IDPosete)
         {
             if (IDPosete == null)
@@ -109,7 +109,7 @@ namespace Example.Controllers
             }
             return View(model);
         }
-        
+
         public ActionResult ObrisiObavljenuPosetu(int IDPosete)
         {
 

@@ -12,14 +12,11 @@ namespace Example.Models
 
         public int IDKartona { get; set; }
 
-        [Required]
-        public string StomatologIDClanaKomore
-        {
-            get;
-            set;
-        }
+        public string StomatologIDClanaKomore { get; set; }
+
 
         [Required]
+        [Display(Name = "Ime: ")]
         public string Ime
         {
             get;
@@ -28,6 +25,7 @@ namespace Example.Models
 
 
         [Required]
+        [Display(Name = "Prezime: ")]
         public string Prezime
         {
             get;
@@ -35,6 +33,7 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "JMBG: ")]
         public string JMBG
         {
             get;
@@ -42,6 +41,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Godina rođenja: ")]
+
         public int GodinaRodjenja
         {
             get;
@@ -49,6 +50,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Kontakt telefon: ")]
+
         public string KontaktTelefon
         {
             get;
@@ -56,6 +59,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Ime roditelja: ")]
+
         public string ImeRoditelja
         {
             get;
@@ -63,6 +68,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Napomena: ")]
+
         public string Napomena
         {
             get;
@@ -70,6 +77,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Pol: ")]
+
         public string Pol
         {
             get;
@@ -79,8 +88,8 @@ namespace Example.Models
         public void loadData()
         {
             Pacijent pacijent = (from m in context.Pacijenti
-                                     where m.IDKartona == IDKartona
-                                     select m).First();
+                                 where m.IDKartona == IDKartona
+                                 select m).First();
             StomatologIDClanaKomore = pacijent.StomatologIDClanaKomore;
             Ime = pacijent.Ime;
             Prezime = pacijent.Prezime;

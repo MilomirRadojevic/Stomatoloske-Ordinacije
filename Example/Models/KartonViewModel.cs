@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Microsoft.AspNet.Identity;
 
 namespace Example.Models
 {
     public class KartonViewModel
     {
-        [Display(Name = "Ime:")]
+        [Display(Name = "Ime: ")]
         public string Ime { get; set; }
 
-        [Display(Name = "Prezime:")]
+        [Display(Name = "Prezime: ")]
         public string Prezime { get; set; }
 
-        [Display(Name = "JMBG:")]
+        [Display(Name = "JMBG: ")]
         public string JMBG { get; set; }
 
         public IEnumerable<Pacijent> ListaKartona
@@ -36,11 +37,11 @@ namespace Example.Models
         public void RefreshList()
         {
             ListaKartona = (from m in context.Pacijenti
-                            where (m.StomatologIDClanaKomore == Username.Name)/*!!!*/&&
+                            where (m.StomatologIDClanaKomore == Username.Name) &&
                                ((m.Ime == Ime) ||
                                (m.Prezime == Prezime) ||
                                (m.JMBG == JMBG))
-                               select m).ToList();
+                            select m).ToList();
         }
     }
 }

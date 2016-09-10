@@ -43,8 +43,8 @@ namespace Example.Models
             get
             {
                 ZakazanaPoseta z = (from m in context.ZakazanePosete
-                        where m.IDZakazanePosete == IDZakazanePosete
-                        select m).First();
+                                    where m.IDZakazanePosete == IDZakazanePosete
+                                    select m).First();
 
                 return z.DatumVreme.Day.ToString() + "." + z.DatumVreme.Month.ToString() + "." + z.DatumVreme.Year.ToString() + ".";
             }
@@ -56,8 +56,8 @@ namespace Example.Models
             get
             {
                 ZakazanaPoseta z = (from m in context.ZakazanePosete
-                        where m.IDZakazanePosete == IDZakazanePosete
-                        select m).First();
+                                    where m.IDZakazanePosete == IDZakazanePosete
+                                    select m).First();
 
                 return z.DatumVreme.Hour.ToString() + ":" + z.DatumVreme.Minute.ToString();
             }

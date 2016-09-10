@@ -57,8 +57,8 @@ namespace Example.Models
         public void loadData()
         {
             ZakazanaPoseta z = (from m in context.ZakazanePosete
-                            where m.IDZakazanePosete == IDZakazanePosete
-                            select m).First();
+                                where m.IDZakazanePosete == IDZakazanePosete
+                                select m).First();
 
             Napomena = z.Napomena;
             Dan = z.DatumVreme.Day;

@@ -1,9 +1,9 @@
-ï»¿@model Example.Models.IzborGradaViewModel
+@model Example.Models.IzborGradaViewModel
 @{
-    ViewBag.Title = "Start page";
+    ViewBag.Title = "Poèetna strana";
 }
 
-<h2>Dobrodosli na sajt stomatoloskih ordinacija</h2>
+<h2>Dobrodošli na sajt stomatoloških ordinacija</h2>
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "Home", new AjaxOptions()
@@ -21,7 +21,7 @@
        new SelectListItem {Text = "Beograd", Value = "Beograd"},
        new SelectListItem {Text = "Novi Sad", Value = "Novi Sad"},
        new SelectListItem {Text = "Kragujevac", Value = "Kragujevac"},
-       new SelectListItem {Text = "Nis", Value = "Nis"},
+       new SelectListItem {Text = "Niš", Value = "Niš"},
        new SelectListItem {Text = "Ostali gradovi", Value = "Ostali gradovi"}
 
 
@@ -61,7 +61,6 @@
         });
     </script>
 }
-
 
 
 

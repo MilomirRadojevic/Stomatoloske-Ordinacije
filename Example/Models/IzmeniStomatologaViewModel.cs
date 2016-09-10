@@ -13,6 +13,7 @@ namespace Example.Models
         public string IDClanaKomore { get; set; }
 
         [Required]
+        [Display(Name = "Ime: ")]
         public string Ime
         {
             get;
@@ -20,6 +21,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Prezime: ")]
+
         public string Prezime
         {
             get;
@@ -27,6 +30,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "JMBG: ")]
+
         public string JMBG
         {
             get;
@@ -34,6 +39,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Završeni fakultet: ")]
+
         public string ZavrseniFakultet
         {
             get;
@@ -41,6 +48,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Specijalizacija: ")]
+
         public string Specijalizacija
         {
             get;
@@ -48,6 +57,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Sertifikati i seminari: ")]
+
         public string Sertifikat
         {
             get;
@@ -55,6 +66,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Broj telefona: ")]
+
         public string BrojTelefona
         {
             get;
@@ -62,6 +75,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Mail: ")]
+
         public string Mail
         {
             get;
