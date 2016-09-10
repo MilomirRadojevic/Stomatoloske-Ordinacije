@@ -166,6 +166,7 @@
     <Compile Include="Controllers\ObavljenaPosetaController.cs" />
     <Compile Include="Controllers\OrdinacijaController.cs" />
     <Compile Include="Controllers\PorukaController.cs" />
+    <Compile Include="Controllers\PrikazOrdinacijaController.cs" />
     <Compile Include="Controllers\ProfilController.cs" />
     <Compile Include="Controllers\StomatologController.cs" />
     <Compile Include="Controllers\ZakazanaPosetaController.cs" />
@@ -175,10 +176,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DetaljiKartonaViewModel.cs" />
     <Compile Include="Models\DetaljiObavljenaPosetaViewModel.cs" />
+    <Compile Include="Models\DetaljiOrdinacijeJavnoViewModel.cs" />
     <Compile Include="Models\DetaljiOrdinacijeViewModel.cs" />
     <Compile Include="Models\DetaljiStomatologViewModel.cs" />
     <Compile Include="Models\DetaljiZakazanaPosetaViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IzborGradaViewModel.cs" />
     <Compile Include="Models\IzmeniKartonViewModel.cs" />
     <Compile Include="Models\IzmeniObavljenuPosetu.cs" />
     <Compile Include="Models\IzmeniOrdinacijuViewModel.cs" />
@@ -203,6 +206,7 @@
     <Compile Include="Models\Pacijent.cs" />
     <Compile Include="Models\Poruka.cs" />
     <Compile Include="Models\Pregled.cs" />
+    <Compile Include="Models\ProfilStomatologaJavnoModelView.cs" />
     <Compile Include="Models\Stomatolog.cs" />
     <Compile Include="Models\StomatologContext.cs" />
     <Compile Include="Models\StomatologViewModel.cs" />
@@ -305,6 +309,9 @@
     <Content Include="Views\Poruka\ListaPoruka.cshtml" />
     <Content Include="Views\Poruka\NovaPoruka.cshtml" />
     <Content Include="Views\Poruka\ProcitajPoruku.cshtml" />
+    <Content Include="Views\Home\_PrikazOrdinacija.cshtml" />
+    <Content Include="Views\Home\DetaljiOrdinacijeJavno.cshtml" />
+    <Content Include="Views\Home\ProfilStomatologaJavno.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -319,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PrikazOrdinacija\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

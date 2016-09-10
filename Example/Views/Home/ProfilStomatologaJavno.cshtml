@@ -1,0 +1,61 @@
+﻿@model Example.Models.ProfilStomatologaJavnoModelView
+
+<div>
+    <h4> Stomatolog: <b> @Html.DisplayFor(model => model.Ime)  @Html.DisplayFor(model => model.Prezime)</b> </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ZavrseniFakultet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZavrseniFakultet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specijalizacija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specijalizacija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sertifikat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sertifikat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojTelefona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojTelefona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdinacijaZaposlenogInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdinacijaZaposlenogInfo)
+        </dd>
+
+    </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Nazad na listu ordinacija", "Index")
+</p>
+

@@ -13,12 +13,51 @@ namespace Example.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("admin"))
+                    return RedirectToAction("Admin", "Home");
+                else if (User.IsInRole("user"))
+                    return RedirectToAction("IndexForUsers", "Home");
+            }
+            IzborGradaViewModel model = new IzborGradaViewModel();
+            model.Grad = "Svi gradovi";
+            return View(model);
+        }
 
-            // treba da bude deo za izlistavanje ordinacija
+        [HttpPost]
+        public ActionResult RefreshList(IzborGradaViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.RefreshList();
+            }
+            return PartialView("_PrikazOrdinacija", model);
+        }
 
-            return View();
+        public ActionResult DetaljiOrdinacijeJavno(int? MaticniBrojFirme)
+        {
+            if (MaticniBrojFirme == null)
+                throw new Exception("Matični broj firme nije zadat!");
+
+            DetaljiOrdinacijeJavnoViewModel model = new DetaljiOrdinacijeJavnoViewModel();
+            model.MaticniBrojFirme = (int)MaticniBrojFirme;
+
+            return View(model);
+        }
+
+        public ActionResult ProfilStomatologaJavno(string IDClanaKomore)
+        {
+            if (IDClanaKomore == null)
+                throw new Exception("Nije pravilno izabran stomatolog!");
+
+            ProfilStomatologaJavnoModelView model = new ProfilStomatologaJavnoModelView();
+            model.IDClanaKomore = IDClanaKomore;
+
+            return View(model);
         }
 
         [Authorize(Roles = "user")]
@@ -31,7 +70,6 @@ namespace Example.Controllers
             UserManager<ApplicationUser> manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             StomatologContext context = new StomatologContext();
             var user = manager.FindById(User.Identity.GetUserId());
-            Username.Name = user.UserName;
             var result = from e in context.Stomatolozi
                          where e.IDClanaKomore == user.UserName
                          select e.Ime + " " + e.Prezime;
