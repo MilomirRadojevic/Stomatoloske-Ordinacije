@@ -12,7 +12,7 @@ namespace Example.Models
 
         public string IDClanaKomore { get; set; }
 
-        [Display(Name = "Ime: ")]
+        [Display(Name="Ime: ")]
         public string Ime { get; set; }
 
         [Display(Name = "Prezime: ")]
@@ -35,9 +35,9 @@ namespace Example.Models
 
         public void UcitajImeIPrezime()
         {
-            Stomatolog stomatolog = (from m in context.Stomatolozi
-                                     where m.IDClanaKomore == IDClanaKomore
-                                     select m).First();
+            Stomatolog stomatolog = ( from m in context.Stomatolozi
+                                      where m.IDClanaKomore ==  IDClanaKomore
+                                      select m).First();
 
 
             Ime = stomatolog.Ime;

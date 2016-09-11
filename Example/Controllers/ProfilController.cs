@@ -19,8 +19,8 @@ namespace Example.Controllers
             StomatologContext context = new StomatologContext();
             var user = manager.FindById(User.Identity.GetUserId());
             var result = (from e in context.Stomatolozi
-                          where e.IDClanaKomore == user.UserName
-                          select e.IDClanaKomore).First();
+                         where e.IDClanaKomore == user.UserName
+                         select e.IDClanaKomore).First();
             UrediProfilViewModel model = new UrediProfilViewModel();
             model.IDClanaKomore = result;
             model.UcitajImeIPrezime();
@@ -36,8 +36,8 @@ namespace Example.Controllers
             {
                 /*try
                 {*/
-                model.IzmeniProfil();
-                return RedirectToAction("IndexForUsers", "Home");
+                    model.IzmeniProfil();
+                    return RedirectToAction("IndexForUsers","Home");
                 /*}
                 catch (Exception e)
                 {
@@ -47,5 +47,5 @@ namespace Example.Controllers
             }
             return View(model);
         }
-    }
+	}
 }

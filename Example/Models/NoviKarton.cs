@@ -8,7 +8,7 @@ namespace Example.Models
 {
     public class NoviKarton
     {
-
+        
         [Required]
         [Display(Name = "Ime:")]
         public string Ime { get; set; }

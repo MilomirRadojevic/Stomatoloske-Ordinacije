@@ -1,4 +1,4 @@
-@model Example.Models.ZakazanaPosetaViewModel
+﻿@model Example.Models.ZakazanaPosetaViewModel
 
 <table class="table">
     <tr>
@@ -28,7 +28,7 @@
             <td>
                 @Html.ActionLink("Izmeni podatke o zakazanoj poseti", "IzmeniZakazanuPosetu", new { IDZakazanePosete = m.IDZakazanePosete }) |
                 @Html.ActionLink("Detalji o zakazanoj poseti", "DetaljiZakazanePosete", new { IDZakazanePosete = m.IDZakazanePosete }) |
-                @Html.ActionLink("Obri�i zakazanu posetu", "ObrisiZakazanuPosetu", new { IDZakazanePosete = m.IDZakazanePosete })
+                @Html.ActionLink("Obriši zakazanu posetu", "ObrisiZakazanuPosetu", new { IDZakazanePosete = m.IDZakazanePosete })
             </td>
         </tr>
     }

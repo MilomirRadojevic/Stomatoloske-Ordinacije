@@ -41,7 +41,7 @@ namespace Example.Models
                                ((m.Ime == Ime) ||
                                (m.Prezime == Prezime) ||
                                (m.JMBG == JMBG))
-                            select m).ToList();
+                               select m).ToList();
         }
     }
 }

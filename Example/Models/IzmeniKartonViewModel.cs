@@ -13,7 +13,7 @@ namespace Example.Models
         public int IDKartona { get; set; }
 
         public string StomatologIDClanaKomore { get; set; }
-
+       
 
         [Required]
         [Display(Name = "Ime: ")]
@@ -88,8 +88,8 @@ namespace Example.Models
         public void loadData()
         {
             Pacijent pacijent = (from m in context.Pacijenti
-                                 where m.IDKartona == IDKartona
-                                 select m).First();
+                                     where m.IDKartona == IDKartona
+                                     select m).First();
             StomatologIDClanaKomore = pacijent.StomatologIDClanaKomore;
             Ime = pacijent.Ime;
             Prezime = pacijent.Prezime;

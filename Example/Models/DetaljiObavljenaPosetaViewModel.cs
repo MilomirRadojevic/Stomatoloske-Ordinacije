@@ -34,8 +34,8 @@ namespace Example.Models
             get
             {
                 ObavljenaPoseta o = (from m in context.ObavljenePosete
-                                     where m.IDPosete == IDPosete
-                                     select m).First();
+                                    where m.IDPosete == IDPosete
+                                    select m).First();
 
                 return o.DatumVreme.Day.ToString() + "." + o.DatumVreme.Month.ToString() + "." + o.DatumVreme.Year.ToString() + ".";
             }
@@ -48,7 +48,7 @@ namespace Example.Models
             {
                 ObavljenaPoseta o = (from m in context.ObavljenePosete
                                      where m.IDPosete == IDPosete
-                                     select m).First();
+                                    select m).First();
 
                 return o.DatumVreme.Hour.ToString() + ":" + o.DatumVreme.Minute.ToString();
             }

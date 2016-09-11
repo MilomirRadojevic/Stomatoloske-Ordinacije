@@ -1,6 +1,6 @@
-@model ICollection<Example.Models.Poruka>
+﻿@model ICollection<Example.Models.Poruka>
 @{
-    ViewBag.Title = "Pro�itaj";
+    ViewBag.Title = "Pročitaj";
 }
 
 <h2>Detalji poruke:</h2>
@@ -15,4 +15,5 @@
     </div>
 }
 @Html.ActionLink("Nova poruka", "NovaPoruka", "Poruka", new { PrimalacIDClanaKomore = Model.First().Primalac.IDClanaKomore })</li>
+
 

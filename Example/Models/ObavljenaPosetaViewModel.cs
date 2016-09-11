@@ -56,10 +56,10 @@ namespace Example.Models
             DateTime dt1 = new DateTime(Godina1, Mesec1, Dan1);
             DateTime dt2 = new DateTime(Godina2, Mesec2, Dan2);
             ListaObavljenihPoseta = (from m in context.ObavljenePosete
-                                     where (m.StomatologIDClanaKomore == Username.Name) &&
-                                       (m.DatumVreme > dt1) &&
-                                       (m.DatumVreme < dt2)
-                                     select m).ToList();
+                                    where (m.StomatologIDClanaKomore == Username.Name) &&
+                                      (m.DatumVreme > dt1) &&
+                                      (m.DatumVreme < dt2)
+                                    select m).ToList();
         }
 
     }
