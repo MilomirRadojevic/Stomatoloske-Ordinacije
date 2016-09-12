@@ -1,0 +1,30 @@
+﻿@model Example.Models.ObjavaViewModel
+@{
+    ViewBag.Title = "Prikaz objave";
+}
+
+<h2>Detalji objave</h2>
+
+<div class="zaglavljeObjave">
+    <b>@(Model.Objavio.Ime + " " + Model.Objavio.Prezime)</b>  @(Model.DatumVreme.ToString()) #ID objave: @(Model.IDObjave)
+</div>
+<div class="tekstObjave">
+    @(Model.Tekst)
+</div>
+
+<div class="komentariNaObjavu">
+    @foreach (var m in Model.KomentariNaObjavu)
+    {
+         @(m.DatumVreme.ToString()) @:  #ID komentara: @(m.IDKomentara)
+        <div class="tekstKomentara">
+            @(m.Tekst)
+        </div>
+    }
+</div>
+
+@Html.ActionLink("Dodaj komentar na ovu objavu", "DodajKomentar", new { IDObjave = Model.IDObjave })
+
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@model Example.Models.NoviKomentar
+@{
+    ViewBag.Title = "Dodaj komentar";
+}
+
+<h2>Novi komentar</h2>
+
+<div class="novaObjava">
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.Tekst)
+            @Html.TextAreaFor(m => m.Tekst)
+            @Html.ValidationMessageFor(m => m.Tekst)
+        </div>
+
+
+        <div>
+            <input type="submit" value="Dodaj komentar" />
+        </div>
+    }
+</div>
+
+<li>@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
+

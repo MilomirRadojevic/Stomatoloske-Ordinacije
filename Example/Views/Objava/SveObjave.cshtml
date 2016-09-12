@@ -1,0 +1,20 @@
+﻿@model Example.Models.SveObjaveViewModel
+
+@{
+    ViewBag.Title = "Sve objave";
+}
+
+<h2>Sve objave</h2>
+
+<ul>
+
+    @foreach (var m in Model.ListaObjava)
+    {
+        <li>
+            <b>@(m.Objavio.Ime + " " + m.Objavio.Prezime)</b> ( @(m.DatumVreme.ToString()) ) <i>@(m.Tekst) ...</i> @Html.ActionLink("Prikaži objavu", "PrikaziObjavu", new { IDObjave = m.IDObjave })
+        </li>
+    }
+
+</ul>
+
+@Html.ActionLink("Dodaj novu objavu", "DodajObjavu", "Objava")

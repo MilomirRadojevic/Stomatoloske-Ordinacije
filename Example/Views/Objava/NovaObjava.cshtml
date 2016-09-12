@@ -1,0 +1,33 @@
+﻿@model Example.Models.NovaObjava
+@{
+    ViewBag.Title = "NovaObjava";
+}
+
+<h2>Nova objava</h2>
+
+<div class="novaObjava">
+    @using (Html.BeginForm())
+    {       <div>
+        @Html.LabelFor(m => m.Tekst)
+        @Html.TextAreaFor(m => m.Tekst)
+        @Html.ValidationMessageFor(m => m.Tekst)
+    </div>
+
+        <div>
+            @Html.LabelFor(m => m.Vrsta)
+            @Html.DropDownList("Vrsta", new List<SelectListItem>
+            {
+                 new SelectListItem {Text = "Obaveštenje", Value = "Obaveštenje", Selected = true},
+                 new SelectListItem {Text = "Pomoć oko problema", Value = "Pomoć"}
+            })
+            @Html.ValidationMessageFor(m => m.Vrsta)
+        </div>
+
+        <div>
+            <input type="submit" value="Objavi" />
+        </div>
+    }
+</div>
+
+<li>@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
+
