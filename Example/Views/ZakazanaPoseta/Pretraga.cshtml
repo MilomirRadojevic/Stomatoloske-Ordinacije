@@ -3,9 +3,7 @@
     ViewBag.Title = "Pretraga";
 }
 
-<p>
-    @Html.ActionLink("Zakaži novu posetu", "ZakaziPosetu", "ZakazanaPoseta")
-</p>
+
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "ZakazanaPoseta", new AjaxOptions()
@@ -41,6 +39,11 @@
     @Html.Partial("_ListaZakazanihPoseta", Model)
 </div>
 
+
+<p>
+    @Html.ActionLink("Zakaži novu posetu", "ZakaziPosetu", "ZakazanaPoseta")
+</p>
+
 @section scripts {
     <script type="text/javascript">
         $("#Dan1, #Mesec1, #Godina1, #Dan2, #Mesec2, #Godina2").change(function (event) {
@@ -65,4 +68,3 @@
         });
     </script>
 }
-

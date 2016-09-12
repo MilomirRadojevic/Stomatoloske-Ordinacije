@@ -10,35 +10,35 @@ namespace Example.Models
     {
         
         [Required]
-        [Display(Name = "Ime:")]
+        [Display(Name = "Ime: ")]
         public string Ime { get; set; }
 
         [Required]
-        [Display(Name = "Prezime:")]
+        [Display(Name = "Prezime: ")]
         public string Prezime { get; set; }
 
         [Required]
-        [Display(Name = "JMBG:")]
+        [Display(Name = "JMBG: ")]
         public string JMBG { get; set; }
 
         [Required]
-        [Display(Name = "Godina rođenja:")]
+        [Display(Name = "Godina rođenja: ")]
         public int GodinaRodjenja { get; set; }
 
         [Required]
-        [Display(Name = "Kontakt telefon:")]
+        [Display(Name = "Kontakt telefon: ")]
         public string KontaktTelefon { get; set; }
 
         [Required]
-        [Display(Name = "Ime roditelja:")]
+        [Display(Name = "Ime roditelja: ")]
         public string ImeRoditelja { get; set; }
 
         [Required]
-        [Display(Name = "Napomena:")]
+        [Display(Name = "Napomena: ")]
         public string Napomena { get; set; }
 
         [Required]
-        [Display(Name = "Pol:")]
+        [Display(Name = "Pol: ")]
         public string Pol { get; set; }
     }
 }

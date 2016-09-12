@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Microsoft.AspNet.Identity;
 
 namespace Example.Models
 {
     public class KartonViewModel
     {
+        
+        StomatologContext context = new StomatologContext();
+
         [Display(Name = "Ime: ")]
         public string Ime { get; set; }
 
@@ -18,30 +20,23 @@ namespace Example.Models
         [Display(Name = "JMBG: ")]
         public string JMBG { get; set; }
 
+        [Display(Name = "ID člana komore: ")]
+        public string IDStomatologa { get; set; }
+
         public IEnumerable<Pacijent> ListaKartona
         {
             get;
             set;
         }
 
-        public KartonViewModel()
-        {
-            ListaKartona = context.Pacijenti.Where(t => t.StomatologIDClanaKomore == Username.Name).ToList();
-            Ime = "";
-            Prezime = "";
-            JMBG = "";
-        }
-
-        StomatologContext context = new StomatologContext();
 
         public void RefreshList()
         {
             ListaKartona = (from m in context.Pacijenti
-                            where (m.StomatologIDClanaKomore == Username.Name) &&
-                               ((m.Ime == Ime) ||
+                            where (((m.Ime == Ime) ||
                                (m.Prezime == Prezime) ||
-                               (m.JMBG == JMBG))
-                               select m).ToList();
+                               (m.JMBG == JMBG)) && (m.StomatologIDClanaKomore == IDStomatologa)) 
+                            select m).ToList();
         }
     }
 }

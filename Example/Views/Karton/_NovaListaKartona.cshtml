@@ -1,0 +1,35 @@
+﻿
+@model Example.Models.KartonViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JMBG)
+        </th>
+
+
+    </tr>
+
+    @foreach (var m in Model.ListaKartona)
+    {
+        <tr>
+            <td>@m.Ime</td>
+            <td>@m.Prezime</td>
+            <td>@m.JMBG</td>
+
+
+            <td>
+                @Html.ActionLink("Izmeni podatke o kartonu", "IzmeniKarton", new { IDKartona = m.IDKartona }) |
+                @Html.ActionLink("Detalji o kartonu", "DetaljiKartona", new { IDKartona = m.IDKartona }) |
+                @Html.ActionLink("Obriši karton", "ObrisiKarton", new { IDKartona = m.IDKartona })
+            </td>
+        </tr>
+    }
+
+</table>

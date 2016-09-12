@@ -4,7 +4,7 @@
     ViewBag.Title = "Pacijent sa kartonom";
 }
 
-<h2>Pacijent sa kartonom</h2>
+<h2>Zakazivanje posete</h2>
 
 
 @using (Html.BeginForm())
@@ -15,14 +15,6 @@
         <h4>Pacijent sa kartonom</h4>
         <hr />
         @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.StomatologIDClanaKomore, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.StomatologIDClanaKomore)
-                @Html.ValidationMessageFor(model => model.StomatologIDClanaKomore)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Dan, new { @class = "control-label col-md-2" })
@@ -42,9 +34,17 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.IDKartona, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.IDKartona)
+                @Html.ValidationMessageFor(model => model.IDKartona)
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.ImePacijenta, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ImePacijenta)
+                @Html.TextBoxFor(model => model.ImePacijenta)
                 @Html.ValidationMessageFor(model => model.ImePacijenta)
             </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PrezimePacijenta, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PrezimePacijenta)
+                @Html.TextBoxFor(model => model.PrezimePacijenta)
                 @Html.ValidationMessageFor(model => model.PrezimePacijenta)
             </div>
         </div>
@@ -60,7 +60,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.JMBG, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.JMBG)
+                @Html.TextBoxFor(model => model.JMBG)
                 @Html.ValidationMessageFor(model => model.JMBG)
             </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Napomena, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Napomena)
+                @Html.TextAreaFor(model => model.Napomena)
                 @Html.ValidationMessageFor(model => model.Napomena)
             </div>
         </div>

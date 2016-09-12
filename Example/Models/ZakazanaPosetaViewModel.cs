@@ -9,22 +9,22 @@ namespace Example.Models
     public class ZakazanaPosetaViewModel
     {
 
-        [Display(Name = "Dan1:")]
+        [Display(Name = "Od dana: ")]
         public int Dan1 { get; set; }
 
-        [Display(Name = "Mesec1:")]
+        [Display(Name = "Od meseca: ")]
         public int Mesec1 { get; set; }
 
-        [Display(Name = "Godina1:")]
+        [Display(Name = "Od godine: ")]
         public int Godina1 { get; set; }
 
-        [Display(Name = "Dan2:")]
+        [Display(Name = "Do dana: ")]
         public int Dan2 { get; set; }
 
-        [Display(Name = "Mesec2:")]
+        [Display(Name = "Do meseca: ")]
         public int Mesec2 { get; set; }
 
-        [Display(Name = "Godina2:")]
+        [Display(Name = "Do godine: ")]
         public int Godina2 { get; set; }
 
         private StomatologContext context = new StomatologContext();
@@ -35,19 +35,7 @@ namespace Example.Models
             set;
         }
 
-        public ZakazanaPosetaViewModel()
-        {
-            ListaZakazanihPoseta = context.ZakazanePosete.ToList();
-            DateTime dt = DateTime.Now;
-            Dan1 = dt.Day;
-            Mesec1 = dt.Month;
-            Godina1 = dt.Year;
-            dt = dt.AddDays(1);
-            Dan2 = dt.Day;
-            Mesec2 = dt.Month;
-            Godina2 = dt.Year;
-        }
-
+        public string IDStomatologa { get; set; }
 
 
 
@@ -56,7 +44,7 @@ namespace Example.Models
             DateTime dt1 = new DateTime(Godina1, Mesec1, Dan1);
             DateTime dt2 = new DateTime(Godina2, Mesec2, Dan2);
             ListaZakazanihPoseta = (from m in context.ZakazanePosete
-                                where (m.StomatologIDClanaKomore == Username.Name) &&
+                                where (m.StomatologIDClanaKomore == IDStomatologa) &&
                                   (m.DatumVreme > dt1) &&
                                   (m.DatumVreme < dt2)
                                 select m).ToList();

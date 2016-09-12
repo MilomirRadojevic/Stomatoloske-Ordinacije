@@ -4,7 +4,7 @@
     ViewBag.Title = "Pacijent bez kartona";
 }
 
-<h2>Pacijent bez kartona</h2>
+<h2>Zakazivanje posete</h2>
 
 
 @using (Html.BeginForm())
@@ -15,14 +15,6 @@
         <h4>Pacijent bez kartona</h4>
         <hr />
         @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.StomatologIDClanaKomore, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.StomatologIDClanaKomore)
-                @Html.ValidationMessageFor(model => model.StomatologIDClanaKomore)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Dan, new { @class = "control-label col-md-2" })
@@ -60,7 +52,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Napomena, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Napomena)
+                @Html.TextAreaFor(model => model.Napomena)
                 @Html.ValidationMessageFor(model => model.Napomena)
             </div>
         </div>

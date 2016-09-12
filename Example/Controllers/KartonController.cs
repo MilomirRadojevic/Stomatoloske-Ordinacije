@@ -24,7 +24,7 @@ namespace Example.Controllers
         [Authorize(Roles = "user")]
         public ActionResult DodajKarton()
         {
-            return View(new NoviKarton());
+            return View();
         }
 
         // POST: /Karton/DodajKarton
@@ -35,9 +35,12 @@ namespace Example.Controllers
         {
             if (ModelState.IsValid)
             {
+                string IDStomatologa = User.Identity.GetUserName();
+                Stomatolog izabrani = context.Stomatolozi.Where(m => m.IDClanaKomore == IDStomatologa).First();
                 Pacijent o = new Pacijent()
                 {
-                    StomatologIDClanaKomore = User.Identity.GetUserName(),
+                    StomatologIDClanaKomore = IDStomatologa,
+                    IzabraniStomatolog = izabrani,
                     Ime = model.Ime,
                     Prezime = model.Prezime,
                     GodinaRodjenja = model.GodinaRodjenja,
@@ -45,13 +48,16 @@ namespace Example.Controllers
                     KontaktTelefon = model.KontaktTelefon,
                     ImeRoditelja = model.ImeRoditelja,
                     Napomena = model.Napomena,
-                    Pol = model.Pol
+                    Pol = model.Pol,
+                    ObavljenePosete = new List<ObavljenaPoseta>(),
+                    ZakazanePosete = new List<ZakazanaPoseta>()
                 };
 
                 context.Pacijenti.Add(o);
                 context.SaveChanges();
                 return RedirectToAction("Index", "Karton");
             }
+
 
             // If we got this far, something failed, redisplay form
             return View(model);
@@ -62,7 +68,18 @@ namespace Example.Controllers
         // GET: /Ordinacija/Pretraga
         public ActionResult Pretraga()
         {
-            return View(new KartonViewModel());
+            string IDStomatologa = User.Identity.GetUserName();
+            KartonViewModel pretragaKartona = new KartonViewModel
+            {   
+                IDStomatologa = IDStomatologa,
+                Ime = "",
+                Prezime = "",
+                ListaKartona = (from m in context.Pacijenti
+                                 where m.StomatologIDClanaKomore == IDStomatologa
+                                 select m).ToList(),
+                JMBG = ""
+            };
+            return View(pretragaKartona);
         }
 
         /*[HttpPost]
@@ -79,11 +96,13 @@ namespace Example.Controllers
         [HttpPost]
         public ActionResult RefreshList(KartonViewModel model)
         {
+            string IDStomatologa = User.Identity.GetUserName();
+            model.IDStomatologa = IDStomatologa;
             if (ModelState.IsValid)
             {
                 model.RefreshList();
             }
-            return PartialView("_ListaKartona", model);
+            return PartialView("_NovaListaKartona", model);
         }
 
         public ActionResult DetaljiKartona(int? IDKartona)

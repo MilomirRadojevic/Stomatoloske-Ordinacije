@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace Example.Controllers
 {
@@ -12,6 +13,7 @@ namespace Example.Controllers
 
         private StomatologContext context = new StomatologContext();
 
+        // SREDJENO
         //
         // GET: /Stomatolog/
         public ActionResult Index()
@@ -26,11 +28,55 @@ namespace Example.Controllers
             return View();
         }
 
+        public ActionResult PretragaKartona()
+        {
+            string trenutni = User.Identity.GetUserName();
+            KartonViewModel pretragaKartona = new KartonViewModel
+            {
+                IDStomatologa = trenutni,
+                Ime = "",
+                Prezime = "",
+                ListaKartona = (from m in context.Pacijenti
+                                where m.StomatologIDClanaKomore == trenutni
+                                select m).ToList(),
+                JMBG = ""
+            };
+            return View(pretragaKartona);
+        }
+
+        [HttpPost]
+        public ActionResult RefreshListZaKartone(KartonViewModel model)
+        {
+            string IDStomatologa = User.Identity.GetUserName();
+            model.IDStomatologa = IDStomatologa;
+            if (ModelState.IsValid)
+            {
+                model.RefreshList();
+            }
+            return PartialView("_ListaKartona", model);
+        }
+
         // GET: /ZakazanaPoseta/PacijentSaKartonom
         [Authorize(Roles = "user")]
-        public ActionResult PacijentSaKartonom()
+        public ActionResult PacijentSaKartonom(int ? IDKartona)
         {
-            return View(new NovaZakazanaPosetaSaKartonom());
+            if (IDKartona == null)
+                throw new Exception("nije izabran ID kartona");
+            Pacijent novi = context.Pacijenti.Where(m => m.IDKartona == (int)IDKartona).First();
+            NovaZakazanaPosetaSaKartonom novaPoseta = new NovaZakazanaPosetaSaKartonom();
+            DateTime now = DateTime.Now;
+            novaPoseta.Dan = now.Day;
+            novaPoseta.Mesec = now.Month;
+            novaPoseta.Godina = now.Year;
+            novaPoseta.Sat = now.Hour;
+            novaPoseta.Minut = now.Minute;
+            novaPoseta.StomatologIDClanaKomore = novi.StomatologIDClanaKomore;
+            novaPoseta.IDKartona = (int)IDKartona;
+            novaPoseta.ImePacijenta = novi.Ime;
+            novaPoseta.PrezimePacijenta = novi.Prezime;
+            novaPoseta.JMBG = novi.JMBG;
+            novaPoseta.Napomena = "";
+            return View(novaPoseta);
         }
 
         // POST: /ZakazanaPoseta/PacijentSaKartonom
@@ -41,19 +87,20 @@ namespace Example.Controllers
         {
             if (ModelState.IsValid)
             {
+                string IDStomatologa = User.Identity.GetUserName();
+                Stomatolog trenutni = context.Stomatolozi.Where(m => m.IDClanaKomore == IDStomatologa).First();
+                Pacijent novaPoseta = context.Pacijenti.Where(m => m.IDKartona == model.IDKartona).First();
                 ZakazanaPoseta z = new ZakazanaPoseta()
                 {
-                    StomatologIDClanaKomore = model.StomatologIDClanaKomore,
-                    PacijentIDKartona = (from m in context.Pacijenti
-                                         where m.Ime == model.ImePacijenta &&
-                                         m.Prezime == model.PrezimePacijenta &&
-                                         m.JMBG == model.JMBG
-                                         select m.IDKartona).ToList().First(),
+                    StomatologIDClanaKomore =IDStomatologa,
+                    Zakazao = trenutni,
+                    ZakazanPacijent = novaPoseta,
+                    PacijentIDKartona = novaPoseta.IDKartona,
                     DatumVreme = new DateTime(model.Godina, model.Mesec, model.Dan, model.Sat, model.Minut, 0),
                     ImePacijenta = model.ImePacijenta,
                     PrezimePacijenta = model.PrezimePacijenta,
                     Napomena = model.Napomena,
-                    ImaKarton = true
+                    ImaKarton = true                    
                 };
 
                 context.ZakazanePosete.Add(z);
@@ -69,7 +116,16 @@ namespace Example.Controllers
         [Authorize(Roles = "user")]
         public ActionResult PacijentBezKartona()
         {
-            return View(new NovaZakazanaPosetaBezKartona());
+            string IDStomatologa = User.Identity.GetUserName();
+            NovaZakazanaPosetaBezKartona novaPoseta = new NovaZakazanaPosetaBezKartona();
+            DateTime now = DateTime.Now;
+            novaPoseta.Dan = now.Day;
+            novaPoseta.Mesec = now.Month;
+            novaPoseta.Godina = now.Year;
+            novaPoseta.Sat = now.Hour;
+            novaPoseta.Minut = now.Minute;
+            novaPoseta.StomatologIDClanaKomore = IDStomatologa;
+            return View(novaPoseta);
         }
 
         // POST: /ZakazanaPoseta/PacijentBezKartona
@@ -80,10 +136,13 @@ namespace Example.Controllers
         {
             if (ModelState.IsValid)
             {
+                string IDStomatologa = User.Identity.GetUserName();
+                Stomatolog trenutni = context.Stomatolozi.Where(m => m.IDClanaKomore == IDStomatologa).First();
                 ZakazanaPoseta z = new ZakazanaPoseta()
                 {
-                    StomatologIDClanaKomore = model.StomatologIDClanaKomore,
+                    StomatologIDClanaKomore = IDStomatologa,
                     PacijentIDKartona = null,
+                    Zakazao = trenutni,
                     DatumVreme = new DateTime(model.Godina, model.Mesec, model.Dan, model.Sat, model.Minut, 0),
                     ImePacijenta = model.ImePacijenta,
                     PrezimePacijenta = model.PrezimePacijenta,
@@ -103,12 +162,27 @@ namespace Example.Controllers
         // GET: /Stomatolog/Pretraga
         public ActionResult Pretraga()
         {
-            return View(new ZakazanaPosetaViewModel());
+            string IDStomatologa = User.Identity.GetUserName();
+            DateTime dt = DateTime.Now;
+            ZakazanaPosetaViewModel nova = new ZakazanaPosetaViewModel
+            {
+                Dan1 = dt.Day,
+                Mesec1 = dt.Month,
+                Godina1 = dt.Year,
+                Dan2 = dt.AddDays(7).Day,
+                Mesec2 = dt.AddDays(7).Month,
+                Godina2 = dt.AddDays(7).Year,
+                IDStomatologa = IDStomatologa,
+                ListaZakazanihPoseta = context.ZakazanePosete.Where(m => m.StomatologIDClanaKomore == IDStomatologa).ToList()
+            };
+            return View(nova);
         }
 
         [HttpPost]
         public ActionResult RefreshList(ZakazanaPosetaViewModel model)
         {
+            string IDStomatologa = User.Identity.GetUserName();
+            model.IDStomatologa = IDStomatologa;
             if (ModelState.IsValid)
             {
                 model.RefreshList();
@@ -116,23 +190,23 @@ namespace Example.Controllers
             return PartialView("_ListaZakazanihPoseta", model);
         }
 
-        public ActionResult DetaljiZakazanePosete(int IDZakazanePosete)
+        public ActionResult DetaljiZakazanePosete(int ? IDZakazanePosete)
         {
             if (IDZakazanePosete == null)
-                throw new Exception("");
+                throw new Exception("nije izabran ID zakazane posete");
 
             DetaljiZakazanaPosetaViewModel model = new DetaljiZakazanaPosetaViewModel();
-            model.IDZakazanePosete = IDZakazanePosete;
+            model.IDZakazanePosete = (int)IDZakazanePosete;
 
             return View(model);
         }
 
-        public ActionResult IzmeniZakazanuPosetu(int IDZakazanePosete)
+        public ActionResult IzmeniZakazanuPosetu(int ? IDZakazanePosete)
         {
             if (IDZakazanePosete == null)
-                throw new Exception("");
+                throw new Exception("nije izabran ID zakazane posete");
             IzmeniZakazanuPosetuViewModel model = new IzmeniZakazanuPosetuViewModel();
-            model.IDZakazanePosete = IDZakazanePosete;
+            model.IDZakazanePosete = (int)IDZakazanePosete;
             model.loadData();
 
             return View(model);

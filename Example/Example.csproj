@@ -276,7 +276,6 @@
     <Content Include="Views\Ordinacija\_ListaOrdinacija.cshtml" />
     <Content Include="Views\Karton\DodajKarton.cshtml" />
     <Content Include="Views\Karton\Index.cshtml" />
-    <Content Include="Views\Karton\_ListaKartona.cshtml" />
     <Content Include="Views\Karton\Pretraga.cshtml" />
     <Content Include="Views\Ordinacija\DetaljiOrdinacije.cshtml" />
     <Content Include="Views\Ordinacija\IzmeniOrdinaciju.cshtml" />
@@ -312,6 +311,9 @@
     <Content Include="Views\Home\_PrikazOrdinacija.cshtml" />
     <Content Include="Views\Home\DetaljiOrdinacijeJavno.cshtml" />
     <Content Include="Views\Home\ProfilStomatologaJavno.cshtml" />
+    <Content Include="Views\Karton\_NovaListaKartona.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\PretragaKartona.cshtml" />
+    <Content Include="Views\ZakazanaPoseta\_ListaKartona.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
