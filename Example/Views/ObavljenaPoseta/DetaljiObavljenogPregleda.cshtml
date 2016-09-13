@@ -1,0 +1,320 @@
+﻿@model Example.Models.ObavljeniPregled
+
+@{
+    ViewBag.Title = "Detalji obavljenog pregleda";
+}
+
+<h2>Detalji obavljenog pregleda</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImePacijenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImePacijenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrezimePacijenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrezimePacijenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JMBG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JMBG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dan).@Html.DisplayFor(model => model.Mesec).@Html.DisplayFor(model => model.Godina)
+           
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sat) : @Html.DisplayFor(model=> model.Minut)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JedinicaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JedinicaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DvojkaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DvojkaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrojkaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrojkaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CetvorkaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CetvorkaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeticaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeticaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SesticaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SesticaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SedmicaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SedmicaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OsmicaGoreLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OsmicaGoreLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JedinicaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JedinicaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DvojkaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DvojkaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrojkaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrojkaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CetvorkaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CetvorkaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeticaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeticaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SesticaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SesticaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SedmicaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SedmicaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OsmicaGoreDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OsmicaGoreDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JedinicaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JedinicaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DvojkaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DvojkaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrojkaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrojkaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CetvorkaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CetvorkaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeticaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeticaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SesticaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SesticaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SedmicaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SedmicaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OsmicaDoleDesno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OsmicaDoleDesno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JedinicaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JedinicaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DvojkaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DvojkaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrojkaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrojkaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CetvorkaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CetvorkaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeticaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeticaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SesticaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SesticaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SedmicaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SedmicaDoleLevo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OsmicaDoleLevo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OsmicaDoleLevo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Vrati se na listu", "Index")
+</p>

@@ -4,7 +4,7 @@
     ViewBag.Title = "Izmeni zakazanu posetu";
 }
 
-<h2>Izmeni stomatologa</h2>
+<h2>Izmeni zakazanu posetu</h2>
 
 <div>
     @using (Html.BeginForm())
@@ -12,10 +12,11 @@
         @Html.HiddenFor(model => model.IDZakazanePosete)
         <div>
             @Html.LabelFor(model => model.Napomena)
-            @Html.TextBoxFor(model => model.Napomena)
+            @Html.TextAreaFor(model => model.Napomena)
             @Html.ValidationMessageFor(model => model.Napomena)
         </div>
         <div>
+            @Html.LabelFor(model => model.Dan)
             @Html.DropDownListFor(model => model.Dan, new SelectList(Enumerable.Range(1, 31).ToList()))
             @Html.ValidationMessageFor(model => model.Dan)
             @Html.DropDownListFor(model => model.Mesec, new SelectList(Enumerable.Range(1, 12).ToList()))
@@ -28,7 +29,7 @@
             @Html.DropDownListFor(model => model.Minut, new SelectList(Enumerable.Range(0, 60).ToList()))
             @Html.ValidationMessageFor(model => model.Minut)
         </div>
-        <input type="submit" value="Submit changes" />
+        <input type="submit" value="Potvrdi izmene" />
     }
     @Html.ActionLink("Vrati se na listu zakazanih poseta", "Index")
 </div>

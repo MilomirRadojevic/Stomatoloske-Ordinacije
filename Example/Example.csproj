@@ -164,6 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KartonController.cs" />
     <Compile Include="Controllers\ObavljenaPosetaController.cs" />
+    <Compile Include="Controllers\ObjavaController.cs" />
     <Compile Include="Controllers\OrdinacijaController.cs" />
     <Compile Include="Controllers\PorukaController.cs" />
     <Compile Include="Controllers\PrikazOrdinacijaController.cs" />
@@ -191,15 +192,19 @@
     <Compile Include="Models\KomentarNaObjavu.cs" />
     <Compile Include="Models\ListaPorukaViewModel.cs" />
     <Compile Include="Models\NovaObavljenaPoseta.cs" />
+    <Compile Include="Models\NovaObjava.cs" />
     <Compile Include="Models\NovaOrdinacija.cs" />
     <Compile Include="Models\NovaPorukaViewModel.cs" />
     <Compile Include="Models\NovaZakazanaPosetaBezKartona.cs" />
     <Compile Include="Models\NovaZakazanaPosetaSaKartonom.cs" />
     <Compile Include="Models\NoviKarton.cs" />
+    <Compile Include="Models\NoviKomentar.cs" />
     <Compile Include="Models\NovStomatolog.cs" />
     <Compile Include="Models\ObavljenaPoseta.cs" />
     <Compile Include="Models\ObavljenaPosetaViewModel.cs" />
+    <Compile Include="Models\ObavljeniPregled.cs" />
     <Compile Include="Models\Objava.cs" />
+    <Compile Include="Models\ObjavaViewModel.cs" />
     <Compile Include="Models\OdgovorNaPoruku.cs" />
     <Compile Include="Models\Ordinacija.cs" />
     <Compile Include="Models\OrdinacijaViewModel.cs" />
@@ -210,6 +215,7 @@
     <Compile Include="Models\Stomatolog.cs" />
     <Compile Include="Models\StomatologContext.cs" />
     <Compile Include="Models\StomatologViewModel.cs" />
+    <Compile Include="Models\SveObjaveViewModel.cs" />
     <Compile Include="Models\UrediProfilViewModel.cs" />
     <Compile Include="Models\ZakazanaPoseta.cs" />
     <Compile Include="Models\ZakazanaPosetaViewModel.cs" />
@@ -314,6 +320,15 @@
     <Content Include="Views\Karton\_NovaListaKartona.cshtml" />
     <Content Include="Views\ZakazanaPoseta\PretragaKartona.cshtml" />
     <Content Include="Views\ZakazanaPoseta\_ListaKartona.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\PretragaKartona.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\_ListaKartona.cshtml" />
+    <Content Include="Views\Objava\DodajKomentar.cshtml" />
+    <Content Include="Views\Objava\Index.cshtml" />
+    <Content Include="Views\Objava\NovaObjava.cshtml" />
+    <Content Include="Views\Objava\PrikaziObjavu.cshtml" />
+    <Content Include="Views\Objava\SveObjave.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\DodajObavljeniPregled.cshtml" />
+    <Content Include="Views\ObavljenaPoseta\DetaljiObavljenogPregleda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

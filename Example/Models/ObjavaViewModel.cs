@@ -60,7 +60,8 @@ namespace Example.Models
         {
             get
             {
-                return context.Objave.Where(m => m.IDObjave == IDObjave).Select(m => m.KomentariNaObjavu).First();
+                List<KomentarNaObjavu> lista = context.Objave.Where(m => m.IDObjave == IDObjave).Select(m => m.KomentariNaObjavu).First().ToList();
+                return lista.OrderByDescending(m => m.DatumVreme).ToList();
             }
         }
     }

@@ -38,12 +38,15 @@ namespace Example.Controllers
         }
 
         //
-        // GET: /Poruka/
+        [Authorize(Roles = "user")]
+
         public ActionResult Index()
         {
             return View();
         }
 
+
+        [Authorize(Roles = "user")]
 
         public ActionResult NovaPoruka(string PrimalacIDClanaKomore)
         {
@@ -56,6 +59,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult NovaPoruka(NovaPorukaViewModel model)
         {
             if (ModelState.IsValid)
@@ -72,6 +77,8 @@ namespace Example.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult NovaPoruka2(Poruka model)
         {
             if (ModelState.IsValid)
@@ -87,6 +94,8 @@ namespace Example.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "user")]
+
         public ActionResult ListaPoruka()
         {
             ListaPorukaViewModel model = new ListaPorukaViewModel();
@@ -95,6 +104,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult RefreshList(ListaPorukaViewModel model)
         {
             if (ModelState.IsValid)
@@ -104,6 +115,8 @@ namespace Example.Controllers
             return PartialView("_ListaPoruka", model);
         }
 
+
+        [Authorize(Roles = "user")]
 
         public ActionResult ProcitajPoruku(string IDClanaKomore)
         {

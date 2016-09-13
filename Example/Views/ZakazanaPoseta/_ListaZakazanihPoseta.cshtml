@@ -25,11 +25,20 @@
             <td>@(m.DatumVreme.Day + "." + m.DatumVreme.Month + "." + m.DatumVreme.Year + ".")</td>
             <td>@(m.DatumVreme.Hour + ":" + m.DatumVreme.Minute)</td>
 
+
             <td>
                 @Html.ActionLink("Izmeni podatke o zakazanoj poseti", "IzmeniZakazanuPosetu", new { IDZakazanePosete = m.IDZakazanePosete }) |
                 @Html.ActionLink("Detalji o zakazanoj poseti", "DetaljiZakazanePosete", new { IDZakazanePosete = m.IDZakazanePosete }) |
                 @Html.ActionLink("Obriši zakazanu posetu", "ObrisiZakazanuPosetu", new { IDZakazanePosete = m.IDZakazanePosete })
+                @if (m.ImaKarton)
+                { 
+                    @Html.ActionLink("Obavljena intervencija", "DodajNovuObavljenuPosetu","ObavljenaPoseta", new { IDKartona = m.PacijentIDKartona, Dan = m.DatumVreme.Day, Mesec = m.DatumVreme.Month, Godina = m.DatumVreme.Year, Sat = m.DatumVreme.Hour, Minut = m.DatumVreme.Minute },null) @: |
+                    @Html.ActionLink("Obavljen pregled", "DodajObavljeniPregled", "ObavljenaPoseta",new { IDKartona = m.PacijentIDKartona, Dan = m.DatumVreme.Day, Mesec = m.DatumVreme.Month, Godina = m.DatumVreme.Year, Sat = m.DatumVreme.Hour, Minut = m.DatumVreme.Minute },null)
+                    
+                }
             </td>
+
+
         </tr>
     }
 

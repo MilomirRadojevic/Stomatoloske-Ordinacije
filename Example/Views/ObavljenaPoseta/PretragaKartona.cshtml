@@ -1,0 +1,73 @@
+﻿@model Example.Models.KartonViewModel
+@{
+    ViewBag.Title = "Pretraga";
+}
+
+
+<div>
+    <div>
+        @using (Ajax.BeginForm("RefreshListZaKartone", "ObavljenaPoseta", new AjaxOptions()
+        {
+            UpdateTargetId = "listakartona",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST"
+
+        }))
+        {
+
+            @Html.LabelFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime)
+            @Html.ValidationMessageFor(m => m.Ime)
+
+            @Html.LabelFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime)
+            @Html.ValidationMessageFor(m => m.Prezime)
+
+            @Html.LabelFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG)
+            @Html.ValidationMessageFor(m => m.JMBG)
+
+            @Html.LabelFor(m => m.IDStomatologa)
+            @Html.DisplayFor(m => m.IDStomatologa)
+            @Html.ValidationMessageFor(m => m.IDStomatologa)
+
+            <div>
+            </div>
+        }
+    </div>
+
+</div>
+
+<div id="listakartona">
+    @Html.Partial("_ListaKartona", Model)
+</div>
+
+<p>
+    @Html.ActionLink("Dodaj novog pacijenta", "DodajKarton", "Karton")
+</p>
+
+@section scripts {
+    <script type="text/javascript">
+        $("#Ime, #Prezime, #JMBG").keyup(function (event) {
+            // $(this).parents("form").submit();
+
+            // Moze i ovako, efekat je isti, ali je fleksibilnije, jer direktno
+            // koristimo JQuery.ajax() metodu.
+            $.ajax($(this).parents("form").attr("action"), {
+                // submit-uju se parametri koji se pokupe iz forme
+                data: { Ime: $("#Ime").val(), Prezime: $("#Prezime").val(), JMBG: $("#JMBG").val(), IDStomatologa: $("#IDStomatologa").val() },
+                method: "POST",
+                // izvrsava se ako zahtev uspe
+                success: function (data, status, xhr) {
+                    $("#listakartona").html(data);
+                },
+                // izvrsava se ako se dogodi neka greska
+                error: function (xhr, status, err) {
+                    $("#listakartona").text(err);
+                },
+                dataType: "html"
+            });
+        });
+    </script>
+}
+

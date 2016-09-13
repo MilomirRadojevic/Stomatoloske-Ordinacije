@@ -29,37 +29,25 @@ namespace Example.Models
 
         public StomatologContext context = new StomatologContext();
 
+        public string IDStomatologa { get; set; }
+
+        
         public IEnumerable<ObavljenaPoseta> ListaObavljenihPoseta
         {
             get;
             set;
         }
 
-        public ObavljenaPosetaViewModel()
-        {
-            ListaObavljenihPoseta = context.ObavljenePosete.ToList();
-            DateTime dt = DateTime.Now;
-            Dan1 = dt.Day;
-            Mesec1 = dt.Month;
-            Godina1 = dt.Year;
-            dt = dt.AddDays(1);
-            Dan2 = dt.Day;
-            Mesec2 = dt.Month;
-            Godina2 = dt.Year;
-        }
-
-
-
-
+        
         public void RefreshList()
         {
             DateTime dt1 = new DateTime(Godina1, Mesec1, Dan1);
             DateTime dt2 = new DateTime(Godina2, Mesec2, Dan2);
             ListaObavljenihPoseta = (from m in context.ObavljenePosete
-                                    where (m.StomatologIDClanaKomore == Username.Name) &&
-                                      (m.DatumVreme > dt1) &&
-                                      (m.DatumVreme < dt2)
-                                    select m).ToList();
+                                     where (m.StomatologIDClanaKomore == IDStomatologa) &&
+                                       (m.DatumVreme > dt1) &&
+                                       (m.DatumVreme < dt2)
+                                     select m).ToList();
         }
 
     }

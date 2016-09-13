@@ -15,6 +15,8 @@ namespace Example.Controllers
 
         //
         // GET: /Karton/
+        [Authorize(Roles = "user")]
+
         public ActionResult Index()
         {
             return View();
@@ -64,6 +66,7 @@ namespace Example.Controllers
         }
 
 
+        [Authorize(Roles = "user")]
 
         // GET: /Ordinacija/Pretraga
         public ActionResult Pretraga()
@@ -94,6 +97,8 @@ namespace Example.Controllers
         }*/
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult RefreshList(KartonViewModel model)
         {
             string IDStomatologa = User.Identity.GetUserName();
@@ -104,6 +109,8 @@ namespace Example.Controllers
             }
             return PartialView("_NovaListaKartona", model);
         }
+
+        [Authorize(Roles = "user")]
 
         public ActionResult DetaljiKartona(int? IDKartona)
         {
@@ -117,6 +124,8 @@ namespace Example.Controllers
         }
 
 
+        [Authorize(Roles = "user")]
+
         public ActionResult IzmeniKarton(int? IDKartona)
         {
             if (IDKartona == null)
@@ -129,6 +138,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult IzmeniKarton(IzmeniKartonViewModel model)
         {
             if (ModelState.IsValid)
@@ -146,6 +157,9 @@ namespace Example.Controllers
             }
             return View(model);
         }
+
+
+        [Authorize(Roles = "user")]
 
         public ActionResult ObrisiKarton(int? IDKartona)
         {

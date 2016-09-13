@@ -15,7 +15,7 @@
 <div class="komentariNaObjavu">
     @foreach (var m in Model.KomentariNaObjavu)
     {
-         @(m.DatumVreme.ToString()) @:  #ID komentara: @(m.IDKomentara)
+        @(m.DatumVreme.ToString()) @:  #ID komentara: @(m.IDKomentara)
         <div class="tekstKomentara">
             @(m.Tekst)
         </div>

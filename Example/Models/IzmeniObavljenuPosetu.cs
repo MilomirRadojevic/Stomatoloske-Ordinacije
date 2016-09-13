@@ -13,6 +13,7 @@ namespace Example.Models
         public int IDPosete { get; set; }
 
         [Required]
+        [Display(Name = "Opis intervencije: ")]
         public string OpisIntervencije
         {
             get;
@@ -20,6 +21,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Terapija: ")]
+
         public string Terapija
         {
             get;
@@ -27,6 +30,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Datum i vreme: ")]
+
         public int Dan
         {
             get;

@@ -16,6 +16,8 @@ namespace Example.Controllers
         // SREDJENO
         //
         // GET: /Stomatolog/
+        [Authorize(Roles = "user")]
+
         public ActionResult Index()
         {
             return View();
@@ -27,6 +29,9 @@ namespace Example.Controllers
         {
             return View();
         }
+
+
+        [Authorize(Roles = "user")]
 
         public ActionResult PretragaKartona()
         {
@@ -45,6 +50,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult RefreshListZaKartone(KartonViewModel model)
         {
             string IDStomatologa = User.Identity.GetUserName();
@@ -160,6 +167,8 @@ namespace Example.Controllers
         }
 
         // GET: /Stomatolog/Pretraga
+        [Authorize(Roles = "user")]
+
         public ActionResult Pretraga()
         {
             string IDStomatologa = User.Identity.GetUserName();
@@ -179,6 +188,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult RefreshList(ZakazanaPosetaViewModel model)
         {
             string IDStomatologa = User.Identity.GetUserName();
@@ -190,6 +201,8 @@ namespace Example.Controllers
             return PartialView("_ListaZakazanihPoseta", model);
         }
 
+        [Authorize(Roles = "user")]
+
         public ActionResult DetaljiZakazanePosete(int ? IDZakazanePosete)
         {
             if (IDZakazanePosete == null)
@@ -200,6 +213,9 @@ namespace Example.Controllers
 
             return View(model);
         }
+
+
+        [Authorize(Roles = "user")]
 
         public ActionResult IzmeniZakazanuPosetu(int ? IDZakazanePosete)
         {
@@ -213,6 +229,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult IzmeniZakazanuPosetu(IzmeniZakazanuPosetuViewModel model)
         {
             if (ModelState.IsValid)
@@ -230,6 +248,8 @@ namespace Example.Controllers
             }
             return View(model);
         }
+
+        [Authorize(Roles = "user")]
 
         public ActionResult ObrisiZakazanuPosetu(int IDZakazanePosete)
         {

@@ -24,12 +24,20 @@
             <td>@((from t in Model.context.Pacijenti where t.IDKartona == m.PacijentIDKartona select t.Prezime).First())</td>
             <td>@(m.DatumVreme.Day + "." + m.DatumVreme.Month + "." + m.DatumVreme.Year + ".")</td>
             <td>@(m.DatumVreme.Hour + ":" + m.DatumVreme.Minute)</td>
-
+            @if((m.OpisIntervencije != "pregled"))
+            { 
             <td>
                 @Html.ActionLink("Izmeni podatke o obavljenoj poseti", "IzmeniObavljenuPosetu", new { IDPosete = m.IDPosete }) |
                 @Html.ActionLink("Detalji o obavljenoj poseti", "DetaljiObavljenePosete", new { IDPosete = m.IDPosete }) |
                 @Html.ActionLink("Obriši obavljenu posetu", "ObrisiObavljenuPosetu", new { IDPosete = m.IDPosete })
             </td>
+            }
+            @if (m.OpisIntervencije == "pregled")
+            {
+            <td>
+                @Html.ActionLink("Detalji obavljenog pregleda", "DetaljiObavljenogPregleda", new { IDPregleda = m.IDPosete })
+            </td>
+}
         </tr>
     }
 

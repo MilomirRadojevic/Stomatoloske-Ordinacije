@@ -14,7 +14,7 @@ namespace Example.Models
         {
             get
             {
-                return stomatolog.Objave.ToList();
+                return stomatolog.Objave.OrderByDescending(m => m.DatumVreme).ToList();
             }
         }
 

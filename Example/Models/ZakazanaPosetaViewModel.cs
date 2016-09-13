@@ -44,10 +44,10 @@ namespace Example.Models
             DateTime dt1 = new DateTime(Godina1, Mesec1, Dan1);
             DateTime dt2 = new DateTime(Godina2, Mesec2, Dan2);
             ListaZakazanihPoseta = (from m in context.ZakazanePosete
-                                where (m.StomatologIDClanaKomore == IDStomatologa) &&
-                                  (m.DatumVreme > dt1) &&
-                                  (m.DatumVreme < dt2)
-                                select m).ToList();
+                                    where (m.StomatologIDClanaKomore == IDStomatologa) &&
+                                      (m.DatumVreme > dt1) &&
+                                      (m.DatumVreme < dt2)
+                                    select m).ToList();
         }
 
     }

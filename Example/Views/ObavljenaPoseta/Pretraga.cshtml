@@ -3,9 +3,7 @@
     ViewBag.Title = "Pretraga";
 }
 
-<p>
-    @Html.ActionLink("Dodaj novu obavljanu posetu", "DodajNovuObavljenuPosetu", "ObavljenaPoseta")
-</p>
+
 <div>
     <div>
         @using (Ajax.BeginForm("RefreshList", "ObavljenaPoseta", new AjaxOptions()
@@ -40,6 +38,12 @@
 <div id="listaobavljenihposeta">
     @Html.Partial("_ListaObavljenihPoseta", Model)
 </div>
+
+
+
+<p>
+    @Html.ActionLink("Dodaj novu obavljenu posetu","PretragaKartona", "ObavljenaPoseta")
+</p>
 
 @section scripts {
     <script type="text/javascript">

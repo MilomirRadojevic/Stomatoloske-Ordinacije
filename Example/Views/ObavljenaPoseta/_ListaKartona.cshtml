@@ -1,0 +1,36 @@
+﻿@model Example.Models.KartonViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JMBG)
+        </th>
+
+
+    </tr>
+
+    @foreach (var m in Model.ListaKartona)
+    {
+        <tr>
+            <td>@m.Ime</td>
+            <td>@m.Prezime</td>
+            <td>@m.JMBG</td>
+
+
+            <td>
+                @Html.ActionLink("Obavljena intervencija", "DodajNovuObavljenuPosetu", new { IDKartona = m.IDKartona, Dan = DateTime.Now.Day, Mesec = DateTime.Now.Month, Godina = DateTime.Now.Year, Sat = DateTime.Now.Hour, Minut = DateTime.Now.Minute }) |
+                @Html.ActionLink("Obavljen pregled", "DodajObavljeniPregled", new { IDKartona = m.IDKartona, Dan = DateTime.Now.Day, Mesec = DateTime.Now.Month, Godina = DateTime.Now.Year, Sat = DateTime.Now.Hour, Minut = DateTime.Now.Minute })
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+

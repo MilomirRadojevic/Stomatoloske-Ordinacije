@@ -13,15 +13,22 @@ namespace Example.Controllers
         StomatologContext context = new StomatologContext();
         //
         // GET: /Objava/
+        [Authorize(Roles = "user")]
         public ActionResult Index()
         {
             return View();
         }
 
+
+        [Authorize(Roles = "user")]
+
         public ActionResult SveObjave()
         {
             return View(new SveObjaveViewModel());
         }
+
+
+        [Authorize(Roles = "user")]
 
         public ActionResult PrikaziObjavu(int? IDObjave)
         {
@@ -34,12 +41,17 @@ namespace Example.Controllers
             return View(model);
         }
 
+
+        [Authorize(Roles = "user")]
+
         public ActionResult NovaObjava()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult NovaObjava(NovaObjava model)
         {
             string IDkorisnika = User.Identity.GetUserName();
@@ -61,6 +73,8 @@ namespace Example.Controllers
             return RedirectToAction("Index", "Objava");
         }
 
+        [Authorize(Roles = "user")]
+
         public ActionResult DodajKomentar(int? IDObjave)
         {
             if (IDObjave == null)
@@ -71,6 +85,8 @@ namespace Example.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "user")]
+
         public ActionResult DodajKomentar(NoviKomentar model)
         {
             string IDkorisnika = User.Identity.GetUserName();
@@ -82,7 +98,7 @@ namespace Example.Controllers
             {
                 DatumVreme = trenutnoVreme,
                 ObjavaIDObjave = model.IDObjave,
-                Tekst = ulogovani.Ime + " " + ulogovani.Prezime + ":\n" +model.Tekst,
+                Tekst = ulogovani.Ime + " " + ulogovani.Prezime + ":\n" + model.Tekst,
                 OriginalnaObjava = originalnaObjava
             };
 

@@ -13,6 +13,7 @@ namespace Example.Models
         public int IDZakazanePosete { get; set; }
 
         [Required]
+        [Display(Name = "Napomena: ")]
         public string Napomena
         {
             get;
@@ -20,6 +21,8 @@ namespace Example.Models
         }
 
         [Required]
+        [Display(Name = "Datum i vreme: ")]
+
         public int Dan
         {
             get;

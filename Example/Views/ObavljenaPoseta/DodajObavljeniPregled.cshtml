@@ -1,0 +1,335 @@
+﻿@model Example.Models.ObavljeniPregled
+
+@{
+    ViewBag.Title = "Obavljeni pregled";
+}
+
+<h2>Obavljeni pregled</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dan, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Dan, new SelectList(Enumerable.Range(1, 31).ToList()))
+                @Html.ValidationMessageFor(model => model.Dan)
+                @Html.DropDownListFor(model => model.Mesec, new SelectList(Enumerable.Range(1, 12).ToList()))
+                @Html.ValidationMessageFor(model => model.Mesec)
+                @Html.DropDownListFor(model => model.Godina, new SelectList(Enumerable.Range(1990, 50).ToList()))
+                @Html.ValidationMessageFor(model => model.Godina)
+                &nbsp;&nbsp;
+                @Html.DropDownListFor(model => model.Sat, new SelectList(Enumerable.Range(0, 24).ToList()))
+                @Html.ValidationMessageFor(model => model.Sat)
+                @Html.DropDownListFor(model => model.Minut, new SelectList(Enumerable.Range(0, 60).ToList()))
+                @Html.ValidationMessageFor(model => model.Minut)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IDPacijenta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.IDPacijenta)
+                @Html.ValidationMessageFor(model => model.IDPacijenta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImePacijenta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ImePacijenta)
+                @Html.ValidationMessageFor(model => model.ImePacijenta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PrezimePacijenta, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PrezimePacijenta)
+                @Html.ValidationMessageFor(model => model.PrezimePacijenta)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.JMBG, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.JMBG)
+                @Html.ValidationMessageFor(model => model.JMBG)
+            </div>
+        </div>
+
+        
+
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.JedinicaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JedinicaGoreLevo)
+                @Html.ValidationMessageFor(model => model.JedinicaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DvojkaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DvojkaGoreLevo)
+                @Html.ValidationMessageFor(model => model.DvojkaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrojkaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrojkaGoreLevo)
+                @Html.ValidationMessageFor(model => model.TrojkaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CetvorkaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CetvorkaGoreLevo)
+                @Html.ValidationMessageFor(model => model.CetvorkaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PeticaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PeticaGoreLevo)
+                @Html.ValidationMessageFor(model => model.PeticaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SesticaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SesticaGoreLevo)
+                @Html.ValidationMessageFor(model => model.SesticaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SedmicaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SedmicaGoreLevo)
+                @Html.ValidationMessageFor(model => model.SedmicaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OsmicaGoreLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OsmicaGoreLevo)
+                @Html.ValidationMessageFor(model => model.OsmicaGoreLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.JedinicaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JedinicaGoreDesno)
+                @Html.ValidationMessageFor(model => model.JedinicaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DvojkaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DvojkaGoreDesno)
+                @Html.ValidationMessageFor(model => model.DvojkaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrojkaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrojkaGoreDesno)
+                @Html.ValidationMessageFor(model => model.TrojkaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CetvorkaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CetvorkaGoreDesno)
+                @Html.ValidationMessageFor(model => model.CetvorkaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PeticaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PeticaGoreDesno)
+                @Html.ValidationMessageFor(model => model.PeticaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SesticaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SesticaGoreDesno)
+                @Html.ValidationMessageFor(model => model.SesticaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SedmicaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SedmicaGoreDesno)
+                @Html.ValidationMessageFor(model => model.SedmicaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OsmicaGoreDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OsmicaGoreDesno)
+                @Html.ValidationMessageFor(model => model.OsmicaGoreDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.JedinicaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JedinicaDoleDesno)
+                @Html.ValidationMessageFor(model => model.JedinicaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DvojkaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DvojkaDoleDesno)
+                @Html.ValidationMessageFor(model => model.DvojkaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrojkaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrojkaDoleDesno)
+                @Html.ValidationMessageFor(model => model.TrojkaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CetvorkaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CetvorkaDoleDesno)
+                @Html.ValidationMessageFor(model => model.CetvorkaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PeticaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PeticaDoleDesno)
+                @Html.ValidationMessageFor(model => model.PeticaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SesticaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SesticaDoleDesno)
+                @Html.ValidationMessageFor(model => model.SesticaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SedmicaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SedmicaDoleDesno)
+                @Html.ValidationMessageFor(model => model.SedmicaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OsmicaDoleDesno, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OsmicaDoleDesno)
+                @Html.ValidationMessageFor(model => model.OsmicaDoleDesno)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.JedinicaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.JedinicaDoleLevo)
+                @Html.ValidationMessageFor(model => model.JedinicaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DvojkaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DvojkaDoleLevo)
+                @Html.ValidationMessageFor(model => model.DvojkaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrojkaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TrojkaDoleLevo)
+                @Html.ValidationMessageFor(model => model.TrojkaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CetvorkaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CetvorkaDoleLevo)
+                @Html.ValidationMessageFor(model => model.CetvorkaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PeticaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PeticaDoleLevo)
+                @Html.ValidationMessageFor(model => model.PeticaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SesticaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SesticaDoleLevo)
+                @Html.ValidationMessageFor(model => model.SesticaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SedmicaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SedmicaDoleLevo)
+                @Html.ValidationMessageFor(model => model.SedmicaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OsmicaDoleLevo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OsmicaDoleLevo)
+                @Html.ValidationMessageFor(model => model.OsmicaDoleLevo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sačuvaj" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Vrati se na listu","Index")
+</div>
