@@ -6,21 +6,21 @@
 
 <h2>Napiši poruku:</h2>
 
-<div>
+<div class="novaporuka">
     @using (Html.BeginForm())
     {
-        <div>
+        <div >
             @Html.LabelFor(m => m.PrimalacIDClanaKomore)
-            @Html.DropDownListFor(m => m.PrimalacIDClanaKomore, new SelectList(Model.Primaoci, "IDClanaKomore", "ImeIPrezime"));
+            @Html.DropDownListFor(m => m.PrimalacIDClanaKomore, new SelectList(Model.Primaoci, "IDClanaKomore", "ImeIPrezime"))
             @Html.ValidationMessageFor(m => m.PrimalacIDClanaKomore)
         </div>
         <div>
             @Html.LabelFor(m => m.TekstPoruke)
-            @Html.TextAreaFor(m => m.TekstPoruke)
+            @Html.TextAreaFor(m => m.TekstPoruke, new { id = "novaporukatekst" })
             @Html.ValidationMessageFor(m => m.TekstPoruke)
         </div>
         <div>
-            <input type="submit" value="Pošalji" />
+            <input type="submit" value="Pošalji" class="btn" />
         </div>
     }
 </div>

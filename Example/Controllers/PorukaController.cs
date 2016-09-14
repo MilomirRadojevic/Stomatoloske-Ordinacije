@@ -37,6 +37,7 @@ namespace Example.Controllers
 
         }
 
+        StomatologContext context = new StomatologContext();
         //
         [Authorize(Roles = "user")]
 
@@ -76,30 +77,49 @@ namespace Example.Controllers
         }
 
 
+        [Authorize(Roles = "user")]
+
+        public ActionResult NovaPoruka2(string IDClanaKomore1 , string IDClanaKomore2)
+        {
+            string ulogovani = User.Identity.GetUserName();
+            
+            string ID;
+            if (IDClanaKomore1 == ulogovani)
+                ID = IDClanaKomore2;
+            else
+                ID = IDClanaKomore1;
+            
+            NovaPorukaViewModel model = new NovaPorukaViewModel();
+            model.PrimalacIDClanaKomore = ID;
+
+            model.ImePrimaoca = context.Stomatolozi.Where(m => m.IDClanaKomore == ID).First().Ime;
+            model.PrezimePrimaoca = context.Stomatolozi.Where(m => m.IDClanaKomore == ID).First().Prezime;
+            return View(model);
+        }
+
         [HttpPost]
         [Authorize(Roles = "user")]
 
-        public ActionResult NovaPoruka2(Poruka model)
+        public ActionResult NovaPoruka2(NovaPorukaViewModel model)
         {
             if (ModelState.IsValid)
             {
-                Console.Write("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                model.Salje = MessageUser;
-                model.StomatologSaljeIDClanaKomore = MessageUser.IDClanaKomore;
-                model.sacuvajPoruku();
+
+                model.sacuvajPoruku(MessageUser.IDClanaKomore);
                 return RedirectToAction("Index");
-
-
             }
             return View(model);
         }
+
+
 
         [Authorize(Roles = "user")]
 
         public ActionResult ListaPoruka()
         {
+            string ulogovani = User.Identity.GetUserName();
             ListaPorukaViewModel model = new ListaPorukaViewModel();
-            model.azurirajListuPoruka(MessageUser.IDClanaKomore);
+            model.azurirajListuPoruka(ulogovani);
             return View(model);
         }
 
@@ -108,30 +128,28 @@ namespace Example.Controllers
 
         public ActionResult RefreshList(ListaPorukaViewModel model)
         {
+            string ulogovani = User.Identity.GetUserName();
             if (ModelState.IsValid)
             {
-                model.azurirajListuPoruka(MessageUser.IDClanaKomore);
+                model.azurirajListuPoruka(ulogovani);
             }
             return PartialView("_ListaPoruka", model);
         }
 
 
         [Authorize(Roles = "user")]
-
-        public ActionResult ProcitajPoruku(string IDClanaKomore)
+        public ActionResult ProcitajPoruku(string IDClanaKomore1,string IDClanaKomore2)
         {
-
+            string trenutni = User.Identity.GetUserName();
+            string ID = IDClanaKomore1 == trenutni ? IDClanaKomore2 : IDClanaKomore1;
             StomatologContext context = new StomatologContext();
-            ICollection<Poruka> lista_poruka_primljene = context.Poruke.Where(m => m.Salje.IDClanaKomore == IDClanaKomore).ToList();
-            ICollection<Poruka> lista_poruka_poslate = context.Poruke.Where(m => m.Primalac.IDClanaKomore == IDClanaKomore).ToList();
+            string ulogovani = User.Identity.GetUserName();
+            ICollection<Poruka> lista_poruka_primljene = context.Poruke.Where(m => m.Salje.IDClanaKomore == ID).Where(m => m.Primalac.IDClanaKomore == ulogovani).ToList();
+            ICollection<Poruka> lista_poruka_poslate = context.Poruke.Where(m => m.Primalac.IDClanaKomore == ID).Where(m => m.Salje.IDClanaKomore == ulogovani).ToList();
 
-            Poruka novaPoruka = new Poruka();
-            novaPoruka.Primalac = context.Stomatolozi.Where(m => m.IDClanaKomore == IDClanaKomore).ToList().First();
-            novaPoruka.StomatologPrimalacIDClanaKomore = novaPoruka.Primalac.IDClanaKomore;
-
-            lista_poruka_poslate.Add(novaPoruka);
+          
             var pom = lista_poruka_poslate.Concat(lista_poruka_primljene);
-
+            ViewBag.IDClana = trenutni;
             return View(pom.OrderBy(m => m.DatumVreme).ToList());
         }
 

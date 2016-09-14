@@ -21,6 +21,11 @@ namespace Example.Models
 
         }
 
+        [Display(Name = "Ime i prezime primaoca: ")]
+        public string ImePrimaoca { get; set; }
+        public string PrezimePrimaoca { get; set; }
+
+
         public List<Stavka> Primaoci
         {
             get

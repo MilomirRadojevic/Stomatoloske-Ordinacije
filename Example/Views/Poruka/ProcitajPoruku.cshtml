@@ -8,12 +8,24 @@
 
 @foreach (var m in Model)
 {
-    <div>
-
-        <div style="background-color: rgb(150,150,150); color: blue;">@m.Tekst</div>
-      
+    <div class="bubble">
+        @if(ViewBag.IDClana == m.StomatologPrimalacIDClanaKomore)
+        {
+        <div class="primalacporuka" >
+            <span class="imeiprezimeprimaoca">@(m.Salje.Ime + " " + m.Salje.Prezime) </span><br/>
+            @m.Tekst
+        </div>
+        }
+        @if(ViewBag.IDClana != m.StomatologPrimalacIDClanaKomore)
+        {
+        <div class="posiljalacporuka"> 
+            <span class="imeiprezimeposiljaoca">@(m.Salje.Ime + " " + m.Salje.Prezime) </span><br/>
+            @m.Tekst
+        </div>
+        } 
+        
     </div>
 }
-@Html.ActionLink("Nova poruka", "NovaPoruka", "Poruka", new { PrimalacIDClanaKomore = Model.First().Primalac.IDClanaKomore })</li>
+@Html.ActionLink("Nova poruka", "NovaPoruka2", "Poruka", new {IDClanaKomore1=Model.First().Salje.IDClanaKomore , IDClanaKomore2 = Model.First().Primalac.IDClanaKomore },null)
 
 

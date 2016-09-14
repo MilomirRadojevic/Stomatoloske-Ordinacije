@@ -7,6 +7,7 @@
 <h2>Dodaj karton</h2>
 
 
+<div id="dodavanjekartona">
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -92,6 +93,7 @@
     @Html.ActionLink("Nazad", "Index")
 </div>
 
+</div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

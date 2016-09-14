@@ -273,3 +273,113 @@ C:\Users\Ana\Desktop\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ana\Desktop\Example\obj\Release\Example.csprojResolveAssemblyReference.cache
 C:\Users\Ana\Desktop\Example\obj\Release\Example.dll
 C:\Users\Ana\Desktop\Example\obj\Release\Example.pdb
+C:\Users\user\Desktop\12sept vece\Example\bin\Example.dll.config
+C:\Users\user\Desktop\12sept vece\Example\bin\Example.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Example.pdb
+C:\Users\user\Desktop\12sept vece\Example\bin\Antlr3.Runtime.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\EntityFramework.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\Owin.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Helpers.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Optimization.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\WebGrease.dll
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Helpers.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Optimization.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Antlr3.Runtime.pdb
+C:\Users\user\Desktop\12sept vece\Example\bin\EntityFramework.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user\Desktop\12sept vece\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user\Desktop\12sept vece\Example\obj\Release\Example.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\12sept vece\Example\obj\Release\Example.dll
+C:\Users\user\Desktop\12sept vece\Example\obj\Release\Example.pdb
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Example.dll.config
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Example.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Example.pdb
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Antlr3.Runtime.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\EntityFramework.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\EntityFramework.SqlServer.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Newtonsoft.Json.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Owin.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Helpers.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Mvc.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Optimization.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Razor.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\WebGrease.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Helpers.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Mvc.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Optimization.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.Razor.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Newtonsoft.Json.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Antlr3.Runtime.pdb
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\EntityFramework.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\EntityFramework.SqlServer.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Ana\Desktop\sredjivanje\Example\obj\Release\Example.csprojResolveAssemblyReference.cache
+C:\Users\Ana\Desktop\sredjivanje\Example\obj\Release\Example.dll
+C:\Users\Ana\Desktop\sredjivanje\Example\obj\Release\Example.pdb

@@ -6,7 +6,7 @@
     {
         <tr>
             <td>
-                @Html.ActionLink(m.Salje.Ime + " " + m.Salje.Prezime, "ProcitajPoruku", new { IDClanaKomore = m.Salje.IDClanaKomore })
+                @Html.ActionLink(m.Salje.Ime + " " + m.Salje.Prezime + ", "+m.Primalac.Ime + " " + m.Primalac.Prezime , "ProcitajPoruku", new { IDClanaKomore1 = m.Salje.IDClanaKomore, IDClanaKomore2 = m.Primalac.IDClanaKomore })
 
             </td>
         </tr>

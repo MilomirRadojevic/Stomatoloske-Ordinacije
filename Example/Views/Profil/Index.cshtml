@@ -7,46 +7,46 @@
 
 <h2>Uredi profil</h2>
 
-<div>
+<div id="izmeneprofila">
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(m => m.IDClanaKomore)
         <div>
-            @Html.LabelFor(m => m.Ime)
+            @Html.LabelFor(m => m.Ime, new { id = "imeprofil"})
             @Html.TextBoxFor(m => m.Ime)
             @Html.ValidationMessageFor(m => m.Ime)
         </div>
         <div>
-            @Html.LabelFor(m => m.Prezime)
+            @Html.LabelFor(m => m.Prezime, new { id = "prezimeprofil"})
             @Html.TextBoxFor(m => m.Prezime)
             @Html.ValidationMessageFor(m => m.Prezime)
         </div>
         <div>
-            @Html.LabelFor(m => m.ZavrseniFakultet)
+            @Html.LabelFor(m => m.ZavrseniFakultet, new { id = "zavrsenifakultetprofil"})
             @Html.TextBoxFor(m => m.ZavrseniFakultet)
             @Html.ValidationMessageFor(m => m.ZavrseniFakultet)
         </div>
         <div>
-            @Html.LabelFor(m => m.Specijalizacija)
+            @Html.LabelFor(m => m.Specijalizacija, new {id = "specijalizacijaprofil"})
             @Html.TextBoxFor(m => m.Specijalizacija)
             @Html.ValidationMessageFor(m => m.Specijalizacija)
         </div>
         <div>
-            @Html.LabelFor(m => m.Sertifikat)
+            @Html.LabelFor(m => m.Sertifikat, new{id = "sertifikatprofil"})
             @Html.TextBoxFor(m => m.Sertifikat)
             @Html.ValidationMessageFor(m => m.Sertifikat)
         </div>
         <div>
-            @Html.LabelFor(m => m.BrojTelefona)
+            @Html.LabelFor(m => m.BrojTelefona , new {id = "brojtelefonaprofil"})
             @Html.TextBoxFor(m => m.BrojTelefona)
             @Html.ValidationMessageFor(m => m.BrojTelefona)
         </div>
         <div>
-            @Html.LabelFor(m => m.Mail)
+            @Html.LabelFor(m => m.Mail, new{id = "mailprofil"})
             @Html.TextBoxFor(m => m.Mail)
             @Html.ValidationMessageFor(m => m.Mail)
         </div>
-        <input type="submit" value="Potvrdi izmene" />
+        <input type="submit" value="Potvrdi izmene" class="btn"/>
     }
     @Html.ActionLink("Vrati se na na pocetnu stranu", "IndexForUsers", "Home")
 </div>

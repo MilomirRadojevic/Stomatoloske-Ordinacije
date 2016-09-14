@@ -7,7 +7,7 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink("Dobrodošli, " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Promena lozinke" })
+                @Html.ActionLink("Dobrodošli, " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Promena lozinke"})
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Izlogujte se</a></li>
         </ul>

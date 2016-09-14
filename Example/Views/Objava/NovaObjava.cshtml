@@ -5,11 +5,11 @@
 
 <h2>Nova objava</h2>
 
-<div class="novaObjava">
+<div id="novaobjava">
     @using (Html.BeginForm())
     {       <div>
         @Html.LabelFor(m => m.Tekst)
-        @Html.TextAreaFor(m => m.Tekst)
+        @Html.TextAreaFor(m => m.Tekst, new { id = "novaporukatekst" })
         @Html.ValidationMessageFor(m => m.Tekst)
     </div>
 
@@ -19,7 +19,7 @@
             {
                  new SelectListItem {Text = "Obaveštenje", Value = "Obaveštenje", Selected = true},
                  new SelectListItem {Text = "Pomoć oko problema", Value = "Pomoć"}
-            })
+            }, new { id = "obavestenjeobjava"})
             @Html.ValidationMessageFor(m => m.Vrsta)
         </div>
 
@@ -29,5 +29,5 @@
     }
 </div>
 
-<li>@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
+@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
 

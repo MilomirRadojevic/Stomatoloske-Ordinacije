@@ -1,0 +1,31 @@
+﻿@model Example.Models.NovaPorukaViewModel
+
+@{
+    ViewBag.Title = "Nova poruka";
+}
+
+<h2>Nova poruka</h2>
+
+<div class="novaporuka">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.PrimalacIDClanaKomore)
+        <div>
+            @Html.LabelFor(m => m.ImePrimaoca)
+            @Html.DisplayFor(m => m.ImePrimaoca)
+            @Html.ValidationMessageFor(m => m.ImePrimaoca)
+            @Html.DisplayFor(m => m.PrezimePrimaoca)
+            @Html.ValidationMessageFor(m => m.PrezimePrimaoca)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.TekstPoruke)
+            @Html.TextAreaFor(m => m.TekstPoruke, new { id = "novaporukatekst" })
+            @Html.ValidationMessageFor(m => m.TekstPoruke)
+        </div>
+        <div>
+            <input type="submit" value="Pošalji" class="btn"/>
+        </div>
+    }
+</div>
+
