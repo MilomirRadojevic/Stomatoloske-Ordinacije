@@ -4,27 +4,25 @@
 }
 
 <h2>Detalji objave</h2>
-
-<div class="zaglavljeObjave">
-    <b>@(Model.Objavio.Ime + " " + Model.Objavio.Prezime)</b>  @(Model.DatumVreme.ToString()) #ID objave: @(Model.IDObjave)
-</div>
-<div class="tekstObjave">
+<div id="prikazobjave">
+<div class="zaglavljeObjave objavaStil">
+    <b>@(Model.Objavio.Ime + " " + Model.Objavio.Prezime)</b>  @(Model.DatumVreme.ToString()) #ID objave: @(Model.IDObjave)<br/>
     @(Model.Tekst)
 </div>
 
-<div class="komentariNaObjavu">
+<div class="komentariNaObjavu komentariStil">
     @foreach (var m in Model.KomentariNaObjavu)
     {
         @(m.DatumVreme.ToString()) @:  #ID komentara: @(m.IDKomentara)
         <div class="tekstKomentara">
             @(m.Tekst)
-        </div>
+        </div><hr/>
     }
 </div>
 
 @Html.ActionLink("Dodaj komentar na ovu objavu", "DodajKomentar", new { IDObjave = Model.IDObjave })
 
 
-
+</div>
 
 

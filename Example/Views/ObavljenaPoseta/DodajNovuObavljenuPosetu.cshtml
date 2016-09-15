@@ -33,9 +33,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PacijentIDKartona, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PacijentIDKartona, new { @class = "control-label col-md-2 " })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.PacijentIDKartona)
+                @Html.TextBoxFor(model => model.PacijentIDKartona, new { @class = "NovaObavljena" })
                 @Html.ValidationMessageFor(model => model.PacijentIDKartona)
             </div>
         </div>
@@ -43,23 +43,23 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ImePacijenta, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.ImePacijenta)
+                @Html.TextBoxFor(model => model.ImePacijenta, new { @class = "NovaObavljena" })
                 @Html.ValidationMessageFor(model => model.ImePacijenta)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PrezimePacijenta, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PrezimePacijenta, new { @class = "control-label col-md-2 " })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.PrezimePacijenta)
+                @Html.TextBoxFor(model => model.PrezimePacijenta, new { @class = "NovaObavljena" })
                 @Html.ValidationMessageFor(model => model.PrezimePacijenta)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.JMBG, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.JMBG, new { @class = "control-label col-md-2 " })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.JMBG)
+                @Html.TextBoxFor(model => model.JMBG, new { @class = "NovaObavljena" })
                 @Html.ValidationMessageFor(model => model.JMBG)
             </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.OpisIntervencije, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.OpisIntervencije)
+                @Html.TextAreaFor(model => model.OpisIntervencije, new {id = "opisIntervencijeObavljena" })
                 @Html.ValidationMessageFor(model => model.OpisIntervencije)
             </div>
         </div>
@@ -76,7 +76,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Terapija, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Terapija)
+                @Html.TextAreaFor(model => model.Terapija, new {id = "opisTerapijeObavljena" })
                 @Html.ValidationMessageFor(model => model.Terapija)
             </div>
         </div>

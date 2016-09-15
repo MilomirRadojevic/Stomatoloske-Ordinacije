@@ -40,7 +40,7 @@ namespace Example.Controllers
             return View(pretragaKartona);
         }
 
-        
+
         [HttpPost]
         [Authorize(Roles = "user")]
 
@@ -55,16 +55,16 @@ namespace Example.Controllers
             return PartialView("_ListaKartona", model);
         }
 
-        public ActionResult DodajObavljeniPregled(int? IDKartona, int Dan,int Mesec,int Godina,int Sat, int Minut)
+        public ActionResult DodajObavljeniPregled(int? IDKartona, int Dan, int Mesec, int Godina, int Sat, int Minut)
         {
             if (IDKartona == null)
                 throw new Exception("nije izabran ID kartona");
-            
+
             Pacijent novi = context.Pacijenti.Where(m => m.IDKartona == (int)IDKartona).First();
             ObavljeniPregled novaPoseta = new ObavljeniPregled();
             novaPoseta.Dan = Dan;
             novaPoseta.Mesec = Mesec;
-            novaPoseta.Godina =Godina;
+            novaPoseta.Godina = Godina;
             novaPoseta.Sat = Sat;
             novaPoseta.Minut = Minut;
             novaPoseta.IDStomatologa = novi.StomatologIDClanaKomore;
@@ -114,25 +114,26 @@ namespace Example.Controllers
             novaPoseta.OsmicaGoreLevo = "";
 
             return View(novaPoseta);
-       
+
         }
 
         [HttpPost]
-        public ActionResult DodajObavljeniPregled(ObavljeniPregled model) {
+        public ActionResult DodajObavljeniPregled(ObavljeniPregled model)
+        {
 
             if (ModelState.IsValid)
             {
                 string IDStomatologa = User.Identity.GetUserName();
                 Stomatolog trenutni = context.Stomatolozi.Where(m => m.IDClanaKomore == IDStomatologa).First();
                 Pacijent novaPoseta = context.Pacijenti.Where(m => m.IDKartona == model.IDPacijenta).First();
-                
+
                 ObavljenaPoseta z = new ObavljenaPoseta()
                 {
                     StomatologIDClanaKomore = IDStomatologa,
                     IzabraniStomatolog = trenutni,
                     PregledaniPacijent = novaPoseta,
                     PacijentIDKartona = novaPoseta.IDKartona,
-                    DatumVreme = new DateTime(model.Godina, model.Mesec, model.Dan,model.Sat,model.Minut, 0),
+                    DatumVreme = new DateTime(model.Godina, model.Mesec, model.Dan, model.Sat, model.Minut, 0),
                     OpisIntervencije = "pregled",
                     Terapija = ""
                 };
@@ -262,7 +263,7 @@ namespace Example.Controllers
 
 
         [Authorize(Roles = "user")]
-        
+
         // GET: /ObavljenaPoseta/Pretraga
         public ActionResult Pretraga()
         {
@@ -277,7 +278,7 @@ namespace Example.Controllers
                 Mesec2 = dt.AddDays(7).Month,
                 Godina2 = dt.AddDays(7).Year,
                 IDStomatologa = IDStomatologa,
-                ListaObavljenihPoseta = context.ObavljenePosete.Where(m => m.StomatologIDClanaKomore == IDStomatologa).ToList()
+                ListaObavljenihPoseta = context.ObavljenePosete.Where(m => m.StomatologIDClanaKomore == IDStomatologa).ToList().OrderByDescending(m => m.DatumVreme)
             };
             return View(nova);
         }
@@ -310,7 +311,7 @@ namespace Example.Controllers
             return View(model);
         }
 
-        
+
 
         public ActionResult DetaljiObavljenogPregleda(int? IDPregleda)
         {
@@ -363,8 +364,8 @@ namespace Example.Controllers
 
             model.SedmicaDoleLevo = p.SedmicaDoleLevo;
             model.SedmicaGoreDesno = p.SedmicaGoreDesno;
-            model.SedmicaDoleDesno =p.SedmicaDoleDesno;
-            model.SedmicaGoreLevo= p.SedmicaGoreLevo;
+            model.SedmicaDoleDesno = p.SedmicaDoleDesno;
+            model.SedmicaGoreLevo = p.SedmicaGoreLevo;
 
             model.OsmicaDoleLevo = p.OsmicaDoleLevo;
             model.OsmicaGoreDesno = p.OsmicaGoreDesno;
@@ -378,7 +379,7 @@ namespace Example.Controllers
 
         }
 
-        
+
 
         [Authorize(Roles = "user")]
 

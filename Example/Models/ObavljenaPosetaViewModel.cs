@@ -31,14 +31,14 @@ namespace Example.Models
 
         public string IDStomatologa { get; set; }
 
-        
+
         public IEnumerable<ObavljenaPoseta> ListaObavljenihPoseta
         {
             get;
             set;
         }
 
-        
+
         public void RefreshList()
         {
             DateTime dt1 = new DateTime(Godina1, Mesec1, Dan1);
@@ -47,7 +47,7 @@ namespace Example.Models
                                      where (m.StomatologIDClanaKomore == IDStomatologa) &&
                                        (m.DatumVreme > dt1) &&
                                        (m.DatumVreme < dt2)
-                                     select m).ToList();
+                                     select m).ToList().OrderByDescending(m => m.DatumVreme);
         }
 
     }

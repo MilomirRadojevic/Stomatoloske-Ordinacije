@@ -20,7 +20,7 @@ namespace Example.Models
         [Display(Name = "JMBG: ")]
         public string JMBG { get; set; }
 
-        [Display(Name = "ID člana komore: ")]
+        [Display(Name = "ID člana: ")]
         public string IDStomatologa { get; set; }
 
         public IEnumerable<Pacijent> ListaKartona

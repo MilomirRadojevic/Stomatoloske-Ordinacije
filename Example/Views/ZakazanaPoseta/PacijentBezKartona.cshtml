@@ -52,14 +52,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Napomena, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Napomena)
+                @Html.TextAreaFor(model => model.Napomena, new { id = "napomenapacijentbezkartona"})
                 @Html.ValidationMessageFor(model => model.Napomena)
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Potvrdi" class="btn btn-default" />
+                <input type="submit" value="Potvrdi" class="dugme btn-default" />
             </div>
         </div>
     </div>

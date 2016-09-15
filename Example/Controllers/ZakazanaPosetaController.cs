@@ -65,7 +65,7 @@ namespace Example.Controllers
 
         // GET: /ZakazanaPoseta/PacijentSaKartonom
         [Authorize(Roles = "user")]
-        public ActionResult PacijentSaKartonom(int ? IDKartona)
+        public ActionResult PacijentSaKartonom(int? IDKartona)
         {
             if (IDKartona == null)
                 throw new Exception("nije izabran ID kartona");
@@ -99,7 +99,7 @@ namespace Example.Controllers
                 Pacijent novaPoseta = context.Pacijenti.Where(m => m.IDKartona == model.IDKartona).First();
                 ZakazanaPoseta z = new ZakazanaPoseta()
                 {
-                    StomatologIDClanaKomore =IDStomatologa,
+                    StomatologIDClanaKomore = IDStomatologa,
                     Zakazao = trenutni,
                     ZakazanPacijent = novaPoseta,
                     PacijentIDKartona = novaPoseta.IDKartona,
@@ -107,7 +107,7 @@ namespace Example.Controllers
                     ImePacijenta = model.ImePacijenta,
                     PrezimePacijenta = model.PrezimePacijenta,
                     Napomena = model.Napomena,
-                    ImaKarton = true                    
+                    ImaKarton = true
                 };
 
                 context.ZakazanePosete.Add(z);
@@ -182,7 +182,7 @@ namespace Example.Controllers
                 Mesec2 = dt.AddDays(7).Month,
                 Godina2 = dt.AddDays(7).Year,
                 IDStomatologa = IDStomatologa,
-                ListaZakazanihPoseta = context.ZakazanePosete.Where(m => m.StomatologIDClanaKomore == IDStomatologa).ToList()
+                ListaZakazanihPoseta = context.ZakazanePosete.Where(m => m.StomatologIDClanaKomore == IDStomatologa).ToList().OrderBy(m => m.DatumVreme)
             };
             return View(nova);
         }
@@ -203,7 +203,7 @@ namespace Example.Controllers
 
         [Authorize(Roles = "user")]
 
-        public ActionResult DetaljiZakazanePosete(int ? IDZakazanePosete)
+        public ActionResult DetaljiZakazanePosete(int? IDZakazanePosete)
         {
             if (IDZakazanePosete == null)
                 throw new Exception("nije izabran ID zakazane posete");
@@ -217,7 +217,7 @@ namespace Example.Controllers
 
         [Authorize(Roles = "user")]
 
-        public ActionResult IzmeniZakazanuPosetu(int ? IDZakazanePosete)
+        public ActionResult IzmeniZakazanuPosetu(int? IDZakazanePosete)
         {
             if (IDZakazanePosete == null)
                 throw new Exception("nije izabran ID zakazane posete");

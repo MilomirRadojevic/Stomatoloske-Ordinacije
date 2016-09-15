@@ -47,7 +47,7 @@ namespace Example.Models
                                     where (m.StomatologIDClanaKomore == IDStomatologa) &&
                                       (m.DatumVreme > dt1) &&
                                       (m.DatumVreme < dt2)
-                                    select m).ToList();
+                                    select m).ToList().OrderBy(m => m.DatumVreme);
         }
 
     }

@@ -4,7 +4,7 @@
 }
 
 
-<div>
+<div style="font-size:18px;margin-top:15px;">
     <div>
         @using (Ajax.BeginForm("RefreshList", "Karton", new AjaxOptions()
         {
@@ -14,19 +14,19 @@
 
         }))
         {
-           
+
             @Html.LabelFor(m => m.Ime)
-            @Html.TextBoxFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime, new { @class = "pretragaKartonaIme" })
             @Html.ValidationMessageFor(m => m.Ime)
 
-            @Html.LabelFor(m => m.Prezime)
+            @Html.LabelFor(m => m.Prezime, new { @class = "pretragaKartonaPrezime" })
             @Html.TextBoxFor(m => m.Prezime)
             @Html.ValidationMessageFor(m => m.Prezime)
 
-            @Html.LabelFor(m => m.JMBG)
+            @Html.LabelFor(m => m.JMBG, new { @class = "pretragaKartonaJMBG" })
             @Html.TextBoxFor(m => m.JMBG)
             @Html.ValidationMessageFor(m => m.JMBG)
-            
+
             @Html.LabelFor(m => m.IDStomatologa)
             @Html.DisplayFor(m => m.IDStomatologa)
             @Html.ValidationMessageFor(m => m.IDStomatologa)
