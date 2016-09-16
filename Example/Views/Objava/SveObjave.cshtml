@@ -6,7 +6,7 @@
 
 <h2>Sve objave</h2>
 
-<ul class="sveobjave">
+<ul class="sveobjave" style="margin-top:40px;">
 
     @foreach (var m in Model.ListaObjava)
     {
@@ -17,4 +17,4 @@
 
 </ul>
 
-@Html.ActionLink("Dodaj novu objavu", "DodajObjavu", "Objava", new { @class = "sveobjave"})
+@Html.ActionLink("Dodaj novu objavu", "NovaObjava", "Objava", new { @class = "sveobjave"})

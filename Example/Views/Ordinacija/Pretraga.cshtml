@@ -4,7 +4,7 @@
 }
 
 
-<div>
+<div style="margin-top:25px;">
     <div>
         @using (Ajax.BeginForm("RefreshList", "Ordinacija", new AjaxOptions()
         {
@@ -16,19 +16,19 @@
         {
             
             @Html.LabelFor(m => m.Naziv)
-            @Html.TextBoxFor(m => m.Naziv)
+            @Html.TextBoxFor(m => m.Naziv, new { @class = "pretragaordinacijasirina"})
             @Html.ValidationMessageFor(m => m.Naziv)
 
             @Html.LabelFor(m => m.PIB)
-            @Html.TextBoxFor(m => m.PIB)
+            @Html.TextBoxFor(m => m.PIB, new { @class = "pretragaordinacijasirina" })
             @Html.ValidationMessageFor(m => m.PIB)
 
             @Html.LabelFor(m => m.MaticniBrojFirme)
-            @Html.TextBoxFor(m => m.MaticniBrojFirme)
+            @Html.TextBoxFor(m => m.MaticniBrojFirme, new { @class = "pretragaordinacijasirina" })
             @Html.ValidationMessageFor(m => m.MaticniBrojFirme)
 
             @Html.LabelFor(m => m.JMBGVlasnika)
-            @Html.TextBoxFor(m => m.JMBGVlasnika)
+            @Html.TextBoxFor(m => m.JMBGVlasnika, new { @class = "pretragaordinacijasirina" })
             @Html.ValidationMessageFor(m => m.JMBGVlasnika)
 
             <div>

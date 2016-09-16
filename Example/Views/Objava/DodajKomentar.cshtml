@@ -5,21 +5,23 @@
 
 <h2>Novi komentar</h2>
 
-<div class="novaObjava">
+<div class="novaObjava" style="font-size:18px;">
     @using (Html.BeginForm())
     {
         <div>
             @Html.LabelFor(m => m.Tekst)
-            @Html.TextAreaFor(m => m.Tekst)
+            @Html.TextAreaFor(m => m.Tekst, new { id = "komentartekst"})
             @Html.ValidationMessageFor(m => m.Tekst)
         </div>
 
 
         <div>
-            <input type="submit" value="Dodaj komentar" />
+            <input type="submit" value="Dodaj komentar" class="dugme"/>
         </div>
     }
 </div>
 
-<li>@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
+<div class="linkic">
+@Html.ActionLink("Vrati se na listu objava", "Index", "Objava")
 
+</div>

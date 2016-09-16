@@ -12,45 +12,47 @@
         @Html.HiddenFor(m => m.IDClanaKomore)
         <div>
             @Html.LabelFor(m => m.Ime)
-            @Html.TextBoxFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime, new {id = "imeizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.Ime)
         </div>
         <div>
             @Html.LabelFor(m => m.Prezime)
-            @Html.TextBoxFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime, new { id = "prezimeizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.Prezime)
         </div>
         <div>
             @Html.LabelFor(m => m.JMBG)
-            @Html.TextBoxFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG, new { id = "JMBGizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.JMBG)
         </div>
         <div>
             @Html.LabelFor(m => m.ZavrseniFakultet)
-            @Html.TextBoxFor(m => m.ZavrseniFakultet)
+            @Html.TextBoxFor(m => m.ZavrseniFakultet, new { id = "zavrsenifakultetizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.ZavrseniFakultet)
         </div>
         <div>
             @Html.LabelFor(m => m.Specijalizacija)
-            @Html.TextBoxFor(m => m.Specijalizacija)
+            @Html.TextBoxFor(m => m.Specijalizacija, new { id = "specijalizacijaizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.Specijalizacija)
         </div>
         <div>
             @Html.LabelFor(m => m.Sertifikat)
-            @Html.TextBoxFor(m => m.Sertifikat)
+            @Html.TextBoxFor(m => m.Sertifikat, new { id = "sertifikatizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.Sertifikat)
         </div>
         <div>
             @Html.LabelFor(m => m.BrojTelefona)
-            @Html.TextBoxFor(m => m.BrojTelefona)
+            @Html.TextBoxFor(m => m.BrojTelefona, new {id = "telefonizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.BrojTelefona)
         </div>
         <div>
             @Html.LabelFor(m => m.Mail)
-            @Html.TextBoxFor(m => m.Mail)
+            @Html.TextBoxFor(m => m.Mail,  new {id = "mailizmenistomatologa" })
             @Html.ValidationMessageFor(m => m.Mail)
         </div>
-        <input type="submit" value="Sačuvaj promene" />
+        <input type="submit" value="Sačuvaj promene" class="dugme"/>
     }
+    <div class="linkic">
     @Html.ActionLink("Vrati se na listu stomatologa", "Pretraga")
+    </div>
 </div>

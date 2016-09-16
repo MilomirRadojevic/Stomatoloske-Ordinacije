@@ -152,6 +152,7 @@ h2
     color: #dcd9d9;
     text-align: center;
     font-size: 32px;
+    margin-top: 20px;
 }
 
 h4
@@ -166,12 +167,14 @@ h4
     text-align: center;
     margin-left: 20px;
     font-size: 28px;
+    margin-top:20px;
+    margin-bottom: 20px;
 }
 
 .detalji
-{
+{   margin-top:50px;
     border-radius: 10px;
-    width: 700px;
+    width: 750px;
     height: auto;
     padding: 20px;
     background-color: #aec1cf;
@@ -245,7 +248,7 @@ h4
 #menu1karton
 {
     margin-top : 30px;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 
@@ -359,28 +362,11 @@ h4
     text-align:right;
 }
 
-.pretragaKartonaIme {
-    margin-left:10px;
-    margin-right:10px;
-    width: 130px;
-}
 
-.pretragaKartonaPrezime {
-    margin-left:10px;
-    margin-right:10px;
-    width: 130px;
-}
-
-.pretragaKartonaJMBG {
-    margin-left:10px;
-    margin-right:10px;
-    width: 130px;
-}
-
-.pretragaKartonaID {
-    margin-left:10px;
-    margin-right:10px;
-    width: 130px;
+.pretragaKartona {
+    margin-left:8px;
+    margin-right:8px;
+    width: 140px;
 }
 
 #opisIntervencijeObavljena {
@@ -397,4 +383,238 @@ h4
 
 .NovaObavljena {
     width: 240px;
+
+}
+
+
+
+.pretragaordinacijasirina {
+    width:140px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#nazivordinacijeizmena {
+    margin-left: 90px;
+}
+
+#gradordinacijeizmena {
+    margin-left: 94px;
+}
+
+#adresaordinacijeizmena {
+
+    margin-left: 79px;
+}
+
+#telefonordinacijeizmena {
+
+    margin-left: 21px;
+}
+
+
+#PIBordinacijeizmena {
+    margin-left: 104px;
+}
+
+#imevlasnikaordinacijeizmena {
+    margin-left: 42px;
+}
+
+#prezimevlasnikaordinacijeizmena {
+    margin-left: 13px;
+}
+
+#JMBGordinacijeizmena {
+    margin-left: 86px;
+}
+
+.linkic
+{
+    margin-top: 15px;
+    font-size:15px;
+}
+
+
+.stomatologregistrovanje
+{
+    width : 175px;
+}
+
+#IDclanapretragastomatolog
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+#JMBGpretragastomatolog
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+#imepretragastomatolog {
+     margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+
+#prezimepretragastomatolog {
+     margin-left: 5px;
+    margin-right: 5px;
+    width: 150px;
+}
+
+
+
+#imeizmenistomatologa {
+    margin-left: 157px;
+}
+
+#prezimeizmenistomatologa
+{
+    margin-left: 128px;
+}
+
+#JMBGizmenistomatologa
+{
+    margin-left: 140px;
+}
+
+#zavrsenifakultetizmenistomatologa
+{
+    margin-left: 66px;
+}
+
+#specijalizacijaizmenistomatologa
+{
+    margin-left: 84px;
+}
+
+
+#sertifikatizmenistomatologa
+{
+    margin-left: 46px;
+}
+
+#telefonizmenistomatologa
+{
+    margin-left: 93px;
+}
+
+#mailizmenistomatologa {
+    margin-left: 153px;
+}
+
+
+#imeizmenikarton
+{
+    margin-left: 150px;
+}
+
+
+#polizmenikarton
+{
+    margin-left: 143px;
+}
+
+
+#napomenaizmenikarton 
+{
+    margin-left: 92px;
+}
+
+
+#imeroditeljaizmenikarton
+{
+    margin-left: 81px;
+}
+
+#telefonizmenikarton
+{
+    margin-left: 59px;
+}
+
+
+#godinarodjenjaizmenikarton
+{
+    margin-left: 59px;
+}
+
+#JMBGizmenikarton
+{
+    margin-left: 124px;
+}
+
+
+#prezimeizmenikarton
+{
+    margin-left: 112px;
+}
+
+#imeizmenikarton {
+    margin-left: 141px;
+}
+
+#komentartekst
+{
+    width:200px;
+    height: 200px;
+}
+
+#napomenazakazanaposeta
+{
+    width:270px;
+    margin-bottom:20px;
+}
+
+.pretragaKartonaObavljene {
+    width:140px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+
+#opisIntervencijeObavljena {
+    margin-bottom:15px;
+    width:200px;
+}
+
+#terapijaObavljena {
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:61px;
+    width: 202px;
+    height: 150px;
+}
+
+#ime2pretragakartona {
+
+    width:140px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#prezime2pretragakartona
+{
+    width:140px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#JMBG2pretragakartona
+{
+    width:140px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#ID2pretragakartona
+{
+        width:140px;
+    margin-left: 5px;
+    margin-right: 5px;
 }

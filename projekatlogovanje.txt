@@ -1,0 +1,16 @@
+idclana: 1122 lozinka:slobodanv Slobodan Vulovic
+
+idclana: 4455 lozinka:nevenas Nevena Stojanovic
+
+idclana: 7788 lozinka: vladimira Vladimir Arsenijevic
+
+idclana: 8899 lozinka:danijelam Danijela Mitrovic 
+
+
+pacijenti Slobodana Vulovica:
+Petar Petrovic pacijent sa kartonom, obavljena intervencija vadjenje osmice donja leva
+Andjela Avramovic pacijent sa kartonom, obavljen pregled
+Andrija Stojanovic pacijent sa kartonom, obavljena intervencija popravka sestica (gornja desna)
+Milic Milic		  pacijent sa kartonom , obavljen pregled
+Milica Stefanovic pacijent bez kartona	
+Ognjen Jovanovic  pacijent bez kartona

@@ -4,7 +4,7 @@
 }
 
 
-<div>
+<div style="margin-top:20px;font-size:15px;">
     <div>
         @using (Ajax.BeginForm("RefreshListZaKartone", "ZakazanaPoseta", new AjaxOptions()
         {
@@ -16,19 +16,19 @@
         {
 
             @Html.LabelFor(m => m.Ime)
-            @Html.TextBoxFor(m => m.Ime)
+            @Html.TextBoxFor(m => m.Ime, new { id ="ime2pretragakartona"})
             @Html.ValidationMessageFor(m => m.Ime)
 
             @Html.LabelFor(m => m.Prezime)
-            @Html.TextBoxFor(m => m.Prezime)
+            @Html.TextBoxFor(m => m.Prezime, new { id = "prezime2pretragakartona" })
             @Html.ValidationMessageFor(m => m.Prezime)
 
             @Html.LabelFor(m => m.JMBG)
-            @Html.TextBoxFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG, new { id = "JMBG2pretragakartona" })
             @Html.ValidationMessageFor(m => m.JMBG)
 
             @Html.LabelFor(m => m.IDStomatologa)
-            @Html.DisplayFor(m => m.IDStomatologa)
+            @Html.DisplayFor(m => m.IDStomatologa, new { id ="ID2pretragakartona"})
             @Html.ValidationMessageFor(m => m.IDStomatologa)
 
             <div>
@@ -42,7 +42,7 @@
     @Html.Partial("_ListaKartona", Model)
 </div>
 
-<p>
+<p class="linkic">
     @Html.ActionLink("Dodaj novog pacijenta", "DodajKarton", "Karton")
 </p>
 

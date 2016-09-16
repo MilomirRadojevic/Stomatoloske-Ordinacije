@@ -19,9 +19,10 @@
         </div><hr/>
     }
 </div>
-
-@Html.ActionLink("Dodaj komentar na ovu objavu", "DodajKomentar", new { IDObjave = Model.IDObjave })
-
+<div class="linkic">
+    @Html.ActionLink("Dodaj komentar na ovu objavu", "DodajKomentar", new { IDObjave = Model.IDObjave }) <br/>
+    @Html.ActionLink("Vrati se na listu objava","SveObjave","Objava")
+</div>
 
 </div>
 

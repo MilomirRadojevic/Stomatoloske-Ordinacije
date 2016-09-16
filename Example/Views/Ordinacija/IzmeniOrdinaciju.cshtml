@@ -12,45 +12,47 @@
         @Html.HiddenFor(m => m.MaticniBrojFirme)
         <div>
             @Html.LabelFor(m => m.Naziv)
-            @Html.TextBoxFor(m => m.Naziv)
+            @Html.TextBoxFor(m => m.Naziv, new {id = "nazivordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.Naziv)
         </div>
         <div>
             @Html.LabelFor(m => m.Grad)
-            @Html.TextBoxFor(m => m.Grad)
+            @Html.TextBoxFor(m => m.Grad, new { id = "gradordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.Grad)
         </div>
         <div>
             @Html.LabelFor(m => m.Adresa)
-            @Html.TextBoxFor(m => m.Adresa)
+            @Html.TextBoxFor(m => m.Adresa,new {id = "adresaordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.Adresa)
         </div>
         <div>
             @Html.LabelFor(m => m.KontaktTelefon)
-            @Html.TextBoxFor(m => m.KontaktTelefon)
+            @Html.TextBoxFor(m => m.KontaktTelefon, new { id = "telefonordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.KontaktTelefon)
         </div>
         <div>
             @Html.LabelFor(m => m.PIB)
-            @Html.TextBoxFor(m => m.PIB)
+            @Html.TextBoxFor(m => m.PIB, new { id = "PIBordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.PIB)
         </div>
         <div>
             @Html.LabelFor(m => m.ImeVlasnika)
-            @Html.TextBoxFor(m => m.ImeVlasnika)
+            @Html.TextBoxFor(m => m.ImeVlasnika, new { id = "imevlasnikaordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.ImeVlasnika)
         </div>
         <div>
             @Html.LabelFor(m => m.PrezimeVlasnika)
-            @Html.TextBoxFor(m => m.PrezimeVlasnika)
+            @Html.TextBoxFor(m => m.PrezimeVlasnika, new { id = "prezimevlasnikaordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.PrezimeVlasnika)
         </div>
         <div>
             @Html.LabelFor(m => m.JMBG)
-            @Html.TextBoxFor(m => m.JMBG)
+            @Html.TextBoxFor(m => m.JMBG, new { id = "JMBGordinacijeizmena" })
             @Html.ValidationMessageFor(m => m.JMBG)
         </div>
-        <input type="submit" value="Sačuvaj promene" />
+        <input type="submit" value="Sačuvaj promene" class="dugme" style="margin-left:128px;"/>
     }
+    <div class="linkic">
     @Html.ActionLink("Vrati se na listu ordinacija", "Pretraga")
+    </div>
 </div>

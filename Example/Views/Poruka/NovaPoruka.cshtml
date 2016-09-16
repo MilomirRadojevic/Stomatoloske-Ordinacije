@@ -20,7 +20,11 @@
             @Html.ValidationMessageFor(m => m.TekstPoruke)
         </div>
         <div>
-            <input type="submit" value="Pošalji" class="btn" />
+            <input type="submit" value="Pošalji" class="dugme" style="margin-left:240px;"/>
         </div>
     }
 </div>
+
+<p>
+    @Html.ActionLink("Nazad","Index","Poruka")
+</p>

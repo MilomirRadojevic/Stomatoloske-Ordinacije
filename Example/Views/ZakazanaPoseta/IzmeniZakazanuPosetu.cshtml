@@ -6,13 +6,13 @@
 
 <h2>Izmeni zakazanu posetu</h2>
 
-<div>
+<div style="font-size:15px;">
     @using (Html.BeginForm())
     {
         @Html.HiddenFor(model => model.IDZakazanePosete)
         <div>
             @Html.LabelFor(model => model.Napomena)
-            @Html.TextAreaFor(model => model.Napomena)
+            @Html.TextAreaFor(model => model.Napomena, new { id="napomenazakazanaposeta"})
             @Html.ValidationMessageFor(model => model.Napomena)
         </div>
         <div>
@@ -29,7 +29,9 @@
             @Html.DropDownListFor(model => model.Minut, new SelectList(Enumerable.Range(0, 60).ToList()))
             @Html.ValidationMessageFor(model => model.Minut)
         </div>
-        <input type="submit" value="Potvrdi izmene" />
+        <input type="submit" value="Potvrdi izmene" class="dugme" style="margin-left:190px;"/>
     }
+    <p class="linkic">
     @Html.ActionLink("Vrati se na listu zakazanih poseta", "Index")
+    </p>
 </div>
